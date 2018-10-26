@@ -1,4 +1,4 @@
-//
+//bobby died
 //  ViewController.swift
 //  prospectorProject
 //
@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         print("hello")
     }

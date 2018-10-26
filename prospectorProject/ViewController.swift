@@ -1,4 +1,3 @@
-//bobby died
 //  ViewController.swift
 //  prospectorProject
 //

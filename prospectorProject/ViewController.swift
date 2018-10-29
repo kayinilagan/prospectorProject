@@ -1,6 +1,6 @@
 //  ViewController.swift
 //  prospectorProject
-//
+//  bobby died
 //  Created by period3 on 10/26/18.
 //  Copyright © 2018 period3. All rights reserved.
 //
@@ -24,8 +24,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         
+        
     }
-    
 
 }
 

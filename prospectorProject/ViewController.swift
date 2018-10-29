@@ -8,7 +8,8 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
-
+    @IBOutlet weak var mainCollectionView: UICollectionView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

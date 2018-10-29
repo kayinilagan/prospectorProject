@@ -13,7 +13,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        print("hello")
     }
 
     

@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
     
-    var sources = [[String: Any]]()
+    var sources = [[String: String]]()
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
     override func viewDidLoad()
@@ -61,6 +61,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let vc = segue.destination as! CollectionViewCell
+        vc.cellSources = sources
+        
+    }
+    
+    
+    
+    
 
 }
 

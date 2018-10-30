@@ -57,8 +57,8 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="articleDateLabel" destination="kcK-l6-rvO" id="H8P-sq-MJm"/>
-                                            <outlet property="articleLabel" destination="vCr-JW-buC" id="O5s-sU-fCK"/>
+                                            <outlet property="articleDateLabel" destination="kcK-l6-rvO" id="BEz-tv-q01"/>
+                                            <outlet property="articleLabel" destination="vCr-JW-buC" id="hxY-E1-PDm"/>
                                             <outlet property="imageView" destination="KZB-k2-eTe" id="u8x-DU-Qr6"/>
                                         </connections>
                                     </collectionViewCell>

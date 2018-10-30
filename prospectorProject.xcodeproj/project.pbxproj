@@ -13,7 +13,6 @@
 		6E8C053521836CAE004CF39D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C053321836CAE004CF39D /* Main.storyboard */; };
 		6E8C053721836CAF004CF39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C053621836CAF004CF39D /* Assets.xcassets */; };
 		6E8C053A21836CAF004CF39D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C053821836CAF004CF39D /* LaunchScreen.storyboard */; };
-		6EDAD2C42188B01D0083D7E9 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EDAD2C32188B01D0083D7E9 /* Notification.swift */; };
 		6EE2915C21875C5C00EEE5D0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2915B21875C5C00EEE5D0 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		6E8C053621836CAF004CF39D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E8C053921836CAF004CF39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E8C053B21836CAF004CF39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EDAD2C32188B01D0083D7E9 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		6EE2915B21875C5C00EEE5D0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +60,6 @@
 			children = (
 				6E8C052F21836CAE004CF39D /* AppDelegate.swift */,
 				6E8C053121836CAE004CF39D /* ViewController.swift */,
-				6EDAD2C32188B01D0083D7E9 /* Notification.swift */,
 				6EE2915B21875C5C00EEE5D0 /* CollectionViewCell.swift */,
 				6E8C053321836CAE004CF39D /* Main.storyboard */,
 				6E8C053621836CAF004CF39D /* Assets.xcassets */,
@@ -145,7 +142,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E8C053221836CAE004CF39D /* ViewController.swift in Sources */,
-				6EDAD2C42188B01D0083D7E9 /* Notification.swift in Sources */,
 				6E8C053021836CAE004CF39D /* AppDelegate.swift in Sources */,
 				6EE2915C21875C5C00EEE5D0 /* CollectionViewCell.swift in Sources */,
 				6E35CB932188AC1C00BD9F03 /* SwiftyJSON.swift in Sources */,

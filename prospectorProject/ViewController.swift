@@ -38,10 +38,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
      
     }
     
-    func widgetList(_ list: NCWidgetListViewController, viewControllerForRow row: Int) -> NSViewController {
-        
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return 1

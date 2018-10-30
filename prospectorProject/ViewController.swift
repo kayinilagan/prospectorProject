@@ -17,18 +17,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
         
-        
-        if let url = URL(string: query)
+        if let url = URL(string: homePageQuery)
         {
             if let data = try? Data(contentsOf: url)
             {
                 let json = try! JSON(data: data)
-                parse(json: json)
-                return
+                if json["status"] == "ok"
+                {
+                    parse(json: json)
+                    return
+                }
+            
+                
             }
-            
-            
         }
+
+     
     }
     
     
@@ -45,21 +49,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func parse(json: JSON)
     {
-        for result in json["Stops"].arrayValue
+        for result in json["items"].arrayValue
         {
-            let lat = result["Lat"].doubleValue
-            let long = result["Lon"].doubleValue
-            let id = result["StopID"].stringValue
-            let name = result["Name"].stringValue
-            let source = ["Name":name, "StopID": id, "Lon":long, "Lat":lat] as [String : Any]
-            sources.append(source)
-            //            let button = UIButton(type: .detailDisclosure)
-            mapView.reloadInputViews()
-            let annotation = MKPointAnnotation()
-            let centerCoordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
-            annotation.coordinate = centerCoordinate
-            annotation.title = name
-            mapView.addAnnotation(annotation)
+            
+            
         }
         
     }

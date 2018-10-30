@@ -6,6 +6,7 @@
 //  Copyright © 2018 period3. All rights reserved.
 //
 import UIKit
+import NotificationCenter
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
@@ -35,6 +36,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
      
     }
     
+    func widgetList(_ list: NCWidgetListViewController, viewControllerForRow row: Int) -> NSViewController {
+        
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {

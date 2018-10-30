@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
+    
+    var sources = [[String: Any]]()
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
     override func viewDidLoad()
@@ -51,7 +53,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     {
         for result in json["items"].arrayValue
         {
-            
+            let title = result["title"].stringValue
+            let pubDate = result["pubDate"].stringValue
+            let description = result["description"].stringValue
+            let source = [title:"title", pubDate:"pubDate", description:"description"]
             
         }
         

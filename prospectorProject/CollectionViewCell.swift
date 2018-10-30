@@ -10,10 +10,23 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell
 {
+    var cellSources = [[String: String]]()
+
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var articleLabel: UILabel!
     
     @IBOutlet weak var articleDateLabel: UILabel!
+    
+    
+     func viewDidLoad()
+    {
+        viewDidLoad()
+        
+        articleLabel.text = cellSources.first?["title"]
+        
+        
+    }
+    
     
 }

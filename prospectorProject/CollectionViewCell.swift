@@ -8,6 +8,9 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class CollectionViewCell: UICollectionViewCell
+{
+    
+    
     
 }

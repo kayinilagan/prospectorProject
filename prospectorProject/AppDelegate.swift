@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PushKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

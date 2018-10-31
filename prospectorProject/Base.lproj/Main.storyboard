@@ -79,7 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="m8I-vL-y76">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="hamburgerIcon" id="R9o-Dc-pk8"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" largeContentSizeImage="hamburgerIcon" id="R9o-Dc-pk8"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL"/>
                     </navigationItem>
                     <connections>

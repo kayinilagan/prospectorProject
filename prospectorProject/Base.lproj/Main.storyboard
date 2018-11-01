@@ -35,7 +35,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZB-k2-eTe">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="khalid-american-teenjpg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZB-k2-eTe">
                                                     <rect key="frame" x="0.0" y="0.0" width="380" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.26537320017814636" green="0.69113492965698242" blue="0.98525756597518921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -79,7 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="m8I-vL-y76">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="hamburgerIcon" id="R9o-Dc-pk8"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" largeContentSizeImage="hamburgerIcon" id="R9o-Dc-pk8"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL"/>
                     </navigationItem>
                     <connections>
@@ -111,5 +111,6 @@
     </scenes>
     <resources>
         <image name="hamburgerIcon" width="512" height="512"/>
+        <image name="khalid-american-teenjpg" width="759" height="500"/>
     </resources>
 </document>

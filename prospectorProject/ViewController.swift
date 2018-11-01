@@ -12,7 +12,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var sources = [[String: String]]()
     @IBOutlet weak var mainCollectionView: UICollectionView!
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -33,6 +32,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
             }
         }
+   
 
      
     }
@@ -56,17 +56,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let description = result["description"].stringValue
-            let source = [title:"title", pubDate:"pubDate", description:"description"]
+            let source = [title:"title", pubDate:"pubDate",description:"description"]
             
+            
+            func prepare(for segue: UIStoryboardSegue, sender: Any?)
+            {
+                let vc = segue.destination as! CollectionViewCell
+                vc.cellSource = source
+                
+            }
+
         }
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        let vc = segue.destination as! CollectionViewCell
-        vc.cellSources = sources
-        
-    }
+    
     
     
     

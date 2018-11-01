@@ -9,15 +9,15 @@
 import UIKit
 import PushKit
 
-class FileProviderExtension: NSFileProviderExtension, PKPushRegistryDelegate {
+class FileProviderExtension: NSFileProviderExtension {
     var pushRegistry: PKPushRegistry!
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        pushRegistry = PKPushRegistry(queue: nil)
-        pushRegistry.delegate = self
-        pushRegistry.desiredPushTypes = [.fileProvider]
-        
-        return true
-    }
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//
+//        pushRegistry = PKPushRegistry(queue: nil)
+//        pushRegistry.delegate = self
+//        pushRegistry.desiredPushTypes = [.fileProvider]
+//
+//        return true
+//    }
 }

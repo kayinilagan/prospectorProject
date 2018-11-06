@@ -13,7 +13,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var sources = [[String: String]]()
     @IBOutlet weak var mainCollectionView: UICollectionView!
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -38,6 +37,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
             }
         }
+   
 
      
     }
@@ -50,8 +50,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
+        
         return cell
     }
     
@@ -62,17 +61,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let description = result["description"].stringValue
-            let source = [title:"title", pubDate:"pubDate", description:"description"]
+            let content = result["content"].stringValue
             
+            var source = [title:"title", pubDate:"pubDate",description:"description"]
+          
+
         }
         
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        let vc = segue.destination as! CollectionViewCell
-        vc.cellSources = sources
+        
+            
+            
+        
+            
+            
+        
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ArticleViewController
+
+    }
+    
     
     
     

@@ -50,6 +50,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
         return cell
     }
     
@@ -60,18 +61,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let description = result["description"].stringValue
-            let source = [title:"title", pubDate:"pubDate",description:"description"]
+            let content = result["content"].stringValue
             
-            
-            func prepare(for segue: UIStoryboardSegue, sender: Any?)
-            {
-                let vc = segue.destination as! CollectionViewCell
-                vc.cellSource = source
-                
-            }
+            var source = [title:"title", pubDate:"pubDate",description:"description"]
+          
 
         }
         
+        
+            
+            
+        
+            
+            
+        
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! ArticleViewController
+
     }
     
     

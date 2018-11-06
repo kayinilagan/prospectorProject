@@ -79,7 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="m8I-vL-y76">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" largeContentSizeImage="hamburgerIcon" id="R9o-Dc-pk8"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="hamburgerIconSkinny" id="R9o-Dc-pk8"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL"/>
                     </navigationItem>
                     <connections>
@@ -110,7 +110,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIcon" width="512" height="512"/>
+        <image name="hamburgerIconSkinny" width="40" height="40"/>
         <image name="khalid-american-teenjpg" width="759" height="500"/>
     </resources>
 </document>

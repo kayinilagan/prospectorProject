@@ -18,6 +18,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     {
         super.viewDidLoad()
         
+        let logo = UIImage(named: "prospectorLogol")
+        let imageView = UIImageView(image:logo)
+        self.navigationItem.titleView = imageView
+        
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
         
         if let url = URL(string: homePageQuery)
@@ -46,6 +50,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1
         return cell
     }
     

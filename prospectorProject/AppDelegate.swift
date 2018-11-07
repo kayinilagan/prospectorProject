@@ -78,3 +78,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+//extension AppDelegate: UNUserNotificationCenterDelegate {
+//
+//    func userNotificationCenter(_ center: UNUserNotificationCenter,
+//                                didReceive response: UNNotificationResponse,
+//                                withCompletionHandler completionHandler: @escaping () -> Void) {
+//        // 1
+//        let userInfo = response.notification.request.content.userInfo
+//        let aps = userInfo["aps"] as! [String: AnyObject]
+//
+//        // 2
+//        if let newsItem = NewsItem.makeNewsItem(aps) {
+//            (window?.rootViewController as? UITabBarController)?.selectedIndex = 1
+//
+//            // 3
+//            if response.actionIdentifier == viewActionIdentifier,
+//                let url = URL(string: newsItem.link) {
+//                let safari = SFSafariViewController(url: url)
+//                window?.rootViewController?.present(safari, animated: true, completion: nil)
+//            }
+//        }
+//
+//        // 4
+//        completionHandler()
+//    }
+//}
+

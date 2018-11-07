@@ -11,6 +11,11 @@ import NotificationCenter
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
     
+    @IBOutlet weak var leadingC: NSLayoutConstraint!
+    @IBOutlet weak var trailingC: NSLayoutConstraint!
+    
+    @IBOutlet weak var primeView: UIView!
+    
     var sources = [[String: String]]()
     @IBOutlet weak var mainCollectionView: UICollectionView!
     override func viewDidLoad()

@@ -8,8 +8,39 @@
 
 import UIKit
 
+//extension String {
+//    var html2Attributed: NSAttributedString? {
+//        do {
+//            guard let data = data(using: String.Encoding.utf8) else {
+//                return nil
+//            }
+//            return try NSAttributedString(data: data,
+//                                          options: [.documentType: NSAttributedString.DocumentType.html,
+//                                                    .characterEncoding: String.Encoding.utf8.rawValue],
+//                                          documentAttributes: nil)
+//        } catch {
+//            print("error: ", error)
+//            return nil
+//        }
+//    }
+//}
+extension String {
+    var htmlToAttributedString: NSAttributedString? {
+        guard let data = data(using: .utf8) else { return NSAttributedString() }
+        do {
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch {
+            return NSAttributedString()
+        }
+    }
+    var htmlToString: String {
+        return htmlToAttributedString?.string ?? ""
+    }
+}
+
 class ArticleViewController: UIViewController
 {
+    
     var articleSource = [String:String]()
 
     @IBOutlet weak var articleTextView: UITextView!
@@ -26,6 +57,7 @@ class ArticleViewController: UIViewController
         {
             if let data = try? Data(contentsOf: url)
             {
+                
                 let json = try! JSON(data: data)
                 if json["status"] == "ok"
                 {
@@ -37,10 +69,15 @@ class ArticleViewController: UIViewController
             }
         }
         
+        
+        
 
         
         
     }
+    
+    
+    
     
     func parse(json: JSON)
     {
@@ -53,15 +90,20 @@ class ArticleViewController: UIViewController
             
             var source = [Articletitle:"title", pubDate:"pubDate",description:"description"]
             
-            articleTextView.text = content
-            self.title = title
+            articleTextView.attributedText = content.htmlToAttributedString
             dateLabel.text = pubDate
-            descriptionLabel.text = Articletitle
+            descriptionLabel.attributedText = Articledescription.htmlToAttributedString
+            print(Articledescription.htmlToString)
+            
+          
+            
             print(Articledescription)
         }
         
+       
       
     }
+    
 
   
 }

@@ -89,15 +89,15 @@ class ArticleViewController: UIViewController
             let content = result["content"].stringValue
             
             var source = [Articletitle:"title", pubDate:"pubDate",description:"description"]
-            
-            articleTextView.attributedText = content.htmlToAttributedString
+            //DO NOT TOUCH THIS OR JACK WILL KILL YOU
+            articleTextView.text = content.htmlToString
+            descriptionLabel.text = Articledescription.htmlToString
             dateLabel.text = pubDate
-            descriptionLabel.attributedText = Articledescription.htmlToAttributedString
-            print(Articledescription.htmlToString)
+            
             
           
             
-            print(Articledescription)
+            print(Articledescription.htmlToString)
         }
         
        

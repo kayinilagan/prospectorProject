@@ -8,22 +8,7 @@
 
 import UIKit
 
-//extension String {
-//    var html2Attributed: NSAttributedString? {
-//        do {
-//            guard let data = data(using: String.Encoding.utf8) else {
-//                return nil
-//            }
-//            return try NSAttributedString(data: data,
-//                                          options: [.documentType: NSAttributedString.DocumentType.html,
-//                                                    .characterEncoding: String.Encoding.utf8.rawValue],
-//                                          documentAttributes: nil)
-//        } catch {
-//            print("error: ", error)
-//            return nil
-//        }
-//    }
-//}
+//This is an extension that converts the content and description from html format to the format we need to be able to put it in a text view or label, plz no touch or I will euthanize you - Jack
 extension String {
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return NSAttributedString() }

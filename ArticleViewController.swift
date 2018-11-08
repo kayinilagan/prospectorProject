@@ -29,7 +29,7 @@ class ArticleViewController: UIViewController
     var articleSource = [String:String]()
 
     @IBOutlet weak var articleTextView: UITextView!
-    @IBOutlet weak var descriptionLabel: UILabel!
+
     @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad()
@@ -76,7 +76,6 @@ class ArticleViewController: UIViewController
             var source = [Articletitle:"title", pubDate:"pubDate",description:"description"]
             //DO NOT TOUCH THIS OR JACK WILL KILL YOU
             articleTextView.text = content.htmlToString
-            descriptionLabel.text = Articledescription.htmlToString
             dateLabel.text = pubDate
             
             

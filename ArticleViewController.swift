@@ -76,11 +76,7 @@ class ArticleViewController: UIViewController
             let Articledescription = result["description"].stringValue
             let content = result["content"].stringValue
             
-            let url = URL(string: result["thumbnail"].stringValue)
-            if let data = try? Data(contentsOf: url!)
-            {
-                let image: UIImage = UIImage(data: data)!
-            }
+          
             
             var source = [Articletitle:"title", pubDate:"pubDate",description:"description"]
             //DO NOT TOUCH THIS OR JACK WILL KILL YOU

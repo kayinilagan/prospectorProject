@@ -10,6 +10,10 @@ import UIKit
 import UserNotifications
 
 class NotificationCenter: UNUserNotificationCenter {
+    
+    var alert = [[String: String]]()
+    
+    
 //    "aps": {
 //    "alert" : {
 //            "title" : "New Article",

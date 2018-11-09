@@ -20,9 +20,19 @@ class CollectionViewCell: UICollectionViewCell
     
     @IBOutlet weak var articleDateLabel: UILabel!
     
+    var articleTitle: String!
+    var articleThumbnail: UIImage!
+    var articleDate: String!
+    
+
+    
+    
     
      func viewDidLoad()
     {
+        articleLabel.text = articleTitle
+        imageView.image = articleThumbnail
+        articleDateLabel.text = articleDate
      
         viewDidLoad()
         
@@ -42,6 +52,8 @@ class CollectionViewCell: UICollectionViewCell
                 
             }
         }
+        
+        
         
     }
     

@@ -16,7 +16,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var primeView: UIView!
     
+    var hamburgerIsVisible = false
+    
     var sources = [[String: String]]()
+    
     @IBOutlet weak var mainCollectionView: UICollectionView!
     override func viewDidLoad()
     {
@@ -49,6 +52,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
      
     }
     
+    @IBAction func hamburgerButton(_ sender: UIBarButtonItem) {
+        if !hamburgerIsVisible
+        {
+            leadingC.constant = 150
+            trailingC.constant = -150
+            hamburgerIsVisible = true
+        }
+        else
+        {
+            leadingC.constant = 0
+            trailingC.constant = 0
+            hamburgerIsVisible = false
+        }
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }) { (animationComplete) in
+            print("The animation is complete!")
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return 1

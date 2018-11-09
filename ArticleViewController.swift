@@ -8,12 +8,28 @@
 
 import UIKit
 
+//This is an extension that converts the content and description from html format to the format we need to be able to put it in a text view or label, plz no touch or I will euthanize you - Jack
+extension String {
+    var htmlToAttributedString: NSAttributedString? {
+        guard let data = data(using: .utf8) else { return NSAttributedString() }
+        do {
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch {
+            return NSAttributedString()
+        }
+    }
+    var htmlToString: String {
+        return htmlToAttributedString?.string ?? ""
+    }
+}
+
 class ArticleViewController: UIViewController
 {
+    
     var articleSource = [String:String]()
 
     @IBOutlet weak var articleTextView: UITextView!
-    @IBOutlet weak var descriptionLabel: UILabel!
+
     @IBOutlet weak var dateLabel: UILabel!
     
     override func viewDidLoad()
@@ -26,6 +42,7 @@ class ArticleViewController: UIViewController
         {
             if let data = try? Data(contentsOf: url)
             {
+                
                 let json = try! JSON(data: data)
                 if json["status"] == "ok"
                 {
@@ -37,10 +54,15 @@ class ArticleViewController: UIViewController
             }
         }
         
+        
+        
 
         
         
     }
+    
+    
+    
     
     func parse(json: JSON)
     {
@@ -52,16 +74,20 @@ class ArticleViewController: UIViewController
             let content = result["content"].stringValue
             
             var source = [Articletitle:"title", pubDate:"pubDate",description:"description"]
-            
-            articleTextView.text = content
-            self.title = title
+            //DO NOT TOUCH THIS OR JACK WILL KILL YOU
+            articleTextView.text = content.htmlToString
             dateLabel.text = pubDate
-            descriptionLabel.text = Articletitle
-            print(Articledescription)
+            
+            
+          
+            
+            print(Articledescription.htmlToString)
         }
         
+       
       
     }
+    
 
   
 }

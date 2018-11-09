@@ -11,6 +11,11 @@ import NotificationCenter
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
     
+    @IBOutlet weak var leadingC: NSLayoutConstraint!
+    @IBOutlet weak var trailingC: NSLayoutConstraint!
+    
+    @IBOutlet weak var primeView: UIView!
+    
     var sources = [[String: String]]()
     @IBOutlet weak var mainCollectionView: UICollectionView!
     override func viewDidLoad()
@@ -38,7 +43,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
    
-
+        
+        
+        
      
     }
     
@@ -68,17 +75,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         }
         
-        
-            
-            
-        
-            
-            
-        
-        
+  
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ArticleViewController
+        
 
     }
     

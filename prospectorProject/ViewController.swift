@@ -66,8 +66,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func hamburgerButton(_ sender: UIBarButtonItem) {
         if !hamburgerIsVisible
         {
-            leadingC.constant = 150
-            trailingC.constant = -150
+            leadingC.constant = 129
+            trailingC.constant = -129
             hamburgerIsVisible = true
         }
         else
@@ -77,7 +77,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             hamburgerIsVisible = false
         }
         
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseInOut, animations: {
             self.view.layoutIfNeeded()
         }) { (animationComplete) in
             print("The animation is complete!")
@@ -91,7 +91,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        
         
         return cell
     }

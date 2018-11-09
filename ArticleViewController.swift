@@ -9,6 +9,7 @@
 import UIKit
 
 //This is an extension that converts the content and description from html format to the format we need to be able to put it in a text view or label, plz no touch or I will euthanize you - Jack
+
 extension String {
     var htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return NSAttributedString() }
@@ -22,6 +23,8 @@ extension String {
         return htmlToAttributedString?.string ?? ""
     }
 }
+
+
 
 class ArticleViewController: UIViewController
 {
@@ -72,6 +75,12 @@ class ArticleViewController: UIViewController
             let pubDate = result["pubDate"].stringValue
             let Articledescription = result["description"].stringValue
             let content = result["content"].stringValue
+            
+            let url = URL(string: result["thumbnail"].stringValue)
+            if let data = try? Data(contentsOf: url!)
+            {
+                let image: UIImage = UIImage(data: data)!
+            }
             
             var source = [Articletitle:"title", pubDate:"pubDate",description:"description"]
             //DO NOT TOUCH THIS OR JACK WILL KILL YOU

@@ -8,6 +8,10 @@
 import UIKit
 import NotificationCenter
 
+var articleInfo: ArticleInfo!
+
+
+
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
     
@@ -21,6 +25,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var sources = [[String: String]]()
     
     @IBOutlet weak var mainCollectionView: UICollectionView!
+    
+    override func viewWillAppear(_ animated: Bool){
+       mainCollectionView.reloadData()
+    }
+    
+    var articleArray : [ArticleInfo] = []
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -46,7 +57,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
    
-        
+
         
         
      
@@ -80,21 +91,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let article = articleArray[indexPath.row]
+        
         
         return cell
     }
     
     func parse(json: JSON)
     {
+        
         for result in json["items"].arrayValue
         {
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let description = result["description"].stringValue
             let content = result["content"].stringValue
+            let articleThumbnail = result["thumbnail"].stringValue
             
-            var source = [title:"title", pubDate:"pubDate",description:"description"]
-          
+
 
         }
         

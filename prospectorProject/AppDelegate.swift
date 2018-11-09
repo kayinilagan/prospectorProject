@@ -59,11 +59,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             guard granted else { return }
             self.getNotificationSettings()
+            
+//            let content = UNMutableNotificationContent()
+//            content.title = "New Article"
+//            content.subtitle = "Nobody Reads our Newspaper"
+//            content.body = "This is a new article from the Prospector Group and showing some new data on the paper reading"
+//            
+//            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+//            
+//            let requestIdentifier = "sample request"
+//            let request = UNNotificationRequest()
         }
     }
     
-    func application(_ application: UIApplication,
-                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let tokenParts = deviceToken.map { data -> String in
             return String(format: "%02.2hhx", data)
         }

@@ -19,8 +19,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTT-hW-9s8">
-                                <rect key="frame" x="0.0" y="64" width="768" height="928"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4uc-GD-zry">
+                                <rect key="frame" x="0.0" y="64" width="128" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-fm-BkE">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="38"/>
+                                        <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Trending"/>
+                                        <connections>
+                                            <segue destination="WdX-cT-Jpd" kind="show" id="NM1-j0-uhu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-pc-Mge">
+                                        <rect key="frame" x="0.0" y="46" width="128" height="38"/>
+                                        <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Sports"/>
+                                        <connections>
+                                            <segue destination="keT-iG-7rS" kind="show" id="EkC-H3-oAR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19E-l7-MEe">
+                                        <rect key="frame" x="0.0" y="92" width="128" height="38"/>
+                                        <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Entertainment"/>
+                                        <connections>
+                                            <segue destination="lh0-I7-rTy" kind="show" id="FLJ-J8-fWU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gA-aw-hnA">
+                                        <rect key="frame" x="0.0" y="138" width="128" height="38"/>
+                                        <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="News"/>
+                                        <connections>
+                                            <segue destination="bmF-6k-FnV" kind="show" id="5zm-9r-tbX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-yG-iqL">
+                                        <rect key="frame" x="0.0" y="184" width="128" height="38"/>
+                                        <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Features"/>
+                                        <connections>
+                                            <segue destination="mvB-T7-37b" kind="show" id="VUG-x2-fIg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-xe-eHF">
+                                        <rect key="frame" x="0.0" y="230" width="128" height="38"/>
+                                        <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Opinion"/>
+                                        <connections>
+                                            <segue destination="v3T-bq-n2Q" kind="show" id="FIU-1V-W5U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v69-PJ-Cep">
+                                        <rect key="frame" x="0.0" y="276" width="128" height="38"/>
+                                        <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Other"/>
+                                        <connections>
+                                            <segue destination="xdy-aW-IbO" kind="show" id="4d2-DS-jvV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-Pi-4X7">
+                                        <rect key="frame" x="0.0" y="322" width="128" height="38"/>
+                                        <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Who We Are"/>
+                                        <connections>
+                                            <segue destination="ryX-Lp-SZQ" kind="show" id="TR8-Rs-Iym"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DTT-hW-9s8">
+                                <rect key="frame" x="0.0" y="48" width="768" height="928"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A3Z-T8-gPY">
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="944"/>
@@ -59,76 +137,6 @@
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4uc-GD-zry">
-                                                            <rect key="frame" x="0.0" y="20" width="128" height="360"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-fm-BkE">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="38"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                    <state key="normal" title="Trending"/>
-                                                                    <connections>
-                                                                        <segue destination="WdX-cT-Jpd" kind="show" id="NM1-j0-uhu"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-pc-Mge">
-                                                                    <rect key="frame" x="0.0" y="46" width="128" height="38"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                    <state key="normal" title="Sports"/>
-                                                                    <connections>
-                                                                        <segue destination="keT-iG-7rS" kind="show" id="EkC-H3-oAR"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19E-l7-MEe">
-                                                                    <rect key="frame" x="0.0" y="92" width="128" height="38"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                    <state key="normal" title="Entertainment"/>
-                                                                    <connections>
-                                                                        <segue destination="lh0-I7-rTy" kind="show" id="FLJ-J8-fWU"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gA-aw-hnA">
-                                                                    <rect key="frame" x="0.0" y="138" width="128" height="38"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                    <state key="normal" title="News"/>
-                                                                    <connections>
-                                                                        <segue destination="bmF-6k-FnV" kind="show" id="5zm-9r-tbX"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-yG-iqL">
-                                                                    <rect key="frame" x="0.0" y="184" width="128" height="38"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                    <state key="normal" title="Features"/>
-                                                                    <connections>
-                                                                        <segue destination="mvB-T7-37b" kind="show" id="VUG-x2-fIg"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-xe-eHF">
-                                                                    <rect key="frame" x="0.0" y="230" width="128" height="38"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                    <state key="normal" title="Opinion"/>
-                                                                    <connections>
-                                                                        <segue destination="v3T-bq-n2Q" kind="show" id="FIU-1V-W5U"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v69-PJ-Cep">
-                                                                    <rect key="frame" x="0.0" y="276" width="128" height="38"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                    <state key="normal" title="Other"/>
-                                                                    <connections>
-                                                                        <segue destination="xdy-aW-IbO" kind="show" id="4d2-DS-jvV"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-Pi-4X7">
-                                                                    <rect key="frame" x="0.0" y="322" width="128" height="38"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                    <state key="normal" title="Who We Are"/>
-                                                                    <connections>
-                                                                        <segue destination="ryX-Lp-SZQ" kind="show" id="TR8-Rs-Iym"/>
-                                                                    </connections>
-                                                                </button>
-                                                            </subviews>
-                                                        </stackView>
                                                     </subviews>
                                                 </view>
                                                 <connections>
@@ -158,7 +166,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="m8I-vL-y76">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" image="hamburgerIconSkinny" id="R9o-Dc-pk8"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="hamburgerIconSkinny" id="R9o-Dc-pk8">
+                            <connections>
+                                <action selector="hamburgerButton:" destination="BYZ-38-t0r" id="82n-2s-cj3"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL"/>
                     </navigationItem>
                     <connections>
@@ -180,20 +192,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="insert article here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vNp-iW-GBX">
-                                <rect key="frame" x="0.0" y="138" width="768" height="886"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-fE-a3i">
+                                <rect key="frame" x="0.0" y="64" width="768" height="923"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-yZ-qtZ">
-                                <rect key="frame" x="0.0" y="64" width="183" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UzJ-eE-T3f">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="194"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-yZ-qtZ">
+                                        <rect key="frame" x="0.0" y="125" width="768" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="insert article here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vNp-iW-GBX">
+                                        <rect key="frame" x="0.0" y="198" width="768" height="740"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Wsa-uC-bqS"/>

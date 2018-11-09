@@ -7,17 +7,11 @@
 //
 
 import UIKit
-import PushKit
+import NotificationCenter
+import UserNotifications
 
-class FileProviderExtension: NSFileProviderExtension {
-    var pushRegistry: PKPushRegistry!
-    
-//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//
-//        pushRegistry = PKPushRegistry(queue: nil)
-//        pushRegistry.delegate = self
-//        pushRegistry.desiredPushTypes = [.fileProvider]
-//
-//        return true
-//    }
+class FileProviderExtension: UNUserNotificationCenter, UNUserNotificationCenterDelegate {
+//    var pushRegistry: PKPushRegistry!
+    let content = UNMutableNotificationContent()
+    content.title = "New Article!"
 }

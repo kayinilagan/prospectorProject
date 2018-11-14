@@ -1,6 +1,5 @@
 //  ViewController.swift
 //  prospectorProject
-//  bobby died again
 //  Created by period3 on 10/26/18.
 
 //  Copyright © 2018 period3. All rights reserved.
@@ -115,8 +114,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
   
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ArticleViewController
-        
+        //let vc = segue.destination as! ArticleViewController
+
 
     }
     
@@ -126,4 +125,3 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
 
 }
-

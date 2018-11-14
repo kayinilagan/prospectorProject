@@ -8,7 +8,7 @@
 
 import UIKit
 
-//This is an extension that converts the content and description from html format to the format we need to be able to put it in a text view or label, plz no touch or I will euthanize you - Jack
+//This is an extension that converts the content and description from html format to the format we need to be able to put it in a text view or label, plz no touch or I will eu·tha·nize you - Jack
 
 extension String {
     var htmlToAttributedString: NSAttributedString? {
@@ -40,6 +40,7 @@ class ArticleViewController: UIViewController
         super.viewDidLoad()
 
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
+                            //https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2
         
         if let url = URL(string: homePageQuery)
         {

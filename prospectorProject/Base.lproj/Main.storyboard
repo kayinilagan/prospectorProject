@@ -264,10 +264,10 @@
             </objects>
             <point key="canvasLocation" x="-6" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Trending View Controller-->
         <scene sceneID="XfU-oz-7E2">
             <objects>
-                <viewController id="WdX-cT-Jpd" sceneMemberID="viewController">
+                <viewController id="WdX-cT-Jpd" customClass="TrendingViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsq-r5-XW1">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,10 +288,10 @@
             </objects>
             <point key="canvasLocation" x="-7.2000000000000002" y="859.52023988005999"/>
         </scene>
-        <!--View Controller-->
+        <!--Entertainment View Controller-->
         <scene sceneID="pfK-3I-eTZ">
             <objects>
-                <viewController id="lh0-I7-rTy" sceneMemberID="viewController">
+                <viewController id="lh0-I7-rTy" customClass="EntertainmentViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RLL-Cz-K0l">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,10 +312,10 @@
             </objects>
             <point key="canvasLocation" x="1484" y="860"/>
         </scene>
-        <!--View Controller-->
+        <!--News View Controller-->
         <scene sceneID="K6D-dL-cOL">
             <objects>
-                <viewController id="bmF-6k-FnV" sceneMemberID="viewController">
+                <viewController id="bmF-6k-FnV" customClass="NewsViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ERg-bG-0Gq">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -336,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="2148" y="860"/>
         </scene>
-        <!--View Controller-->
+        <!--Sports View Controller-->
         <scene sceneID="uEF-Z5-3S0">
             <objects>
-                <viewController id="keT-iG-7rS" sceneMemberID="viewController">
+                <viewController id="keT-iG-7rS" customClass="SportsViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zxy-ge-59Y">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,10 +360,10 @@
             </objects>
             <point key="canvasLocation" x="674" y="860"/>
         </scene>
-        <!--View Controller-->
+        <!--Features View Controller-->
         <scene sceneID="TEe-JF-aGd">
             <objects>
-                <viewController id="mvB-T7-37b" sceneMemberID="viewController">
+                <viewController id="mvB-T7-37b" customClass="FeaturesViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9pm-mm-lt1">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,10 +384,10 @@
             </objects>
             <point key="canvasLocation" x="-7" y="1546"/>
         </scene>
-        <!--View Controller-->
+        <!--Opinion View Controller-->
         <scene sceneID="BTz-9Q-7aU">
             <objects>
-                <viewController id="xdy-aW-IbO" sceneMemberID="viewController">
+                <viewController id="xdy-aW-IbO" customClass="OpinionViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hbF-Rw-xoe">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -408,10 +408,10 @@
             </objects>
             <point key="canvasLocation" x="1484" y="1546"/>
         </scene>
-        <!--View Controller-->
+        <!--Who We Are View Controller-->
         <scene sceneID="c5p-Ql-yoR">
             <objects>
-                <viewController id="ryX-Lp-SZQ" sceneMemberID="viewController">
+                <viewController id="ryX-Lp-SZQ" customClass="WhoWeAreViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="89j-Hr-ZTD">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,10 +432,10 @@
             </objects>
             <point key="canvasLocation" x="2148" y="1546"/>
         </scene>
-        <!--View Controller-->
+        <!--Opinion View Controller-->
         <scene sceneID="Wj7-gi-La6">
             <objects>
-                <viewController id="v3T-bq-n2Q" sceneMemberID="viewController">
+                <viewController id="v3T-bq-n2Q" customClass="OpinionViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hFb-Hq-h5g">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -17,6 +17,14 @@
 		6E8C053A21836CAF004CF39D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E8C053821836CAF004CF39D /* LaunchScreen.storyboard */; };
 		6EE2915C21875C5C00EEE5D0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2915B21875C5C00EEE5D0 /* CollectionViewCell.swift */; };
 		6EE3D66921949C7300B8833F /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE3D66821949C7300B8833F /* NotificationCenter.swift */; };
+		6EE481A3219C83140050F30C /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481A2219C83140050F30C /* TrendingViewController.swift */; };
+		6EE481A5219C83400050F30C /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481A4219C83400050F30C /* SportsViewController.swift */; };
+		6EE481A7219C838A0050F30C /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481A6219C838A0050F30C /* EntertainmentViewController.swift */; };
+		6EE481A9219C83AE0050F30C /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481A8219C83AE0050F30C /* NewsViewController.swift */; };
+		6EE481AB219C83CB0050F30C /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481AA219C83CB0050F30C /* FeaturesViewController.swift */; };
+		6EE481AD219C83EF0050F30C /* OpinionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481AC219C83EF0050F30C /* OpinionViewController.swift */; };
+		6EE481AF219C84060050F30C /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481AE219C84060050F30C /* OtherViewController.swift */; };
+		6EE481B1219C84240050F30C /* WhoWeAreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481B0219C84240050F30C /* WhoWeAreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,14 @@
 		6E8C053B21836CAF004CF39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EE2915B21875C5C00EEE5D0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		6EE3D66821949C7300B8833F /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		6EE481A2219C83140050F30C /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		6EE481A4219C83400050F30C /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
+		6EE481A6219C838A0050F30C /* EntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
+		6EE481A8219C83AE0050F30C /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		6EE481AA219C83CB0050F30C /* FeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewController.swift; sourceTree = "<group>"; };
+		6EE481AC219C83EF0050F30C /* OpinionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpinionViewController.swift; sourceTree = "<group>"; };
+		6EE481AE219C84060050F30C /* OtherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViewController.swift; sourceTree = "<group>"; };
+		6EE481B0219C84240050F30C /* WhoWeAreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoWeAreViewController.swift; sourceTree = "<group>"; };
 		6EE975E7218A00DA00A45057 /* prospectorProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = prospectorProject.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +89,14 @@
 				6EE2915B21875C5C00EEE5D0 /* CollectionViewCell.swift */,
 				6E0324E521949D2F00E8040C /* ArticleInfoClass.swift */,
 				6E8C053321836CAE004CF39D /* Main.storyboard */,
+				6EE481A2219C83140050F30C /* TrendingViewController.swift */,
+				6EE481A4219C83400050F30C /* SportsViewController.swift */,
+				6EE481A6219C838A0050F30C /* EntertainmentViewController.swift */,
+				6EE481A8219C83AE0050F30C /* NewsViewController.swift */,
+				6EE481AA219C83CB0050F30C /* FeaturesViewController.swift */,
+				6EE481AC219C83EF0050F30C /* OpinionViewController.swift */,
+				6EE481AE219C84060050F30C /* OtherViewController.swift */,
+				6EE481B0219C84240050F30C /* WhoWeAreViewController.swift */,
 				6E8C053621836CAF004CF39D /* Assets.xcassets */,
 				6E8C053821836CAF004CF39D /* LaunchScreen.storyboard */,
 				6E35CB922188AC1C00BD9F03 /* SwiftyJSON.swift */,
@@ -158,10 +182,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E8C053221836CAE004CF39D /* ViewController.swift in Sources */,
+				6EE481AD219C83EF0050F30C /* OpinionViewController.swift in Sources */,
+				6EE481A3219C83140050F30C /* TrendingViewController.swift in Sources */,
 				6EE3D66921949C7300B8833F /* NotificationCenter.swift in Sources */,
 				6E44CD64218B5530003172E7 /* ArticleViewController.swift in Sources */,
+				6EE481A9219C83AE0050F30C /* NewsViewController.swift in Sources */,
 				6E8C053021836CAE004CF39D /* AppDelegate.swift in Sources */,
 				6EE2915C21875C5C00EEE5D0 /* CollectionViewCell.swift in Sources */,
+				6EE481B1219C84240050F30C /* WhoWeAreViewController.swift in Sources */,
+				6EE481A5219C83400050F30C /* SportsViewController.swift in Sources */,
+				6EE481AF219C84060050F30C /* OtherViewController.swift in Sources */,
+				6EE481A7219C838A0050F30C /* EntertainmentViewController.swift in Sources */,
+				6EE481AB219C83CB0050F30C /* FeaturesViewController.swift in Sources */,
 				6E35CB932188AC1C00BD9F03 /* SwiftyJSON.swift in Sources */,
 				6E0324E621949D2F00E8040C /* ArticleInfoClass.swift in Sources */,
 			);

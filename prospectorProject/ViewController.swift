@@ -114,11 +114,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
   
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! ArticleViewController
-        
-
-    }
+    
     
     
     

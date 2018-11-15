@@ -8,6 +8,36 @@
 
 import UIKit
 
+protocol PinterestLayoutDelegate: class {
+    func collectionView(_ collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat
+}
+
 class pinterestLayout: UICollectionViewLayout {
+
+    // 1
+    weak var delegate: PinterestLayoutDelegate!
+    
+    // 2
+    fileprivate var numberOfColumns = 2
+    fileprivate var cellPadding: CGFloat = 6
+    
+    // 3
+    fileprivate var cache = [UICollectionViewLayoutAttributes]()
+    
+    // 4
+    fileprivate var contentHeight: CGFloat = 0
+    
+    fileprivate var contentWidth: CGFloat {
+        guard let collectionView = collectionView else {
+            return 0
+        }
+        let insets = collectionView.contentInset
+        return collectionView.bounds.width - (insets.left + insets.right)
+    }
+    
+    // 5
+    override var collectionViewContentSize: CGSize {
+        return CGSize(width: contentWidth, height: contentHeight)
+    }
 
 }

@@ -22,6 +22,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var hamburgerIsVisible = false
     
     var sources = [[String: String]]()
+    var articleArray = [ArticleInfo]()
     
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
@@ -29,8 +30,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        mainCollectionView.reloadData()
     }
     
-    var articleArray : [ArticleInfo] = []
-
+    
+    var articleClass : ArticleInfo!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -56,7 +57,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
    
-
+        mainCollectionView.reloadData()
         
         
      
@@ -81,17 +82,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }) { (animationComplete) in
             print("The animation is complete!")
         }
+        mainCollectionView.reloadData()
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
+        return articleArray.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 1
+        return articleArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        //let article = articleArray[indexPath.row]
+        let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+
+        cell.articleLabel.text = articleArray[indexPath.item].articleTitle
+        cell.articleDateLabel.text = articleArray[indexPath.item].articleDate
         
+        print("FUCK")
         
         return cell
     }
@@ -106,8 +116,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let description = result["description"].stringValue
             let content = result["content"].stringValue
             let articleThumbnail = result["thumbnail"].stringValue
-            
-
+            let source = ["title":title, "pubDate":pubDate, "description": description, "content":content]
+            sources.append(source)
 
         }
         

@@ -11,9 +11,9 @@ import UIKit
 
 class ArticleInfo
 {
-    var articleTitle:String!
-    var articleDate:String!
-    var articleThumbnail: UIImage!
+    var articleTitle:String
+    var articleDate:String
+    var articleThumbnail: UIImage
     
     
     init(articleTitle:String, articleDate:String, articleThumbnail: UIImage)

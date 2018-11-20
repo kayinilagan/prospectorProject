@@ -8,7 +8,7 @@
 
 import UIKit
 
-//This is an extension that converts the content and description from html format to the format we need to be able to put it in a text view or label, plz no touch or I will eu·tha·nize you - Jack
+//This is an extension that converts the content and description from html format to the format we need to be able to put it in a text view or label, plz no touch or I will euthanize you - Jack
 
 extension String {
     var htmlToAttributedString: NSAttributedString? {
@@ -60,7 +60,7 @@ class ArticleViewController: UIViewController
         
         
         
-
+        
         
         
     }
@@ -79,10 +79,11 @@ class ArticleViewController: UIViewController
             
           
             
-            var source = [Articletitle:"title", pubDate:"pubDate",description:"description"]
+            var source = [Articletitle:"title", pubDate:"pubDate", Articledescription:"description", content: "content"]
             //DO NOT TOUCH THIS OR JACK WILL KILL YOU
-            articleTextView.text = content.htmlToString
-            dateLabel.text = pubDate
+//            articleTextView.text = content.htmlToString
+            articleTextView.text = source["content"]?.htmlToString
+            dateLabel.text = source["pubDate"]
             
             
           

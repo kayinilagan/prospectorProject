@@ -31,7 +31,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
-    var articleClass : ArticleInfo!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -55,9 +54,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
                 
             }
+            
+            
         }
-   
-        mainCollectionView.reloadData()
+        
+//        mainCollectionView.reloadData()
         
         
      
@@ -85,23 +86,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         mainCollectionView.reloadData()
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int
-    {
-        return articleArray.count
-    }
+//    func numberOfSections(in collectionView: UICollectionView) -> Int
+//    {
+//        return articleArray.count
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return articleArray.count
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-
-        cell.articleLabel.text = articleArray[indexPath.item].articleTitle
-        cell.articleDateLabel.text = articleArray[indexPath.item].articleDate
+       let source = sources[indexPath.row]
+        cell.articleLabel.text = source["title"]
+        cell.articleDateLabel.text = source["pubDate"]
         
-        print("FUCK")
+        print("bobby sucks")
         
         return cell
     }
@@ -118,7 +120,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let articleThumbnail = result["thumbnail"].stringValue
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content]
             sources.append(source)
-
+            
+          
         }
         
   

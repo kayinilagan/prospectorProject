@@ -123,8 +123,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let articleThumbnail = result["thumbnail"].stringValue
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content]
             sources.append(source)
+            
             spinner.stopAnimating()
             spinner.isHidden = true
+            print("We're parsing babey")
+           
             
           
         }
@@ -136,7 +139,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     {
         let vc = segue.destination as! ArticleViewController
         vc.articleSource = sources
+        
+      
     }
+    
+   
     
     
     

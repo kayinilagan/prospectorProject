@@ -29,7 +29,7 @@ extension String {
 class ArticleViewController: UIViewController
 {
     
-    var articleSource = [String:String]()
+    var articleSource = [[String:String]]()
 
     @IBOutlet weak var articleTextView: UITextView!
 
@@ -41,6 +41,10 @@ class ArticleViewController: UIViewController
 
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
                             //https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2
+        
+        
+        
+        
         
         if let url = URL(string: homePageQuery)
         {
@@ -77,11 +81,14 @@ class ArticleViewController: UIViewController
             let Articledescription = result["description"].stringValue
             let content = result["content"].stringValue
             
-            var source = [Articletitle:"title", pubDate:"pubDate", Articledescription:"description", content: "content"]
+          
+            
+           // var source = [Articletitle:"title", pubDate:"pubDate", Articledescription:"description", content: "content"]
+            
             //DO NOT TOUCH THIS OR JACK WILL KILL YOU
 //            articleTextView.text = content.htmlToString
-            articleTextView.text = source["content"]?.htmlToString
-            dateLabel.text = source["pubDate"]
+            articleTextView.text = content.htmlToString
+            dateLabel.text = pubDate
             
             
           

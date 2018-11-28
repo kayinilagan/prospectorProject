@@ -16,6 +16,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     @IBOutlet weak var primeView: UIView!
     
@@ -34,7 +35,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        spinner.isHidden = true
         let logo = UIImage(named: "prospectorLogol")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
@@ -113,6 +114,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         for result in json["items"].arrayValue
         {
+            spinner.isHidden = false
+            spinner.startAnimating()
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let description = result["description"].stringValue
@@ -120,6 +123,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let articleThumbnail = result["thumbnail"].stringValue
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content]
             sources.append(source)
+            spinner.stopAnimating()
+            spinner.isHidden = true
             
           
         }

@@ -77,8 +77,6 @@ class ArticleViewController: UIViewController
             let Articledescription = result["description"].stringValue
             let content = result["content"].stringValue
             
-          
-            
             var source = [Articletitle:"title", pubDate:"pubDate", Articledescription:"description", content: "content"]
             //DO NOT TOUCH THIS OR JACK WILL KILL YOU
 //            articleTextView.text = content.htmlToString

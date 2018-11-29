@@ -122,7 +122,7 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = articleCollectionView.dequeueReusableCell(withReuseIdentifier: "article", for: indexPath) as! ArticleCollectionViewCell
         let source = articleSource[indexPath.row]
-        cell.articleTextView.text = source["content"]?.htmlToString as? String
+        cell.articleTextView.text = source["content"]?.htmlToString
         print(source["content"]?.htmlToString)
         
         print("bobby sucks")

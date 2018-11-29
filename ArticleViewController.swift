@@ -26,15 +26,19 @@ extension String {
 
 
 
-class ArticleViewController: UIViewController
+class ArticleViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate
 {
+    
+    
+ 
     
     var articleSource = [[String:String]]()
 
-    @IBOutlet weak var articleTextView: UITextView!
+    
 
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var articleCollectionView: UICollectionView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -76,22 +80,32 @@ class ArticleViewController: UIViewController
     {
         for result in json["items"].arrayValue
         {
+            print("We're parsing babey")
+           
+   
+            
             let Articletitle = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let Articledescription = result["description"].stringValue
             let content = result["content"].stringValue
             
-          
+            
+            
+            
+            //FIX THIS THING RIGHT HERE 
             
            // var source = [Articletitle:"title", pubDate:"pubDate", Articledescription:"description", content: "content"]
             
-            //DO NOT TOUCH THIS OR JACK WILL KILL YOU
+            //DO NOT TOUCH THIS OR JACK WILL KILL YOU nicely
+            
+            
+            
+
 //            articleTextView.text = content.htmlToString
-            articleTextView.text = content.htmlToString
-            dateLabel.text = pubDate
+//            dateLabel.text = pubDate
+//
             
-            
-          
+        
             
             print(Articledescription.htmlToString)
         }
@@ -99,6 +113,24 @@ class ArticleViewController: UIViewController
        
       
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = articleCollectionView.dequeueReusableCell(withReuseIdentifier: "article", for: indexPath) as! ArticleCollectionViewCell
+        let source = articleSource[indexPath.row]
+        cell.articleTextView.text = source["content"]?.htmlToString as? String
+        print(source["content"]?.htmlToString)
+        
+        print("bobby sucks")
+        
+        return cell
+        
+    }
+    
     
 
   

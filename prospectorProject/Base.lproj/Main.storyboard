@@ -216,7 +216,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-fE-a3i">
-                                <rect key="frame" x="0.0" y="64" width="768" height="923"/>
+                                <rect key="frame" x="0.0" y="70" width="768" height="923"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UzJ-eE-T3f">
@@ -230,13 +230,43 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="insert article here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vNp-iW-GBX">
-                                        <rect key="frame" x="0.0" y="198" width="768" height="740"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3zU-gs-2Qz">
+                                        <rect key="frame" x="0.0" y="202" width="768" height="715"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CJC-jG-8fB">
+                                            <size key="itemSize" width="768" height="555"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="article" id="Uef-u5-sNf" customClass="ArticleCollectionViewCell" customModule="prospectorProject" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="768" height="555"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="555"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="content" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au0-Aq-ruF">
+                                                            <rect key="frame" x="0.0" y="11" width="768" height="544"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                </view>
+                                                <connections>
+                                                    <outlet property="articleTextView" destination="au0-Aq-ruF" id="2ef-Fv-oP5"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="ZGI-wT-Vqe" id="VZc-bh-Xqi"/>
+                                            <outlet property="delegate" destination="ZGI-wT-Vqe" id="T4T-g0-q8m"/>
+                                        </connections>
+                                    </collectionView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -244,7 +274,7 @@
                         <viewLayoutGuide key="safeArea" id="Wsa-uC-bqS"/>
                     </view>
                     <connections>
-                        <outlet property="articleTextView" destination="vNp-iW-GBX" id="AEU-AZ-HO6"/>
+                        <outlet property="articleCollectionView" destination="3zU-gs-2Qz" id="FzQ-d2-oGE"/>
                         <outlet property="dateLabel" destination="fg8-yZ-qtZ" id="7i2-Q5-5ym"/>
                     </connections>
                 </viewController>
@@ -464,6 +494,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="24" height="24"/>
+        <image name="hamburgerIconSkinny" width="25" height="25"/>
     </resources>
 </document>

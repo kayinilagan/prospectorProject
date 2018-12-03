@@ -2,17 +2,10 @@
 # platform :ios, '9.0'
 
 target 'Notificaiton Center' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Notificaiton Center
-
+    pod 'OneSignal', '>= 2.6.2', '<3.0'
 end
 
 target 'prospectorProject' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for prospectorProject
-
+    pod 'OneSignal', '>= 2.6.2', '<3.0'
+  
 end

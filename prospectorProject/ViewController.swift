@@ -128,6 +128,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             spinner.isHidden = true
             print("We're parsing babey")
            
+           func prepare(for segue: UIStoryboardSegue, sender: Any?)
+           {
+            let vc = segue.destination as! ArticleViewController
+            vc.contentString = content
+           }
             
           
         }

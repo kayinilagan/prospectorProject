@@ -33,7 +33,7 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
  
     
     var articleSource = [[String:String]]()
-
+    var contentString: String!
     
 
     @IBOutlet weak var dateLabel: UILabel!
@@ -47,6 +47,7 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
                             //https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2
         
         
+
         
         
         
@@ -82,17 +83,15 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
         {
             print("We're parsing babey")
            
-   
+            
             
             let Articletitle = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let Articledescription = result["description"].stringValue
-            let content = result["content"].stringValue
+            var content = result["content"].stringValue
             
             
             
-            
-            //FIX THIS THING RIGHT HERE 
             
            // var source = [Articletitle:"title", pubDate:"pubDate", Articledescription:"description", content: "content"]
             
@@ -121,13 +120,13 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = articleCollectionView.dequeueReusableCell(withReuseIdentifier: "article", for: indexPath) as! ArticleCollectionViewCell
+        articleCollectionView.reloadData()
+
         let source = articleSource[indexPath.row]
         cell.articleTextView.text = source["content"]?.htmlToString
-        print(source["content"]?.htmlToString)
-        
         print("bobby sucks")
-        
         return cell
+
         
     }
     

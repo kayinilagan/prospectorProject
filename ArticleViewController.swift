@@ -32,7 +32,7 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
     
  
     
-    var articleSource = [[String:String]]()
+    var articleSource = [String:String]()
     var contentString: String!
     
 
@@ -45,7 +45,6 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
 
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
                             //https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2
-        
         
 
         
@@ -82,34 +81,17 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
         for result in json["items"].arrayValue
         {
             print("We're parsing babey")
-           
-            
-            
             let Articletitle = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let Articledescription = result["description"].stringValue
             var content = result["content"].stringValue
-            
-            
-            
-            
            // var source = [Articletitle:"title", pubDate:"pubDate", Articledescription:"description", content: "content"]
-            
             //DO NOT TOUCH THIS OR JACK WILL KILL YOU nicely
-            
-            
-            
-
 //            articleTextView.text = content.htmlToString
 //            dateLabel.text = pubDate
 //
-            
-        
-            
-            print(Articledescription.htmlToString)
+    
         }
-        
-       
       
     }
     
@@ -122,7 +104,7 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
         let cell = articleCollectionView.dequeueReusableCell(withReuseIdentifier: "article", for: indexPath) as! ArticleCollectionViewCell
         articleCollectionView.reloadData()
         let source = articleSource[indexPath.row]
-        cell.articleTextView.text = source["content"]?.htmlToString
+        cell.articleTextView.text = contentString?.htmlToString
         print("bobby sucks")
         return cell
         }

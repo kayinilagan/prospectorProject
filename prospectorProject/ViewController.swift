@@ -13,7 +13,8 @@ var articleInfo: ArticleInfo!
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
-    
+    var contentString1: String!
+
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -39,9 +40,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let logo = UIImage(named: "prospectorLogol")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
-        
+
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
-        
+
         if let url = URL(string: homePageQuery)
         {
             if let data = try? Data(contentsOf: url)
@@ -52,14 +53,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     parse(json: json)
                     return
                 }
-            
-                
+
+
             }
-            
-            
+
+
         }
         
-//        mainCollectionView.reloadData()
+        mainCollectionView.reloadData()
         
         
      
@@ -87,11 +88,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         mainCollectionView.reloadData()
     }
     
-//    func numberOfSections(in collectionView: UICollectionView) -> Int
-//    {
-//        return articleArray.count
-//    }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return 10
@@ -103,15 +100,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        let source = sources[indexPath.row]
         cell.articleLabel.text = source["title"]
         cell.articleDateLabel.text = source["pubDate"]
-        
         print("bobby sucks")
-        
         return cell
     }
     
     func parse(json: JSON)
     {
-        
+        var x = 0
+
         for result in json["items"].arrayValue
         {
             spinner.isHidden = false
@@ -123,29 +119,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let articleThumbnail = result["thumbnail"].stringValue
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content]
             sources.append(source)
-            
+            contentString1 = content
             spinner.stopAnimating()
             spinner.isHidden = true
+            let itemTest = result["items[1].title"]
             print("We're parsing babey")
-           
-           func prepare(for segue: UIStoryboardSegue, sender: Any?)
-           {
-            let vc = segue.destination as! ArticleViewController
-            vc.contentString = content
-           }
-            
-          
+            print(itemTest)
         }
-        
-  
+
+
+
+
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?)
     {
+//        var indexPath: IndexPath!
+//         let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        guard let contentView = (sender as AnyObject).superview else {return}
+        guard let cell = contentView?.superview as? CollectionViewCell else {return}
+        guard let collectionView = self.mainCollectionView else {return}
+        guard let indexpathForCell = collectionView.indexPath(for: cell) else {return}
         let vc = segue.destination as! ArticleViewController
-        vc.articleSource = sources
+        vc.articleSource = sources[]
+        vc.contentString = contentString1
         
-      
     }
     
    

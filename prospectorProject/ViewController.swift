@@ -117,7 +117,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let description = result["description"].stringValue
             let content = result["content"].stringValue
             let articleThumbnail = result["thumbnail"].stringValue
-            let source = ["title":title, "pubDate":pubDate, "description": description, "content":content]
+            let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail]
             sources.append(source)
             contentString1 = content
             spinner.stopAnimating()
@@ -141,7 +141,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         guard let collectionView = self.mainCollectionView else {return}
         guard let indexpathForCell = collectionView.indexPath(for: cell) else {return}
         let vc = segue.destination as! ArticleViewController
-        vc.articleSource = sources[]
+        vc.articleSource = sources
         vc.contentString = contentString1
         
     }

@@ -188,11 +188,32 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="m8I-vL-y76">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="hamburgerIconSkinny" id="R9o-Dc-pk8">
                             <connections>
                                 <action selector="hamburgerButton:" destination="BYZ-38-t0r" id="82n-2s-cj3"/>
                             </connections>
                         </barButtonItem>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" id="nMc-4D-RaV">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <attributedString key="attributedText">
+                                <fragment content="PROSPECTOR">
+                                    <attributes>
+                                        <color key="NSColor" red="0.087453864514827728" green="0.20676326751708984" blue="0.3940390944480896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="50" name="SukhumvitSet-Text"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="NOW">
+                                    <attributes>
+                                        <color key="NSColor" red="0.2149919867515564" green="0.63083118200302124" blue="0.98529237508773804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="50" name="SukhumvitSet-Text"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL"/>
                     </navigationItem>
                     <connections>
@@ -494,6 +515,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="25" height="25"/>
+        <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
 </document>

@@ -37,9 +37,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     {
         super.viewDidLoad()
         spinner.isHidden = true
-        let logo = UIImage(named: "prospectorLogol")
-        let imageView = UIImageView(image:logo)
-        self.navigationItem.titleView = imageView
 
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
 

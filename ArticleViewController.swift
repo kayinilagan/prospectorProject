@@ -45,8 +45,10 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
         super.viewDidLoad()
 
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
+                            //https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2
         
-        //contentString = articleSource
+
+        
         
 //        if let url = URL(string: homePageQuery)
 //        {
@@ -97,10 +99,10 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = articleCollectionView.dequeueReusableCell(withReuseIdentifier: "article", for: indexPath) as? ArticleCollectionViewCell
-        let source = articleSource[indexPath.row]
-        cell!.articleTextView.text = contentString?.htmlToString
-        //articleCollectionView.reloadData()
+        let cell = articleCollectionView.dequeueReusableCell(withReuseIdentifier: "article", for: indexPath) as! ArticleCollectionViewCell
+        articleCollectionView.reloadData()
+        //let source = articleSource[indexPath.row]
+        cell.articleTextView.text = contentString?.htmlToString
         print("bobby sucks")
         return cell!
         }

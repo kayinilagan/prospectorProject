@@ -6,6 +6,7 @@
 //
 import UIKit
 import NotificationCenter
+import OneSignal
 
 var articleInfo: ArticleInfo!
 
@@ -14,6 +15,8 @@ var articleInfo: ArticleInfo!
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
  
     var contentString1: String!
+    
+    var oneSignal = OneSignal()
 
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
@@ -37,7 +40,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     {
         super.viewDidLoad()
         spinner.isHidden = true
-
+        print(OneSignal.app_id())
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
 
         if let url = URL(string: homePageQuery)
@@ -119,9 +122,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             contentString1 = content
             spinner.stopAnimating()
             spinner.isHidden = true
-            let itemTest = result["items[1].title"]
-            print("We're parsing babey")
-            print(itemTest)
+//            let itemTest = result["items[1].title"]
+//            print("We're parsing babey")
+//            print(itemTest)
         }
 
 
@@ -136,7 +139,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         guard let contentView = (sender as AnyObject).superview else {return}
         guard let cell = contentView?.superview as? CollectionViewCell else {return}
         guard let collectionView = self.mainCollectionView else {return}
-        guard let indexpathForCell = collectionView.indexPath(for: cell) else {return}
+        guard collectionView.indexPath(for: cell) != nil else {return}
         let vc = segue.destination as! ArticleViewController
         vc.articleSource = sources
         vc.contentString = contentString1

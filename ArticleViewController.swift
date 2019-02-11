@@ -32,23 +32,21 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
     
  
     
+    @IBOutlet weak var articleTextField: UITextView!
     var articleSource = [[String:String]]()
     var contentString: String!
     
-
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var articleCollectionView: UICollectionView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
-                            //https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2
         
-
-        
-        contentString = articleSource
+        //contentString = articleSource
         
 //        if let url = URL(string: homePageQuery)
 //        {
@@ -70,43 +68,41 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
         
         
         
-        
     }
     
     
     
     
-//    func parse(json: JSON)
-//    {
-//        for result in json["items"].arrayValue
-//        {
-//            print("We're parsing babey")
-//            let Articletitle = result["title"].stringValue
-//            let pubDate = result["pubDate"].stringValue
-//            let Articledescription = result["description"].stringValue
-//            var content = result["content"].stringValue
-//           // var source = [Articletitle:"title", pubDate:"pubDate", Articledescription:"description", content: "content"]
-//            //DO NOT TOUCH THIS OR JACK WILL KILL YOU nicely
-////            articleTextView.text = content.htmlToString
-////            dateLabel.text = pubDate
-////
-//
-//        }
-//
-//    }
+    func parse(json: JSON)
+    {
+        for result in json["items"].arrayValue
+        {
+            print("We're parsing babey")
+            let articletitle = result["title"].stringValue
+            let pubDate = result["pubDate"].stringValue
+            let articledescription = result["description"].stringValue
+            var content = result["content"].stringValue
+            var source = [articletitle:"title", pubDate:"pubDate", articledescription:"description", content: "content"]
+            //DO NOT TOUCH THIS OR JACK WILL KILL YOU nicely
+            
+            dateLabel.text = pubDate
+
+
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 1
+        return articleSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = articleCollectionView.dequeueReusableCell(withReuseIdentifier: "article", for: indexPath) as! ArticleCollectionViewCell
-        articleCollectionView.reloadData()
+        let cell = articleCollectionView.dequeueReusableCell(withReuseIdentifier: "article", for: indexPath) as? ArticleCollectionViewCell
         let source = articleSource[indexPath.row]
-        cell.articleTextView.text = contentString?.htmlToString
+        cell!.articleTextView.text = contentString?.htmlToString
+        //articleCollectionView.reloadData()
         print("bobby sucks")
-        return cell
+        return cell!
         }
     
     

@@ -9,6 +9,8 @@
 import UIKit
 
 class EntertainmentViewController: UIViewController {
+    var arrayofArticlesEntertainment = [[String: String]]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

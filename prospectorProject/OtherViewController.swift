@@ -9,6 +9,8 @@
 import UIKit
 
 class OtherViewController: UIViewController {
+    var arrayofArticlesOther = [[String: String]]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

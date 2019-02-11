@@ -9,6 +9,8 @@
 import UIKit
 
 class OpinionViewController: UIViewController {
+    var arrayofArticlesOpinions = [[String: String]]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

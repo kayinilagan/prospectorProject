@@ -204,7 +204,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             {
                 if holderC[j] == "Sports"
                 {
-                    arrayHolder.append(one)
+                    sportsArrayHolder.append(one)
                 }
             }
             for k in 0...cCount
@@ -236,7 +236,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             {
                 if holderC[j] == "Entertainment"
                 {
-                    arrayHolder.append(one)
+                    entertainmentArrayHolder.append(one)
                 }
             }
             for k in 0...cCount
@@ -267,7 +267,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             {
                 if holderC[j] == "News"
                 {
-                    arrayHolder.append(one)
+                    newsArrayHolder.append(one)
                 }
             }
             for k in 0...cCount
@@ -298,7 +298,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             {
                 if holderC[j] == "Features"
                 {
-                    arrayHolder.append(one)
+                    featuresArrayHolder.append(one)
                 }
             }
             for k in 0...cCount
@@ -329,7 +329,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             {
                 if holderC[j] == "Opinion"
                 {
-                    arrayHolder.append(one)
+                    opinionArrayHolder.append(one)
                 }
             }
             for k in 0...cCount
@@ -360,7 +360,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             {
                 if holderC[j] == "Other"
                 {
-                    arrayHolder.append(one)
+                    otherArrayHolder.append(one)
                 }
             }
             for k in 0...cCount
@@ -405,7 +405,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if segue.identifier == "newsSegue"
         {
             print(arrayHolder)
-            let nvc = segue.destination as! NewsViewController
+            let nvc = segue.destination as! TrendingViewController
             var count1 = arrayHolder.count - 1
             
             if count1 > -1
@@ -431,7 +431,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
             
-        else if segue.identifier == "Entertainmentsegue"
+        else if segue.identifier == "entertainmentSegue"
         {
             let nvc = segue.destination as! EntertainmentViewController
             var count1 = entertainmentArrayHolder.count - 1
@@ -445,7 +445,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
             
-        else if segue.identifier == "OtherSegue"
+        else if segue.identifier == "otherSegue"
         {
             let nvc = segue.destination as! OtherViewController
             var count1 = otherArrayHolder.count - 1

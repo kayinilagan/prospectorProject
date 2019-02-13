@@ -104,7 +104,7 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
         //let source = articleSource[indexPath.row]
         cell.articleTextView.text = contentString?.htmlToString
         print("bobby sucks")
-        return cell!
+        return cell
         }
     
     

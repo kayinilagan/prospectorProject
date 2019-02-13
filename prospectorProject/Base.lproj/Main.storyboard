@@ -212,7 +212,11 @@
                             </attributedString>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL">
+                            <connections>
+                                <action selector="searchButton:" destination="BYZ-38-t0r" id="asf-Vh-1W3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="leadingC" destination="9pU-x5-RuA" id="lei-n0-Oof"/>
@@ -613,6 +617,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="25" height="25"/>
+        <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
 </document>

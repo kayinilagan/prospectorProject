@@ -174,6 +174,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 if holderC[j] == "Trending"
                 {
                     arrayHolder.append(one)
+                    print(one)
                 }
             }
             for k in 0...cCount
@@ -514,7 +515,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        }
     }
     
-   
+    @IBAction func searchButton(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Keyword?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alert.addTextField { (UITextField) in
+            UITextField.placeholder = "Keyword?"
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                if let keyword = alert.textFields?.first?.text {
+                    print("Your keyword: \(keyword)")
+                }
+            }))
+        }
+        
+        self.present(alert, animated: true)
+    }
+    
     
     
     

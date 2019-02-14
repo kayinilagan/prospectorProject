@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Does not work atm
+
 class NewsViewController: UIViewController {
 
     

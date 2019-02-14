@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Does not work atm
+
 class OtherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
     var arrayofArticlesOther = [[String: String]]()

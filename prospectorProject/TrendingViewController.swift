@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Does not work atm
+
 class TrendingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var arrayofArticlesNews = [[String: String]]()

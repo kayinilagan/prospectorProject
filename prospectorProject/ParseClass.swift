@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// We may be calling Parse twice in View Controller - Kai
+
 class Parse
 {
     var sources = [[String:String]]()

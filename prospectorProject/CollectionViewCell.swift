@@ -8,6 +8,7 @@
 
 import UIKit
 
+// For Main ViewController
 
 class CollectionViewCell: UICollectionViewCell
 {

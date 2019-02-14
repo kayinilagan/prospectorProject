@@ -14,14 +14,18 @@ var articleInfo: ArticleInfo!
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    //Parse Things (Helen's Code)
     var articles = [[String: String]]()
     var categories1 = [String]()
+    var descriptions1 = [String]()
  
     var contentString1: String!
     var numberOfCategories = [Int]()
 
     var oneSignal = OneSignal()
 
+    //Side Menu + Loading Stuff
+    
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -30,14 +34,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var hamburgerIsVisible = false
     
+    // Article stuff for Parse (May Or May Not Be Working)
+    
     var articleArray = [ArticleInfo]()
     
+    // Collection View
+    
     @IBOutlet weak var mainCollectionView: UICollectionView!
+    
+    // Side Menu
     
     override func viewWillAppear(_ animated: Bool){
        mainCollectionView.reloadData()
     }
     
+    // ViewDidLoad
     
     override func viewDidLoad()
     {
@@ -69,6 +80,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
      
     }
     
+    // Side Menu
+    
     @IBAction func hamburgerButton(_ sender: UIBarButtonItem) {
         if !hamburgerIsVisible
         {
@@ -91,25 +104,28 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         mainCollectionView.reloadData()
     }
     
-
+    // Collection View Stuff
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return articles.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-       let source = articles[indexPath.row]
+        let source = articles[indexPath.row]
         cell.articleLabel.text = source["title"]
         cell.articleDateLabel.text = source["pubDate"]
         print("bobby sucks")
         return cell
     }
     
+    //Parse Function
+    
     func parse(json: JSON)
     {
-        var x = 0
 
         for result in json["items"].arrayValue
         {
@@ -134,16 +150,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print(itemTest)
             
             var count = category.count - 1
-
             
             for i in 0...count
             {
                 categories1.append(category[i].stringValue)
             }
+            
+            for i in 0..<articles.count
+            {
+                descriptions1.append(articles[i].description)
+                print("Right here!")
+                // This for loop is adding all the content from the parse function into a description array
+                // (Kai) I am trying to setup a array for a person to search a keyword and find articles that have the keyword in their description.
+                // I have not figured it out yet, but I'm open to ideas
+                // You can find the search button at the bottom
+            }
+            print(descriptions1)
+            
         }
-
-
-
 
     }
     
@@ -154,7 +178,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        vc.contentString = contentString1
 //
 //    }
+    
+    // Start of Helen's Code (Also please see top of Viewcontroller)
     var arrayHolder = [[String:String]]()
+    
+    // Trending
+
     @IBAction func trendingButton(_ sender: UIButton)
     {
         var holderC = [String]()
@@ -175,6 +204,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 if holderC[j] == "Trending"
                 {
                     arrayHolder.append(one)
+                    print(one)
                 }
             }
             for k in 0...cCount
@@ -184,6 +214,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Sports
+    
     var sportsArrayHolder = [[String: String]]()
 
     @IBAction func sportsButton(_ sender: UIButton)
@@ -216,6 +249,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
+    // Entertainment
+    
     var entertainmentArrayHolder = [[String: String]]()
 
     @IBAction func entertainmentButton(_ sender: UIButton)
@@ -247,6 +282,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // News
+    
     var newsArrayHolder = [[String: String]]()
 
     @IBAction func newsButton(_ sender: UIButton)
@@ -278,6 +316,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Features
+    
     var featuresArrayHolder = [[String: String]]()
 
     @IBAction func featuresButton(_ sender: UIButton)
@@ -309,6 +350,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Opinion
+    
     var opinionArrayHolder = [[String: String]]()
 
     @IBAction func opinionButton(_ sender: UIButton)
@@ -340,6 +384,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Other
+    
     var otherArrayHolder = [[String: String]]()
     var realOtherArray = [[String: String]]()
     @IBAction func otherButton(_ sender: UIButton)
@@ -371,6 +418,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Who We Are
+    
     @IBAction func whoWeAreButton(_ sender: UIButton)
     {
         var holderC = [String]()
@@ -507,7 +557,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
+            //table view segue
+//        else if segue.identifier == "tableViewArticlesRecentSegue"
+//        {
+//            let nvc = segue.destination as! TableViewViewController
+//            let index = issueView.indexPathForSelectedRow?.row
+//            nvc.article = articles[index!]
+//        }
+    }
+    
+    // Search Button
+    
+    @IBAction func searchButton(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Search", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        alert.addTextField { (UITextField) in
+            UITextField.placeholder = "What are you looking for?"
             
+            alert.addAction(UIAlertAction(title: "Search", style: .default, handler: { (action) in
+                if let keyword = alert.textFields?.first?.text {
+                    print("Your keyword: \(keyword)")
+                    
+                }
+            }))
+        }
         
 }
 }

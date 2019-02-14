@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// Article Info, the array is empty I'm pretty sure - Kai
+
 class ArticleInfo
 {
     var articleTitle:String

@@ -16,6 +16,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var articles = [[String: String]]()
     var categories1 = [String]()
+    var descriptions1 = [String]()
  
     var contentString1: String!
     
@@ -133,12 +134,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print(itemTest)
             
             var count = category.count - 1
+            var count2 = 10
 
             
             for i in 0...count
             {
                 categories1.append(category[i].stringValue)
             }
+            
+            for i in 0..<articles.count
+            {
+                descriptions1.append(articles[i].description)
+                print("Right here!")
+                // This for loop is adding all the content from the parse function into a description array
+                // (Kai) I am trying to setup a array for a person to search a keyword and find articles that have the keyword in their description.
+                // You can find the searchv button at the bottom
+            }
+            print(descriptions1)
+            
         }
 
 
@@ -516,15 +529,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func searchButton(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Keyword?", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Search", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         alert.addTextField { (UITextField) in
-            UITextField.placeholder = "Keyword?"
+            UITextField.placeholder = "What are you looking for?"
             
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            alert.addAction(UIAlertAction(title: "Search", style: .default, handler: { (action) in
                 if let keyword = alert.textFields?.first?.text {
                     print("Your keyword: \(keyword)")
+                    
                 }
             }))
         }

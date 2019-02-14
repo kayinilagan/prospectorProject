@@ -18,7 +18,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var categories1 = [String]()
  
     var contentString1: String!
-    
+    var numberOfCategories = [Int]()
+
     var oneSignal = OneSignal()
 
     @IBOutlet weak var leadingC: NSLayoutConstraint!
@@ -430,6 +431,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
+            // i dont know why the segue isn't working, I have put all Helen's code in and its all seemingly functional but it doesnt actually show any articles on the view controllers. right now i've been focusing on making the trending and sports view controllers work just to start with 2 and finish the rest later. I am printing the array of articles for trending and it just gives me an empty array everytime so I just think the code inside the buttons isn't working right now, and I don't know why. Also if Bobby reads this later, ur looking like a snacc today <3 
             
         else if segue.identifier == "entertainmentSegue"
         {
@@ -492,7 +494,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
-        if segue.identifier == "sportsSegue"
+        else if segue.identifier == "sportsSegue"
         {
             let nvc = segue.destination as! SportsViewController
             var count1 = sportsArrayHolder.count - 1
@@ -505,21 +507,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
-            //table view segue
-//        else if segue.identifier == "tableViewArticlesRecentSegue"
-//        {
-//            let nvc = segue.destination as! TableViewViewController
-//            let index = issueView.indexPathForSelectedRow?.row
-//            nvc.article = articles[index!]
-//        }
-    }
-    
-   
-    
-    
-    
-    
-    
-    
-
+            
+        
+}
 }

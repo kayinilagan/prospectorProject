@@ -27,7 +27,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var primeView: UIView!
     
-    var hamburgerIsVisible = false
+    var hamburgerIsVisible = false;
     
     var articleArray = [ArticleInfo]()
     

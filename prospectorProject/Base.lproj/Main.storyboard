@@ -30,6 +30,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="trendingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Agw-a8-Y9J"/>
                                             <segue destination="WdX-cT-Jpd" kind="show" identifier="newsSegue" id="NM1-j0-uhu"/>
                                         </connections>
                                     </button>
@@ -41,6 +42,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="sportsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJu-gp-r5h"/>
                                             <segue destination="keT-iG-7rS" kind="show" identifier="sportsSegue" id="EkC-H3-oAR"/>
                                         </connections>
                                     </button>
@@ -52,6 +54,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="entertainmentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ooX-12-F2Q"/>
                                             <segue destination="lh0-I7-rTy" kind="show" identifier="entertainmentSegue" id="FLJ-J8-fWU"/>
                                         </connections>
                                     </button>
@@ -62,6 +65,9 @@
                                         <state key="normal" title="News">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="newsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCS-J8-qoq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-yG-iqL">
                                         <rect key="frame" x="0.0" y="152" width="128" height="38"/>
@@ -71,6 +77,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="featuresButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o7M-7X-iLS"/>
                                             <segue destination="mvB-T7-37b" kind="show" identifier="featuresSegue" id="VUG-x2-fIg"/>
                                         </connections>
                                     </button>
@@ -82,6 +89,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="opinionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ip-Of-OIk"/>
                                             <segue destination="v3T-bq-n2Q" kind="show" identifier="opinionSegue" id="FIU-1V-W5U"/>
                                         </connections>
                                     </button>
@@ -93,6 +101,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="otherButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZ9-jv-yUe"/>
                                             <segue destination="65c-U3-9xA" kind="show" identifier="otherSegue" id="G11-vh-3SE"/>
                                         </connections>
                                     </button>
@@ -617,6 +626,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="24" height="24"/>
+        <image name="hamburgerIconSkinny" width="25" height="25"/>
     </resources>
 </document>

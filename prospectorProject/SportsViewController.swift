@@ -20,7 +20,6 @@ class SportsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     {
         super.viewDidLoad()
         
-
      
     }
     

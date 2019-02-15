@@ -8,8 +8,9 @@
 
 import UIKit
 
+// Does not work atm
+
 class NewsViewController: UIViewController {
-    var arrayofArticlesNews = [[String: String]]()
 
     
     @IBOutlet weak var newsTableView: UITableView!

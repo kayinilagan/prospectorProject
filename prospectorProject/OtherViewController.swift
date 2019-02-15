@@ -8,25 +8,36 @@
 
 import UIKit
 
-class OtherViewController: UIViewController {
+// Does not work atm
+
+class OtherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+   
     var arrayofArticlesOther = [[String: String]]()
 
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+      
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var otherTableView: UITableView!
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return arrayofArticlesOther.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")
+        let article = arrayofArticlesOther[indexPath.row]
+        cell?.textLabel?.text = article["title"]
+        return cell!
+    }
+   
 
 }

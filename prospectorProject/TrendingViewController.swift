@@ -8,24 +8,36 @@
 
 import UIKit
 
-class TrendingViewController: UIViewController {
+// Does not work atm
+
+class TrendingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+    var arrayofArticlesNews = [[String: String]]()
 
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var trendingTableView: UITableView!
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return arrayofArticlesNews.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")
+        let article = arrayofArticlesNews[indexPath.row]
+        print(article)
+        cell?.textLabel?.text = article["title"]
+        print(cell?.textLabel?.text)
+        return cell!
+    }
 
 }

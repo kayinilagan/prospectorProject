@@ -14,7 +14,7 @@ var articleInfo: ArticleInfo!
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    //Parse Things (Helen's Code)
+    //Parse Things (Helen's Code + Kai's Copy For Search Button (Not Done Yet) )
     var articles = [[String: String]]()
     var categories1 = [String]()
     var descriptions1 = [String]()
@@ -156,18 +156,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 categories1.append(category[i].stringValue)
             }
             
+            print("Right here!")
+            
             for i in 0..<articles.count
             {
-                descriptions1.append(articles[i].description)
-                print("Right here!")
+                descriptions1.append(title)
                 // This for loop is adding all the content from the parse function into a description array
                 // (Kai) I am trying to setup a array for a person to search a keyword and find articles that have the keyword in their description.
                 // I have not figured it out yet, but I'm open to ideas
                 // You can find the search button at the bottom
+                
+                //I changed it to titles and found that it repeats multiple articles multiple times.
             }
-            print(descriptions1)
             
         }
+        print("Over Here!")
+        print(descriptions1)
 
     }
     
@@ -583,5 +587,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }))
         }
         
+        self.present(alert, animated: true)
 }
 }

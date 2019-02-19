@@ -105,9 +105,5 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
         cell.articleTextView.text = contentString?.htmlToString
         print("bobby sucks")
         return cell
-        }
-    
-    
-
-  
+    }
 }

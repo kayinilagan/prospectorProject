@@ -33,7 +33,11 @@ class EntertainmentViewController: UIViewController {
         cell?.textLabel?.text = article["title"]
         return cell!
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let nvc = segue.destination as! SpecificArticleViewController
+        nvc.specificArticle = arrayofArticlesEntertainment
+    }
 
     
 

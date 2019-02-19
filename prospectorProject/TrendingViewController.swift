@@ -39,5 +39,10 @@ class TrendingViewController: UIViewController, UITableViewDataSource, UITableVi
         print(cell?.textLabel?.text)
         return cell!
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let nvc = segue.destination as! SpecificArticleViewController
+        nvc.specificArticle = arrayofArticlesNews
+    }
 
 }

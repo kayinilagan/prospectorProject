@@ -80,6 +80,29 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Gnk-Mh-e6X"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zOh-y8-zyV">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" id="A1y-DI-gSg">
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <attributedString key="attributedText">
+                                <fragment content="PROSPECTOR">
+                                    <attributes>
+                                        <color key="NSColor" red="0.087453864514827728" green="0.20676326751708984" blue="0.3940390944480896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="50" name="SukhumvitSet-Text"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="NOW">
+                                    <attributes>
+                                        <color key="NSColor" red="0.2149919867515564" green="0.63083118200302124" blue="0.98529237508773804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="50" name="SukhumvitSet-Text"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="Qyo-Ln-bMx" id="doo-GE-MR7"/>
                         <outlet property="searchCollectionView" destination="Ed8-Bn-qzP" id="rZd-V6-vV6"/>

@@ -20,7 +20,6 @@ class SportsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     {
         super.viewDidLoad()
         
-
      
     }
     
@@ -37,6 +36,11 @@ class SportsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let article = arrayofArticlesSports[indexPath.row]
         cell?.textLabel?.text = article["title"]
         return cell!
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let nvc = segue.destination as! SpecificArticleViewController
+        nvc.specificArticle = arrayofArticlesSports
     }
     
    

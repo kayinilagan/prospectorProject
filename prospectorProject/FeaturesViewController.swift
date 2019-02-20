@@ -1,14 +1,13 @@
 //
 //  FeaturesViewController.swift
 //  prospectorProject
-//
+// bobby is a clone
 //  Created by period3 on 11/14/18.
 //  Copyright © 2018 period3. All rights reserved.
 //
 
 import UIKit
 
-// Does not work atm
 
 class FeaturesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -18,11 +17,8 @@ class FeaturesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         
-        
-        
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -35,6 +31,13 @@ class FeaturesViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")
         let article = arrayofArticlesFeatures[indexPath.row]
         cell?.textLabel?.text = article["title"]
+        
         return cell!
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let nvc = segue.destination as! SpecificArticleViewController
+        nvc.specificArticle = arrayofArticlesFeatures
+    }
+   
 }

@@ -20,7 +20,6 @@ class SearchViewController: ViewController, UISearchBarDelegate {
     var filteredData = [String]().self
     
     override func viewDidLoad() {
-        self.title = "PROSPECTORNOW"
         super.viewDidLoad()
         searchCollectionView.dataSource = self
         searchBar.delegate = self

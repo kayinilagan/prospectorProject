@@ -32,10 +32,7 @@ class FeaturesViewController: UIViewController, UITableViewDataSource, UITableVi
         let article = arrayofArticlesFeatures[indexPath.row]
         cell?.textLabel?.text = article["title"]
         
-       
-        
         return cell!
-        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {

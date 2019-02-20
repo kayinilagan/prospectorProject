@@ -18,77 +18,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="evE-kF-iwf">
-                                <rect key="frame" x="0.0" y="48" width="768" height="928"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyo-Ln-bMx">
+                                <rect key="frame" x="0.0" y="70" width="768" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ed8-Bn-qzP">
+                                <rect key="frame" x="0.0" y="126" width="768" height="898"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hzd-ju-DId">
-                                        <rect key="frame" x="0.0" y="19" width="768" height="944"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YhA-IG-VLw">
+                                    <size key="itemSize" width="768" height="365"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="lep-95-pcj" customClass="CollectionViewCell" customModule="prospectorProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gMa-hN-Hgf">
-                                            <size key="itemSize" width="768" height="365"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="pAL-od-zjb" customClass="CollectionViewCell" customModule="prospectorProject" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WVm-j8-I8S">
                                                     <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZG-h9-AdN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tb-Xc-HzB">
-                                                            <rect key="frame" x="0.0" y="294" width="768" height="38"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSJ-JU-zM0">
-                                                            <rect key="frame" x="0.0" y="332" width="768" height="33"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </view>
-                                                <connections>
-                                                    <outlet property="articleDateLabel" destination="xSJ-JU-zM0" id="FA7-H3-kGD"/>
-                                                    <outlet property="articleLabel" destination="0tb-Xc-HzB" id="dHe-BA-R5h"/>
-                                                    <outlet property="imageView" destination="PZG-h9-AdN" id="PPw-V7-SL5"/>
-                                                </connections>
-                                            </collectionViewCell>
-                                        </cells>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvd-VK-eu9">
+                                                    <rect key="frame" x="0.0" y="294" width="768" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-xK-y6v">
+                                                    <rect key="frame" x="0.0" y="332" width="768" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
                                         <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="u1R-OW-rFq"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="aW5-oS-nOD"/>
+                                            <outlet property="articleDateLabel" destination="UPF-xK-y6v" id="N0b-5t-pEb"/>
+                                            <outlet property="articleLabel" destination="Kvd-VK-eu9" id="cqT-GW-1iA"/>
+                                            <outlet property="imageView" destination="WVm-j8-I8S" id="Mbh-Fv-4lO"/>
                                         </connections>
-                                    </collectionView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.26537320019999999" green="0.69113492970000001" blue="0.98525756600000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ial-80-xNq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Llv-W2-Tws"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Gnk-Mh-e6X"/>
                     </view>
                     <connections>
-                        <outlet property="searchCollectionView" destination="Hzd-ju-DId" id="kkn-Wz-W9J"/>
+                        <outlet property="searchBar" destination="Qyo-Ln-bMx" id="doo-GE-MR7"/>
+                        <outlet property="searchCollectionView" destination="Ed8-Bn-qzP" id="rZd-V6-vV6"/>
+                        <outlet property="searchDisplayController" destination="O6j-GG-LtZ" id="dE0-UY-ZaW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUs-iJ-J8Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="O6j-GG-LtZ">
+                    <connections>
+                        <outlet property="delegate" destination="RHQ-bt-V0H" id="IuX-KU-dSs"/>
+                        <outlet property="searchContentsController" destination="RHQ-bt-V0H" id="sfN-hM-Hhd"/>
+                        <outlet property="searchResultsDataSource" destination="RHQ-bt-V0H" id="PEZ-cG-QAh"/>
+                        <outlet property="searchResultsDelegate" destination="RHQ-bt-V0H" id="KO4-vt-UPf"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1076" y="-554"/>
+            <point key="canvasLocation" x="1075.78125" y="-554.296875"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

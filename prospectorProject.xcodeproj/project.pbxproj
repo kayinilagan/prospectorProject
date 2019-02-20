@@ -65,7 +65,7 @@
 		65D72C2F4AAD26B1406A4532 /* libPods-Notificaiton Center.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Notificaiton Center.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0324E521949D2F00E8040C /* ArticleInfoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInfoClass.swift; sourceTree = "<group>"; };
 		6E1243EC219DDB5700295B5D /* pinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinterestLayout.swift; sourceTree = "<group>"; };
-		6E286764221DB6110027427C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6E286764221DB6110027427C /* SearchViewController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; tabWidth = 4; };
 		6E35CB922188AC1C00BD9F03 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		6E44CD63218B5530003172E7 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArticleViewController.swift; path = ../ArticleViewController.swift; sourceTree = "<group>"; };
 		6E520E2821B9836C000A61C9 /* ParseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseClass.swift; sourceTree = "<group>"; };

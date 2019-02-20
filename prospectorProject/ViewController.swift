@@ -28,7 +28,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     @IBOutlet weak var primeView: UIView!
     
@@ -44,16 +43,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Side Menu
     
-    override func viewWillAppear(_ animated: Bool){
-       mainCollectionView.reloadData()
-    }
+//    override func viewWillAppear(_ animated: Bool){
+//       mainCollectionView.reloadData()
+//    }
     
     // ViewDidLoad
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        spinner.isHidden = true
         print(OneSignal.app_id())
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
 
@@ -129,8 +127,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         for result in json["items"].arrayValue
         {
-            spinner.isHidden = false
-            spinner.startAnimating()
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let description = result["description"].stringValue
@@ -143,8 +139,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories]
             articles.append(source)
             contentString1 = content
-            spinner.stopAnimating()
-            spinner.isHidden = true
             let itemTest = result["items[1].title"]
             print("We're parsing babey")
             print(itemTest)
@@ -446,6 +440,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         //NEWS SEGUE
@@ -553,6 +548,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
+        else if segue.identifier == "searchSegue"
+        {
+            let nvc = segue.destination as! SearchViewController
+            nvc.data = self.descriptions1
+        }
             //table view segue
 //        else if segue.identifier == "tableViewArticlesRecentSegue"
 //        {
@@ -565,28 +565,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // Search Button
     
     @IBAction func searchButton(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Search", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        alert.addTextField { (UITextField) in
-            UITextField.placeholder = "What are you looking for?"
-            
-            alert.addAction(UIAlertAction(title: "Search", style: .default, handler: { (action) in
-                if let keyword = alert.textFields?.first?.text {
-                    print("Your keyword: \(keyword)")
-                    if self.descriptions1.description.contains(keyword)
-                    {
-                        print("yes")
-                    }
-                    else
-                    {
-                        print("no")
-                    }
-                    
-                }
-            }))
-        }
-        
-        self.present(alert, animated: true)
+        print("Why")
 }
 }

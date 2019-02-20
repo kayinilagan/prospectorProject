@@ -158,16 +158,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             print("Right here!")
             
-            for i in 0..<articles.count
-            {
-                descriptions1.append(title)
-                // This for loop is adding all the content from the parse function into a description array
-                // (Kai) I am trying to setup a array for a person to search a keyword and find articles that have the keyword in their description.
-                // I have not figured it out yet, but I'm open to ideas
-                // You can find the search button at the bottom
-                
-                //I changed it to titles and found that it repeats multiple articles multiple times.
-            }
+            // I FIXED IT
+            descriptions1.append(title)
             
         }
         print("Over Here!")
@@ -582,6 +574,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             alert.addAction(UIAlertAction(title: "Search", style: .default, handler: { (action) in
                 if let keyword = alert.textFields?.first?.text {
                     print("Your keyword: \(keyword)")
+                    if self.descriptions1.description.contains(keyword)
+                    {
+                        print("yes")
+                    }
+                    else
+                    {
+                        print("no")
+                    }
                     
                 }
             }))

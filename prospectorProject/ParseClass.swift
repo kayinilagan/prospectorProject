@@ -42,11 +42,6 @@ class Parse
             let articleThumbnail = result["thumbnail"].stringValue
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content]
             sources.append(source)
-            print("We're parsing babey")
-            
-            
-           
-            
         }
         
         

@@ -11,6 +11,8 @@ import UIKit
 class SpecificArticleViewController: UIViewController {
     
     var specificArticle = [[String:String]]()
+    var content0: String!
+    
 
     @IBOutlet weak var articleTextView: UITextView!
     
@@ -18,11 +20,13 @@ class SpecificArticleViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        for i in 0...specificArticle.count - 1
-        {
-            articleTextView.text = specificArticle[i]["content"]?.htmlToString
-            print(specificArticle.first?["content"]?.htmlToString)
-        }
+//        for i in 0...specificArticle.count - 1
+//        {
+//            //articleTextView.text = specificArticle[i]["content"]?.htmlToString
+//            //print(specificArticle[i]["content"]?.htmlToString as Any)
+//        }
+        
+        articleTextView.text = content0.htmlToString
     }
     
 

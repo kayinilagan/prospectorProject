@@ -166,7 +166,7 @@
                                                     <outlet property="articleDateLabel" destination="kcK-l6-rvO" id="BEz-tv-q01"/>
                                                     <outlet property="articleLabel" destination="vCr-JW-buC" id="hxY-E1-PDm"/>
                                                     <outlet property="imageView" destination="KZB-k2-eTe" id="u8x-DU-Qr6"/>
-                                                    <segue destination="ZGI-wT-Vqe" kind="show" id="R9N-Mu-bKv"/>
+                                                    <segue destination="ZGI-wT-Vqe" kind="show" identifier="articleViewSegue" id="R9N-Mu-bKv"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>

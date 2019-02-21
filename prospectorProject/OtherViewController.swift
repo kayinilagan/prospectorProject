@@ -41,7 +41,9 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let nvc = segue.destination as! SpecificArticleViewController
+        let index = otherTableView.indexPathForSelectedRow?.row
         nvc.specificArticle = arrayofArticlesOther
+        nvc.content0 = arrayofArticlesOther[index!]["content"]!
     }
    
 

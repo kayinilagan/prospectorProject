@@ -42,7 +42,9 @@ class TrendingViewController: UIViewController, UITableViewDataSource, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let nvc = segue.destination as! SpecificArticleViewController
+        let index = trendingTableView.indexPathForSelectedRow?.row
         nvc.specificArticle = arrayofArticlesNews
-    }
-
+        nvc.content0 = arrayofArticlesNews[index!]["content"]!    }
 }
+
+

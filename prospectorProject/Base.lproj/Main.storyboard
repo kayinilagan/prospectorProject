@@ -68,6 +68,7 @@
                                             <outlet property="articleDateLabel" destination="UPF-xK-y6v" id="N0b-5t-pEb"/>
                                             <outlet property="articleLabel" destination="Kvd-VK-eu9" id="cqT-GW-1iA"/>
                                             <outlet property="imageView" destination="WVm-j8-I8S" id="Mbh-Fv-4lO"/>
+                                            <segue destination="GcG-Qj-Jiu" kind="show" id="xwR-16-Y3w"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -278,7 +279,7 @@
                                                     <outlet property="articleDateLabel" destination="kcK-l6-rvO" id="BEz-tv-q01"/>
                                                     <outlet property="articleLabel" destination="vCr-JW-buC" id="hxY-E1-PDm"/>
                                                     <outlet property="imageView" destination="KZB-k2-eTe" id="u8x-DU-Qr6"/>
-                                                    <segue destination="ZGI-wT-Vqe" kind="show" id="R9N-Mu-bKv"/>
+                                                    <segue destination="GcG-Qj-Jiu" kind="show" identifier="specificSegue" id="Ofx-EU-xe4"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -705,7 +706,7 @@
                         <viewLayoutGuide key="safeArea" id="lRp-wc-9OL"/>
                     </view>
                     <connections>
-                        <outlet property="articleTextView" destination="TLH-o9-Gu3" id="CIu-9B-HEH"/>
+                        <outlet property="articleTextView" destination="TLH-o9-Gu3" id="wH2-79-Yor"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82x-B7-nUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -790,6 +791,6 @@
         <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Slj-Mm-W4A"/>
+        <segue reference="xwR-16-Y3w"/>
     </inferredMetricsTieBreakers>
 </document>

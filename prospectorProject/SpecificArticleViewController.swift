@@ -21,6 +21,7 @@ class SpecificArticleViewController: UIViewController {
         for i in 0...specificArticle.count - 1
         {
             articleTextView.text = specificArticle[i]["content"]?.htmlToString
+            print("over here kai")
             print(specificArticle.first?["content"]?.htmlToString)
         }
     }

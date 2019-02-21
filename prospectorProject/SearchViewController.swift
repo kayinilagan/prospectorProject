@@ -57,5 +57,11 @@ class SearchViewController: ViewController, UISearchBarDelegate {
         
         searchCollectionView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let nvc = segue.destination as! SpecificArticleViewController
+        nvc.specificArticle = arrayOfSearchArticles
+    }
 
 }

@@ -18,6 +18,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var articles = [[String: String]]()
     var categories1 = [String]()
     var descriptions1 = [String]()
+    var dates1 = [String]()
  
     var contentString1: String!
     var numberOfCategories = [Int]()
@@ -154,6 +155,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             // I FIXED IT
             descriptions1.append(title)
+            dates1.append(pubDate)
             
         }
         print("Over Here!")
@@ -552,6 +554,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
             let nvc = segue.destination as! SearchViewController
             nvc.data = self.descriptions1
+            nvc.arrayOfSearchArticles = self.articles
         }
             //table view segue
 //        else if segue.identifier == "tableViewArticlesRecentSegue"

@@ -17,13 +17,18 @@ class SearchViewController: ViewController, UISearchBarDelegate {
     
     var data = [String]()
     
+    var arrayOfSearchArticles = [[String: String]]()
+    
     var filteredData = [String]().self
+    
+    var filteredArticles = [[String: String]]().self
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchCollectionView.dataSource = self
         searchBar.delegate = self
         filteredData = data
+        filteredArticles = arrayOfSearchArticles
       
     }
     
@@ -33,7 +38,9 @@ class SearchViewController: ViewController, UISearchBarDelegate {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = searchCollectionView.dequeueReusableCell(withReuseIdentifier: "searchCell", for: indexPath) as! CollectionViewCell
+        let source = filteredArticles[indexPath.row]
         cell.articleLabel.text = filteredData[indexPath.row]
+        cell.articleDateLabel.text = source["pubDate"]
         return cell
     }
 

@@ -56,24 +56,29 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         print(OneSignal.app_id())
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
 
-        if let url = URL(string: homePageQuery)
-        {
-            if let data = try? Data(contentsOf: url)
-            {
-                let json = try! JSON(data: data)
-                if json["status"] == "ok"
+        
+            DispatchQueue.global(qos: .userInitiated).async {
+                [unowned self] in
+                if let url = URL(string: homePageQuery)
                 {
-                    parse(json: json)
-                    return
-                }
+                    if let data = try? Data(contentsOf: url)
+                    {
+                        let json = try! JSON(data: data)
+                        if json["status"] == "ok"
+                        {
+                            self.parse(json: json)
+                            return
+                        }
+                        
+                        
+                    }
 
-
+                
             }
 
-
+            self.loadError()
         }
         
-        mainCollectionView.reloadData()
         
         
      
@@ -135,6 +140,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let articleThumbnail = result["thumbnail"].stringValue
             let category = result["categories"].arrayValue
             let categories = String(result["categories"].arrayValue.count)
+            
+            
 
 
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories]
@@ -160,8 +167,33 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         print("Over Here!")
         print(descriptions1)
+        DispatchQueue.main.async {
+            self.mainCollectionView.reloadData()
+        }
 
     }
+    func loadError() {
+        
+        DispatchQueue.main.async {
+            
+            let alert = UIAlertController(title: "Loading Error", message: "There was a problem loading the news feed", preferredStyle: .actionSheet)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?)
 //    {
@@ -231,6 +263,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 if holderC[j] == "Sports"
                 {
                     sportsArrayHolder.append(one)
+                    print(one)
                 }
             }
             for k in 0...cCount

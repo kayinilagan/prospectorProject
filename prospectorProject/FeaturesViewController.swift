@@ -18,6 +18,7 @@ class FeaturesViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        featuresTableView.reloadData()
 
     }
     
@@ -37,7 +38,9 @@ class FeaturesViewController: UIViewController, UITableViewDataSource, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let nvc = segue.destination as! SpecificArticleViewController
+        let index = featuresTableView.indexPathForSelectedRow?.row
         nvc.specificArticle = arrayofArticlesFeatures
+        nvc.content0 = arrayofArticlesFeatures[index!]["content"]!
     }
    
 }

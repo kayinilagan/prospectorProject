@@ -36,8 +36,9 @@ class EntertainmentViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let nvc = segue.destination as! SpecificArticleViewController
+        let index = entertainmentTableView.indexPathForSelectedRow?.row
         nvc.specificArticle = arrayofArticlesEntertainment
-    }
+        nvc.content0 = arrayofArticlesEntertainment[index!]["content"]!    }
 
     
 

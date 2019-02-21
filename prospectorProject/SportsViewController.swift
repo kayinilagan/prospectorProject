@@ -15,12 +15,15 @@ class SportsViewController: UIViewController, UITableViewDelegate, UITableViewDa
    
     
     var arrayofArticlesSports = [[String: String]]()
+    
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-     
+        DispatchQueue.main.async {
+            self.sportTableView.reloadData()
+        }
     }
     
     @IBOutlet weak var sportTableView: UITableView!
@@ -40,8 +43,9 @@ class SportsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let nvc = segue.destination as! SpecificArticleViewController
+        let index = sportTableView.indexPathForSelectedRow?.row
         nvc.specificArticle = arrayofArticlesSports
-    }
+        nvc.content0 = arrayofArticlesSports[index!]["content"]!    }
     
    
 

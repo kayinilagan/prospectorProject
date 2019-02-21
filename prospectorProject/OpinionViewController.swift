@@ -39,7 +39,8 @@ class OpinionViewController: UIViewController, UITableViewDataSource, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let nvc = segue.destination as! SpecificArticleViewController
+        let index = opinionTableView.indexPathForSelectedRow?.row
         nvc.specificArticle = arrayofArticlesOpinions
-    }
+        nvc.content0 = arrayofArticlesOpinions[index!]["content"]!    }
 
 }

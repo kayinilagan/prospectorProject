@@ -11,6 +11,8 @@ import UIKit
 class SpecificArticleViewController: UIViewController {
     
     var specificArticle = [[String:String]]()
+    var content0: String!
+    
 
     @IBOutlet weak var articleTextView: UITextView!
     

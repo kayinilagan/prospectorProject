@@ -21,9 +21,7 @@ class SportsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     {
         super.viewDidLoad()
         
-        DispatchQueue.main.async {
-            self.sportTableView.reloadData()
-        }
+        
     }
     
     @IBOutlet weak var sportTableView: UITableView!

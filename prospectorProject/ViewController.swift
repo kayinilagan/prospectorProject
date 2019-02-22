@@ -167,11 +167,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         print("Over Here!")
         print(descriptions1)
+        
         DispatchQueue.main.async {
             self.mainCollectionView.reloadData()
         }
 
     }
+    
     func loadError() {
         
         DispatchQueue.main.async {
@@ -185,13 +187,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
-    
-    
-    
-    
-    
-    
-    
     
     
     

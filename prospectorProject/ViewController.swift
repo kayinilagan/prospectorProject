@@ -19,7 +19,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var categories1 = [String]()
     var descriptions1 = [String]()
     var dates1 = [String]()
- 
+    var searchBool = true
     var contentString1: String!
     var numberOfCategories = [Int]()
 
@@ -169,8 +169,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         print(descriptions1)
         
         DispatchQueue.main.async {
-            
+            if self.searchBool == true
+            {
             self.mainCollectionView.reloadData()
+            }
         }
     }
     
@@ -608,6 +610,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBAction func searchButton(_ sender: UIBarButtonItem)
     {
         print("Why")
+        searchBool = false
     }
     @IBOutlet weak var searchButtonOut: UIBarButtonItem!
 }

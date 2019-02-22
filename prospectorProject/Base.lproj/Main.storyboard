@@ -10,6 +10,85 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="6n3-3Y-mCs">
+            <objects>
+                <viewController id="8qL-Vz-nnh" customClass="SearchViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mN8-KK-AbI">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WTw-1O-6DN">
+                                <rect key="frame" x="0.0" y="126" width="768" height="898"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iH8-oB-BOm">
+                                    <size key="itemSize" width="768" height="365"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="lcI-yE-iJr" customClass="CollectionViewCell" customModule="prospectorProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wr8-Y7-NaW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYc-os-94h">
+                                                    <rect key="frame" x="0.0" y="294" width="768" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IY-D7-cyk">
+                                                    <rect key="frame" x="0.0" y="332" width="768" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="articleDateLabel" destination="5IY-D7-cyk" id="tZ9-re-WYF"/>
+                                            <outlet property="articleLabel" destination="LYc-os-94h" id="4EG-EU-7Hz"/>
+                                            <outlet property="imageView" destination="Wr8-Y7-NaW" id="yj2-GJ-2XY"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4I0-yI-t7e"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="C37-c7-h0f"/>
+                                </connections>
+                            </collectionView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V44-sF-Hi8">
+                                <rect key="frame" x="0.0" y="70" width="768" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FRd-Su-rah"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="V44-sF-Hi8" id="dB1-hg-iq2"/>
+                        <outlet property="searchCollectionView" destination="WTw-1O-6DN" id="67a-xG-0mn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aiR-5r-PBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.78125" y="-615.234375"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -224,6 +303,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL">
                             <connections>
                                 <action selector="searchButton:" destination="BYZ-38-t0r" id="asf-Vh-1W3"/>
+                                <segue destination="8qL-Vz-nnh" kind="show" id="Uur-jB-cKr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -680,7 +760,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="25" height="25"/>
+        <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Slj-Mm-W4A"/>

@@ -170,7 +170,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         DispatchQueue.main.async {
             self.mainCollectionView.reloadData()
         }
-
     }
     func loadError() {
         

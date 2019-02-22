@@ -169,6 +169,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         print(descriptions1)
         
         DispatchQueue.main.async {
+            
             self.mainCollectionView.reloadData()
         }
     }
@@ -604,7 +605,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Search Button
     
-    @IBAction func searchButton(_ sender: UIBarButtonItem) {
+    @IBAction func searchButton(_ sender: UIBarButtonItem)
+    {
         print("Why")
-}
+    }
+    @IBOutlet weak var searchButtonOut: UIBarButtonItem!
 }

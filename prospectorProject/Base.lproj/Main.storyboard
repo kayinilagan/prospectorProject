@@ -298,7 +298,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL">
                             <connections>
                                 <action selector="searchButton:" destination="BYZ-38-t0r" id="asf-Vh-1W3"/>
-                                <segue destination="8qL-Vz-nnh" kind="show" id="Uur-jB-cKr"/>
+                                <segue destination="8qL-Vz-nnh" kind="show" identifier="searchSegue" id="Uur-jB-cKr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -306,6 +306,7 @@
                         <outlet property="leadingC" destination="9pU-x5-RuA" id="lei-n0-Oof"/>
                         <outlet property="mainCollectionView" destination="A3Z-T8-gPY" id="4sM-3b-gNB"/>
                         <outlet property="primeView" destination="DTT-hW-9s8" id="wvJ-hv-6Uf"/>
+                        <outlet property="searchButtonOut" destination="QUT-Fz-DhL" id="1if-W9-MLM"/>
                         <outlet property="trailingC" destination="JyS-o4-TKG" id="ecH-wT-eRE"/>
                     </connections>
                 </viewController>
@@ -754,7 +755,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="24" height="24"/>
+        <image name="hamburgerIconSkinny" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Slj-Mm-W4A"/>

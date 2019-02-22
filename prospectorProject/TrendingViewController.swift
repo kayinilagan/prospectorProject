@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Does not work atm
+
 class TrendingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var arrayofArticlesNews = [[String: String]]()
@@ -16,7 +18,6 @@ class TrendingViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
         
     }
     
@@ -38,5 +39,12 @@ class TrendingViewController: UIViewController, UITableViewDataSource, UITableVi
         print(cell?.textLabel?.text)
         return cell!
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let nvc = segue.destination as! SpecificArticleViewController
+        let index = trendingTableView.indexPathForSelectedRow?.row
+        nvc.specificArticle = arrayofArticlesNews
+        nvc.content0 = arrayofArticlesNews[index!]["content"]!    }
 }
+
+

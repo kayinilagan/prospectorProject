@@ -101,13 +101,9 @@ class ArticleViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = articleCollectionView.dequeueReusableCell(withReuseIdentifier: "article", for: indexPath) as! ArticleCollectionViewCell
         articleCollectionView.reloadData()
-        //let source = articleSource[indexPath.row]
-        cell.articleTextView.text = contentString?.htmlToString
+        let source = articleSource[indexPath.row]
+        cell.articleTextView.text = source["content"]!.htmlToString
         print("bobby sucks")
         return cell
-        }
-    
-    
-
-  
+    }
 }

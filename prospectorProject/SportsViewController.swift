@@ -8,18 +8,22 @@
 
 import UIKit
 
+// Does not work atm
+
 class SportsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
    
     
     var arrayofArticlesSports = [[String: String]]()
+    
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-
-     
+        DispatchQueue.main.async {
+            self.sportTableView.reloadData()
+        }
     }
     
     @IBOutlet weak var sportTableView: UITableView!
@@ -36,6 +40,12 @@ class SportsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell?.textLabel?.text = article["title"]
         return cell!
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let nvc = segue.destination as! SpecificArticleViewController
+        let index = sportTableView.indexPathForSelectedRow?.row
+        nvc.specificArticle = arrayofArticlesSports
+        nvc.content0 = arrayofArticlesSports[index!]["content"]!    }
     
    
 

@@ -14,59 +14,77 @@ var articleInfo: ArticleInfo!
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    //Parse Things (Helen's Code + Kai's Copy For Search Button (Not Done Yet) )
     var articles = [[String: String]]()
     var categories1 = [String]()
+    var descriptions1 = [String]()
+    var dates1 = [String]()
  
     var contentString1: String!
-    
+    var numberOfCategories = [Int]()
+
     var oneSignal = OneSignal()
 
+    //Side Menu + Loading Stuff
+    
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     @IBOutlet weak var primeView: UIView!
     
     var hamburgerIsVisible = false;
     
+    // Article stuff for Parse (May Or May Not Be Working)
+    
     var articleArray = [ArticleInfo]()
+    
+    // Collection View
     
     @IBOutlet weak var mainCollectionView: UICollectionView!
     
-    override func viewWillAppear(_ animated: Bool){
-       mainCollectionView.reloadData()
-    }
+    // Side Menu
     
+//    override func viewWillAppear(_ animated: Bool){
+//       mainCollectionView.reloadData()
+//    }
+    
+    // ViewDidLoad
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        spinner.isHidden = true
         print(OneSignal.app_id())
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
 
-        if let url = URL(string: homePageQuery)
-        {
-            if let data = try? Data(contentsOf: url)
-            {
-                let json = try! JSON(data: data)
-                if json["status"] == "ok"
+        
+            DispatchQueue.global(qos: .userInitiated).async {
+                [unowned self] in
+                if let url = URL(string: homePageQuery)
                 {
-                    parse(json: json)
-                    return
-                }
+                    if let data = try? Data(contentsOf: url)
+                    {
+                        let json = try! JSON(data: data)
+                        if json["status"] == "ok"
+                        {
+                            self.parse(json: json)
+                            return
+                        }
+                        
+                        
+                    }
 
-
+                
             }
 
-
+            self.loadError()
         }
         
-        mainCollectionView.reloadData()
         
         
      
     }
+    
+    // Side Menu
     
     @IBAction func hamburgerButton(_ sender: UIBarButtonItem) {
         if !hamburgerIsVisible
@@ -90,30 +108,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         mainCollectionView.reloadData()
     }
     
-
+    // Collection View Stuff
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return articles.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-       let source = articles[indexPath.row]
+        let source = articles[indexPath.row]
         cell.articleLabel.text = source["title"]
         cell.articleDateLabel.text = source["pubDate"]
         print("bobby sucks")
         return cell
     }
     
+    //Parse Function
+    
     func parse(json: JSON)
     {
-        var x = 0
 
         for result in json["items"].arrayValue
         {
-            spinner.isHidden = false
-            spinner.startAnimating()
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let description = result["description"].stringValue
@@ -121,30 +140,60 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let articleThumbnail = result["thumbnail"].stringValue
             let category = result["categories"].arrayValue
             let categories = String(result["categories"].arrayValue.count)
+            
+            
 
 
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories]
             articles.append(source)
             contentString1 = content
-            spinner.stopAnimating()
-            spinner.isHidden = true
             let itemTest = result["items[1].title"]
             print("We're parsing babey")
             print(itemTest)
             
             var count = category.count - 1
-
             
             for i in 0...count
             {
                 categories1.append(category[i].stringValue)
             }
+            
+            print("Right here!")
+            
+            // I FIXED IT
+            descriptions1.append(title)
+            dates1.append(pubDate)
+            
+        }
+        print("Over Here!")
+        print(descriptions1)
+        DispatchQueue.main.async {
+            self.mainCollectionView.reloadData()
         }
 
-
-
-
     }
+    func loadError() {
+        
+        DispatchQueue.main.async {
+            
+            let alert = UIAlertController(title: "Loading Error", message: "There was a problem loading the news feed", preferredStyle: .actionSheet)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: (Any)?)
 //    {
@@ -153,7 +202,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        vc.contentString = contentString1
 //
 //    }
+    
+    // Start of Helen's Code (Also please see top of Viewcontroller)
     var arrayHolder = [[String:String]]()
+    
+    // Trending
+
     @IBAction func trendingButton(_ sender: UIButton)
     {
         var holderC = [String]()
@@ -184,6 +238,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Sports
+    
     var sportsArrayHolder = [[String: String]]()
 
     @IBAction func sportsButton(_ sender: UIButton)
@@ -206,6 +263,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 if holderC[j] == "Sports"
                 {
                     sportsArrayHolder.append(one)
+                    print(one)
                 }
             }
             for k in 0...cCount
@@ -215,6 +273,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Entertainment
     
     var entertainmentArrayHolder = [[String: String]]()
 
@@ -247,6 +307,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // News
+    
     var newsArrayHolder = [[String: String]]()
 
     @IBAction func newsButton(_ sender: UIButton)
@@ -278,6 +341,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Features
+    
     var featuresArrayHolder = [[String: String]]()
 
     @IBAction func featuresButton(_ sender: UIButton)
@@ -309,6 +375,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Opinion
+    
     var opinionArrayHolder = [[String: String]]()
 
     @IBAction func opinionButton(_ sender: UIButton)
@@ -340,6 +409,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Other
+    
     var otherArrayHolder = [[String: String]]()
     var realOtherArray = [[String: String]]()
     @IBAction func otherButton(_ sender: UIButton)
@@ -371,6 +443,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
+    // Who We Are
+    
     @IBAction func whoWeAreButton(_ sender: UIButton)
     {
         var holderC = [String]()
@@ -400,6 +475,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         //NEWS SEGUE
@@ -431,6 +507,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
+            // i dont know why the segue isn't working, I have put all Helen's code in and its all seemingly functional but it doesnt actually show any articles on the view controllers. right now i've been focusing on making the trending and sports view controllers work just to start with 2 and finish the rest later. I am printing the array of articles for trending and it just gives me an empty array everytime so I just think the code inside the buttons isn't working right now, and I don't know why. Also if Bobby reads this later, ur looking like a snacc today <3 
             
         else if segue.identifier == "entertainmentSegue"
         {
@@ -493,7 +570,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
-        if segue.identifier == "sportsSegue"
+        else if segue.identifier == "sportsSegue"
         {
             let nvc = segue.destination as! SportsViewController
             var count1 = sportsArrayHolder.count - 1
@@ -506,6 +583,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
+        else if segue.identifier == "searchSegue"
+        {
+            let nvc = segue.destination as! SearchViewController
+            nvc.data = self.descriptions1
+            nvc.arrayOfSearchArticles = self.articles
+        }
+        else if segue.identifier == "mainArticleSegue"
+        {
+            let nvc = segue.destination as! ArticleViewController
+            nvc.articleSource = self.articles
+        }
+        else if segue.identifier == "specificSegue"
+        {
+            let nvc = segue.destination as! SpecificArticleViewController
+            nvc.specificArticle = articles
+        }
             //table view segue
 //        else if segue.identifier == "tableViewArticlesRecentSegue"
 //        {
@@ -515,28 +608,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //        }
     }
     
+    // Search Button
+    
     @IBAction func searchButton(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Keyword?", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        alert.addTextField { (UITextField) in
-            UITextField.placeholder = "Keyword?"
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                if let keyword = alert.textFields?.first?.text {
-                    print("Your keyword: \(keyword)")
-                }
-            }))
-        }
-        
-        self.present(alert, animated: true)
-    }
-    
-    
-    
-    
-    
-    
-    
-
+        print("Why")
+}
 }

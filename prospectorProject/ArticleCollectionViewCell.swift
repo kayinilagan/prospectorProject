@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Unused atm
+
 class ArticleCollectionViewCell: UICollectionViewCell
 {
     

@@ -8,6 +8,9 @@
 
 import UIKit
 
+// THIS IS UNUSED AT THE MOMENT - KAI
+// Does not have an effect on parsing
+
 protocol PinterestLayoutDelegate: class {
     func collectionView(_ collectionView:UICollectionView, heightForPhotoAtIndexPath indexPath:IndexPath) -> CGFloat
 }

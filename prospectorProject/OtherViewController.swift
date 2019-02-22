@@ -8,6 +8,8 @@
 
 import UIKit
 
+// Does not work atm
+
 class OtherViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
     var arrayofArticlesOther = [[String: String]]()
@@ -35,6 +37,13 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
         let article = arrayofArticlesOther[indexPath.row]
         cell?.textLabel?.text = article["title"]
         return cell!
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let nvc = segue.destination as! SpecificArticleViewController
+        let index = otherTableView.indexPathForSelectedRow?.row
+        nvc.specificArticle = arrayofArticlesOther
+        nvc.content0 = arrayofArticlesOther[index!]["content"]!
     }
    
 

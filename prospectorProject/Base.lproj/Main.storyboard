@@ -231,7 +231,6 @@
                         <outlet property="leadingC" destination="9pU-x5-RuA" id="lei-n0-Oof"/>
                         <outlet property="mainCollectionView" destination="A3Z-T8-gPY" id="4sM-3b-gNB"/>
                         <outlet property="primeView" destination="DTT-hW-9s8" id="wvJ-hv-6Uf"/>
-                        <outlet property="spinner" destination="GMJ-Cu-dqX" id="ljH-je-yC9"/>
                         <outlet property="trailingC" destination="JyS-o4-TKG" id="ecH-wT-eRE"/>
                     </connections>
                 </viewController>

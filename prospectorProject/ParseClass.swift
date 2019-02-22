@@ -20,6 +20,7 @@ class Parse
     
     func parse(json: JSON)
     {
+        print("Hello \(#line)")
         if let url = URL(string: homePageQuery)
         {
             if let data = try? Data(contentsOf: url)
@@ -27,6 +28,7 @@ class Parse
                 let json = try! JSON(data: data)
                 if json["status"] == "ok"
                 {
+                    print("Hello \(#line)")
                     parse(json: json)
                     return
                 }
@@ -34,6 +36,7 @@ class Parse
         }
         for result in json["items"].arrayValue
         {
+            print("Hello \(#line)")
            
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue

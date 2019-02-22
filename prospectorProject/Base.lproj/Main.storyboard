@@ -297,7 +297,7 @@
                         </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL">
                             <connections>
-                                <action selector="searchButton:" destination="BYZ-38-t0r" id="asf-Vh-1W3"/>
+                                <action selector="searchButton:" destination="BYZ-38-t0r" id="XK3-BY-RUE"/>
                                 <segue destination="8qL-Vz-nnh" kind="show" identifier="searchSegue" id="Uur-jB-cKr"/>
                             </connections>
                         </barButtonItem>
@@ -755,7 +755,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="25" height="25"/>
+        <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Slj-Mm-W4A"/>

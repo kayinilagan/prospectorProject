@@ -19,7 +19,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var categories1 = [String]()
     var descriptions1 = [String]()
     var dates1 = [String]()
- 
+    var searchBool = false
     var contentString1: String!
     var numberOfCategories = [Int]()
 
@@ -67,6 +67,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         if json["status"] == "ok"
                         {
                             self.parse(json: json)
+                            print("Muhammet Here!")
                             return
                         }
                         
@@ -80,10 +81,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
         
-        
      
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        searchBool = false
+    }
     // Side Menu
     
     @IBAction func hamburgerButton(_ sender: UIBarButtonItem) {
@@ -151,7 +155,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             print("We're parsing babey")
             print(itemTest)
             
-            var count = category.count - 1
+            let count = category.count - 1
             
             for i in 0...count
             {
@@ -167,11 +171,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         print("Over Here!")
         print(descriptions1)
+        print("Muhammet Here!")
+        if searchBool != true
+        {
         DispatchQueue.main.async {
-            self.mainCollectionView.reloadData()
+s            self.mainCollectionView.reloadData()
         }
-
+        }
     }
+    
+    
+    
     func loadError() {
         
         DispatchQueue.main.async {
@@ -185,13 +195,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         
     }
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -610,7 +613,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Search Button
     
-    @IBAction func searchButton(_ sender: UIBarButtonItem) {
+    @IBAction func searchButton(_ sender: UIBarButtonItem)
+    {
+        // in order to fix the dispatch error we are going to have to programmatically make a segue,
+        // use the search bool we tried earlier but switch the true and false statements
         print("Why")
-}
+        searchBool = true
+    
+    }
+    @IBOutlet weak var searchButtonOut: UIBarButtonItem!
 }

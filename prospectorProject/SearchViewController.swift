@@ -30,6 +30,7 @@ class SearchViewController: ViewController, UISearchBarDelegate {
         filteredData = data
         filteredArticles = arrayOfSearchArticles
       
+        print("Hello \(#line)")
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -45,6 +46,7 @@ class SearchViewController: ViewController, UISearchBarDelegate {
     }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("Hello \(#line)")
         // When there is no text, filteredData is the same as the original data
         // When user has entered text into the search box
         // Use the filter method to iterate over all items in the data array

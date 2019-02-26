@@ -175,10 +175,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if searchBool != true
         {
         DispatchQueue.main.async {
-s            self.mainCollectionView.reloadData()
-        }
+        
+        self.mainCollectionView.reloadData()
+            
+            }
         }
     }
+    
     
     
     

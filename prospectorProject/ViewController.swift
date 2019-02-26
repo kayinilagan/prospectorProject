@@ -86,7 +86,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        searchBool = false
+        searchBool = true
     }
     // Side Menu
     
@@ -172,7 +172,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         print("Over Here!")
         print(descriptions1)
         print("Muhammet Here!")
-        if searchBool != true
+        if searchBool == true
         {
         DispatchQueue.main.async {
         
@@ -589,12 +589,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
-        else if segue.identifier == "searchSegue"
-        {
-            let nvc = segue.destination as! SearchViewController
-            nvc.data = self.descriptions1
-            nvc.arrayOfSearchArticles = self.articles
-        }
         else if segue.identifier == "mainArticleSegue"
         {
             let nvc = segue.destination as! ArticleViewController
@@ -604,6 +598,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
             let nvc = segue.destination as! SpecificArticleViewController
             nvc.specificArticle = articles
+        }
+        else if segue.identifier == "searchSegue"
+        {
+            let nvc = segue.destination as! SearchViewController
+            nvc.data = self.descriptions1
+            nvc.arrayOfSearchArticles = self.articles
         }
             //table view segue
 //        else if segue.identifier == "tableViewArticlesRecentSegue"
@@ -622,6 +622,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // use the search bool we tried earlier but switch the true and false statements
         print("Why")
         searchBool = true
+        print(searchBool)
+        let vc = SearchViewController()
+        self.performSegue(withIdentifier: "searchSegue", sender: sender)
+//        self.present(vc, animated: true) {
+//        }
     
     }
     @IBOutlet weak var searchButtonOut: UIBarButtonItem!

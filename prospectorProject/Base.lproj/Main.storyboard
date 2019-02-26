@@ -294,11 +294,13 @@
                                 </fragment>
                             </attributedString>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <segue destination="8qL-Vz-nnh" kind="show" identifier="searchSegue" id="Dqk-co-s9R"/>
+                            </connections>
                         </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL">
                             <connections>
                                 <action selector="searchButton:" destination="BYZ-38-t0r" id="XK3-BY-RUE"/>
-                                <segue destination="8qL-Vz-nnh" kind="show" identifier="searchSegue" id="Uur-jB-cKr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

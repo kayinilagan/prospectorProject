@@ -43,8 +43,8 @@ class SportsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let nvc = segue.destination as! SpecificArticleViewController
         let index = sportTableView.indexPathForSelectedRow?.row
         nvc.specificArticle = arrayofArticlesSports
-        nvc.content0 = arrayofArticlesSports[index!]["content"]!    }
-    
+        nvc.content0 = arrayofArticlesSports[index!]["content"]!    
+    }
    
 
 }

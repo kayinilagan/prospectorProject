@@ -13,6 +13,7 @@ class SearchViewController: ViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchCollectionView: UICollectionView!
     
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
     var data = [String]()

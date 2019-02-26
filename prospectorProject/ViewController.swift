@@ -14,7 +14,7 @@ var articleInfo: ArticleInfo!
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    //Parse Things (Helen's Code + Kai's Copy For Search Button (Not Done Yet) )
+    //Parse Things (Helen's Code + Kai's Copy For Search Button)
     var articles = [[String: String]]()
     var categories1 = [String]()
     var descriptions1 = [String]()

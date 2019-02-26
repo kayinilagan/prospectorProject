@@ -618,15 +618,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func searchButton(_ sender: UIBarButtonItem)
     {
-        // in order to fix the dispatch error we are going to have to programmatically make a segue,
-        // use the search bool we tried earlier but switch the true and false statements
         print("Why")
         searchBool = true
         print(searchBool)
         let vc = SearchViewController()
         self.performSegue(withIdentifier: "searchSegue", sender: sender)
-//        self.present(vc, animated: true) {
-//        }
+
     
     }
     @IBOutlet weak var searchButtonOut: UIBarButtonItem!

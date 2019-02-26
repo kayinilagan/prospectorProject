@@ -63,6 +63,7 @@
                                             <outlet property="articleDateLabel" destination="5IY-D7-cyk" id="tZ9-re-WYF"/>
                                             <outlet property="articleLabel" destination="LYc-os-94h" id="4EG-EU-7Hz"/>
                                             <outlet property="imageView" destination="Wr8-Y7-NaW" id="yj2-GJ-2XY"/>
+                                            <segue destination="GcG-Qj-Jiu" kind="show" identifier="searchToCell" id="OXl-Ch-xb8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -760,6 +761,6 @@
         <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Slj-Mm-W4A"/>
+        <segue reference="OXl-Ch-xb8"/>
     </inferredMetricsTieBreakers>
 </document>

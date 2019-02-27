@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q0I-et-RDA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q0I-et-RDA">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,6 +63,7 @@
                                             <outlet property="articleDateLabel" destination="5IY-D7-cyk" id="tZ9-re-WYF"/>
                                             <outlet property="articleLabel" destination="LYc-os-94h" id="4EG-EU-7Hz"/>
                                             <outlet property="imageView" destination="Wr8-Y7-NaW" id="yj2-GJ-2XY"/>
+                                            <segue destination="GcG-Qj-Jiu" kind="show" identifier="searchToCell" id="OXl-Ch-xb8"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -101,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="64" width="128" height="304"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-fm-BkE">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-fm-BkE">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -113,7 +114,7 @@
                                             <segue destination="WdX-cT-Jpd" kind="show" identifier="newsSegue" id="NM1-j0-uhu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-pc-Mge">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-pc-Mge">
                                         <rect key="frame" x="0.0" y="38" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -125,7 +126,7 @@
                                             <segue destination="keT-iG-7rS" kind="show" identifier="sportsSegue" id="EkC-H3-oAR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19E-l7-MEe">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19E-l7-MEe">
                                         <rect key="frame" x="0.0" y="76" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -137,7 +138,7 @@
                                             <segue destination="lh0-I7-rTy" kind="show" identifier="entertainmentSegue" id="FLJ-J8-fWU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gA-aw-hnA">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gA-aw-hnA">
                                         <rect key="frame" x="0.0" y="114" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -148,7 +149,7 @@
                                             <action selector="newsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCS-J8-qoq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-yG-iqL">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-yG-iqL">
                                         <rect key="frame" x="0.0" y="152" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -160,7 +161,7 @@
                                             <segue destination="mvB-T7-37b" kind="show" identifier="featuresSegue" id="VUG-x2-fIg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-xe-eHF">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-xe-eHF">
                                         <rect key="frame" x="0.0" y="190" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -172,7 +173,7 @@
                                             <segue destination="v3T-bq-n2Q" kind="show" identifier="opinionSegue" id="FIU-1V-W5U"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v69-PJ-Cep">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v69-PJ-Cep">
                                         <rect key="frame" x="0.0" y="228" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -184,7 +185,7 @@
                                             <segue destination="65c-U3-9xA" kind="show" identifier="otherSegue" id="G11-vh-3SE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-Pi-4X7">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-Pi-4X7">
                                         <rect key="frame" x="0.0" y="266" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -245,7 +246,7 @@
                                                     <outlet property="articleDateLabel" destination="kcK-l6-rvO" id="BEz-tv-q01"/>
                                                     <outlet property="articleLabel" destination="vCr-JW-buC" id="hxY-E1-PDm"/>
                                                     <outlet property="imageView" destination="KZB-k2-eTe" id="u8x-DU-Qr6"/>
-                                                    <segue destination="ZGI-wT-Vqe" kind="show" identifier="articleViewSegue" id="R9N-Mu-bKv"/>
+                                                    <segue destination="GcG-Qj-Jiu" kind="show" identifier="specificSegue" id="KBi-Y3-iHt"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -275,7 +276,7 @@
                             </connections>
                         </barButtonItem>
                         <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" id="nMc-4D-RaV">
-                            <rect key="frame" x="153" y="3" width="462" height="44"/>
+                            <rect key="frame" x="153" y="0.0" width="462" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <attributedString key="attributedText">
                                 <fragment content="PROSPECTOR">
@@ -294,11 +295,13 @@
                                 </fragment>
                             </attributedString>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <segue destination="8qL-Vz-nnh" kind="show" identifier="searchSegue" id="Dqk-co-s9R"/>
+                            </connections>
                         </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL">
                             <connections>
                                 <action selector="searchButton:" destination="BYZ-38-t0r" id="XK3-BY-RUE"/>
-                                <segue destination="8qL-Vz-nnh" kind="show" identifier="searchSegue" id="Uur-jB-cKr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -400,7 +403,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q0I-et-RDA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2hN-JH-pEX">
-                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -755,9 +758,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="24" height="24"/>
+        <image name="hamburgerIconSkinny" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Slj-Mm-W4A"/>
+        <segue reference="KBi-Y3-iHt"/>
     </inferredMetricsTieBreakers>
 </document>

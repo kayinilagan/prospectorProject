@@ -14,7 +14,7 @@ var articleInfo: ArticleInfo!
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    //Parse Things (Helen's Code + Kai's Copy For Search Button (Not Done Yet) )
+    //Parse Things (Helen's Code + Kai's Copy For Search Button)
     var articles = [[String: String]]()
     var categories1 = [String]()
     var descriptions1 = [String]()
@@ -86,7 +86,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        searchBool = false
+        searchBool = true
     }
     // Side Menu
     
@@ -172,13 +172,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         print("Over Here!")
         print(descriptions1)
         print("Muhammet Here!")
-        if searchBool != true
+        if searchBool == true
         {
         DispatchQueue.main.async {
-s            self.mainCollectionView.reloadData()
-        }
+        
+        self.mainCollectionView.reloadData()
+            
+            }
         }
     }
+    
     
     
     
@@ -586,12 +589,6 @@ s            self.mainCollectionView.reloadData()
                 }
             }
         }
-        else if segue.identifier == "searchSegue"
-        {
-            let nvc = segue.destination as! SearchViewController
-            nvc.data = self.descriptions1
-            nvc.arrayOfSearchArticles = self.articles
-        }
         else if segue.identifier == "mainArticleSegue"
         {
             let nvc = segue.destination as! ArticleViewController
@@ -601,6 +598,12 @@ s            self.mainCollectionView.reloadData()
         {
             let nvc = segue.destination as! SpecificArticleViewController
             nvc.specificArticle = articles
+        }
+        else if segue.identifier == "searchSegue"
+        {
+            let nvc = segue.destination as! SearchViewController
+            nvc.data = self.descriptions1
+            nvc.arrayOfSearchArticles = self.articles
         }
             //table view segue
 //        else if segue.identifier == "tableViewArticlesRecentSegue"
@@ -615,10 +618,12 @@ s            self.mainCollectionView.reloadData()
     
     @IBAction func searchButton(_ sender: UIBarButtonItem)
     {
-        // in order to fix the dispatch error we are going to have to programmatically make a segue,
-        // use the search bool we tried earlier but switch the true and false statements
         print("Why")
         searchBool = true
+        print(searchBool)
+        let vc = SearchViewController()
+        self.performSegue(withIdentifier: "searchSegue", sender: sender)
+
     
     }
     @IBOutlet weak var searchButtonOut: UIBarButtonItem!

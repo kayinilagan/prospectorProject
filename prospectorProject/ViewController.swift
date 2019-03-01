@@ -598,6 +598,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
             let nvc = segue.destination as! SpecificArticleViewController
             nvc.specificArticle = articles
+            nvc.content0 = contentString1
         }
         else if segue.identifier == "searchSegue"
         {

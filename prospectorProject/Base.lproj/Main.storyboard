@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q0I-et-RDA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q0I-et-RDA">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -102,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="64" width="128" height="304"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-fm-BkE">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvP-fm-BkE">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -111,10 +111,10 @@
                                         </state>
                                         <connections>
                                             <action selector="trendingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Agw-a8-Y9J"/>
-                                            <segue destination="WdX-cT-Jpd" kind="show" identifier="newsSegue" id="NM1-j0-uhu"/>
+                                            <segue destination="WdX-cT-Jpd" kind="show" identifier="trendingSegue" id="NM1-j0-uhu"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-pc-Mge">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2m-pc-Mge">
                                         <rect key="frame" x="0.0" y="38" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -126,7 +126,7 @@
                                             <segue destination="keT-iG-7rS" kind="show" identifier="sportsSegue" id="EkC-H3-oAR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19E-l7-MEe">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19E-l7-MEe">
                                         <rect key="frame" x="0.0" y="76" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -138,7 +138,7 @@
                                             <segue destination="lh0-I7-rTy" kind="show" identifier="entertainmentSegue" id="FLJ-J8-fWU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gA-aw-hnA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gA-aw-hnA">
                                         <rect key="frame" x="0.0" y="114" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -147,9 +147,10 @@
                                         </state>
                                         <connections>
                                             <action selector="newsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qCS-J8-qoq"/>
+                                            <segue destination="C87-Md-ivn" kind="show" identifier="newsSegue" id="pfM-11-2vj"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-yG-iqL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmX-yG-iqL">
                                         <rect key="frame" x="0.0" y="152" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -161,7 +162,7 @@
                                             <segue destination="mvB-T7-37b" kind="show" identifier="featuresSegue" id="VUG-x2-fIg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-xe-eHF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-xe-eHF">
                                         <rect key="frame" x="0.0" y="190" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -173,7 +174,7 @@
                                             <segue destination="v3T-bq-n2Q" kind="show" identifier="opinionSegue" id="FIU-1V-W5U"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v69-PJ-Cep">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v69-PJ-Cep">
                                         <rect key="frame" x="0.0" y="228" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -185,7 +186,7 @@
                                             <segue destination="65c-U3-9xA" kind="show" identifier="otherSegue" id="G11-vh-3SE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-Pi-4X7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AV-Pi-4X7">
                                         <rect key="frame" x="0.0" y="266" width="128" height="38"/>
                                         <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809859156" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -276,7 +277,7 @@
                             </connections>
                         </barButtonItem>
                         <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" id="nMc-4D-RaV">
-                            <rect key="frame" x="153" y="0.0" width="462" height="44"/>
+                            <rect key="frame" x="153" y="3" width="462" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <attributedString key="attributedText">
                                 <fragment content="PROSPECTOR">
@@ -403,7 +404,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q0I-et-RDA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2hN-JH-pEX">
-                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -457,7 +458,7 @@
                         <viewLayoutGuide key="safeArea" id="lV6-CU-c7s"/>
                     </view>
                     <connections>
-                        <outlet property="trendingTableView" destination="Fv5-LZ-lKo" id="LiF-aZ-bRA"/>
+                        <outlet property="trendingTableView" destination="Fv5-LZ-lKo" id="0fD-NG-Lbz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xe9-py-fqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -682,6 +683,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82x-B7-nUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1125" y="2267.578125"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="OjD-Ia-Qru">
+            <objects>
+                <viewController id="C87-Md-ivn" customClass="NewsViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uUd-bW-D9z">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="79X-EO-SwY">
+                                <rect key="frame" x="0.0" y="385" width="768" height="639"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="Lg2-nb-FmW">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lg2-nb-FmW" id="jN1-hF-IhJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="C87-Md-ivn" id="QfJ-We-9bC"/>
+                                    <outlet property="delegate" destination="C87-Md-ivn" id="99K-RW-aIf"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocs-2d-pCd">
+                                <rect key="frame" x="406" y="129" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5VP-oL-dxV"/>
+                    </view>
+                    <connections>
+                        <outlet property="newsTableView" destination="79X-EO-SwY" id="Z72-pu-Ig7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8N-GV-Zrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2431.25" y="888.86718749999989"/>
         </scene>
         <!--Who We Are View Controller-->
         <scene sceneID="c5p-Ql-yoR">

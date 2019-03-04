@@ -35,7 +35,14 @@ class OtherViewController: UIViewController, UITableViewDataSource, UITableViewD
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")
         let article = arrayofArticlesOther[indexPath.row]
+        if article.isEmpty == true
+        {
+            cell?.textLabel?.text = "No Articles at This Time"
+        }
+        else
+        {
         cell?.textLabel?.text = article["title"]
+        }
         return cell!
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

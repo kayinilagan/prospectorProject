@@ -532,7 +532,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let nvc = segue.destination as! OtherViewController
             var count1 = otherArrayHolder.count - 1
             var counter = 0
-            
+            if count1 > 0
+            {
             for h in 0...count1
             {
                 var tester = otherArrayHolder[h]
@@ -549,7 +550,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
                 counter = 0
             }
-            
+            }
             var count2 = realOtherArray.count - 1
             
             if count2 > -1

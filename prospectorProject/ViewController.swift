@@ -511,7 +511,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
-            // i dont know why the segue isn't working, I have put all Helen's code in and its all seemingly functional but it doesnt actually show any articles on the view controllers. right now i've been focusing on making the trending and sports view controllers work just to start with 2 and finish the rest later. I am printing the array of articles for trending and it just gives me an empty array everytime so I just think the code inside the buttons isn't working right now, and I don't know why. Also if Bobby reads this later, ur looking like a snacc today <3 
+          
             
         else if segue.identifier == "entertainmentSegue"
         {

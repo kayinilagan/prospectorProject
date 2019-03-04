@@ -8,7 +8,7 @@
 
 import UIKit
 
-// Does not work atm
+
 
 class EntertainmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var arrayofArticlesEntertainment = [[String: String]]()

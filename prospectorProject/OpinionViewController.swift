@@ -8,7 +8,6 @@
 
 import UIKit
 
-// Does not work atm
 
 class OpinionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {

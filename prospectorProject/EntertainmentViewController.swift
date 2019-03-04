@@ -10,7 +10,7 @@ import UIKit
 
 // Does not work atm
 
-class EntertainmentViewController: UIViewController {
+class EntertainmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var arrayofArticlesEntertainment = [[String: String]]()
 
     @IBOutlet weak var entertainmentTableView: UITableView!
@@ -18,8 +18,6 @@ class EntertainmentViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {

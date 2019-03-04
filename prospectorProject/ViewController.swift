@@ -209,7 +209,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 //
 //    }
     
-    // Start of Helen's Code (Also please see top of Viewcontroller)
+//******Start of Helen's Code (Also please see top of Viewcontroller)***************************************************
     var arrayHolder = [[String:String]]()
     
     // Trending
@@ -453,31 +453,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func whoWeAreButton(_ sender: UIButton)
     {
-        var holderC = [String]()
-        var count = articles.count - 1
         
-        for k in 0...(categories1.count - 1)
-        {
-            holderC.append(categories1[k])
-        }
-        
-        for i in 0...count
-        {
-            var one = articles[i]
-            var cValue = one["categories"]
-            var cCount = Int(cValue!)! - 1
-            for j in 0...cCount
-            {
-                if holderC[j] == "Who We Are"
-                {
-                    arrayHolder.append(one)
-                }
-            }
-            for k in 0...cCount
-            {
-                holderC.remove(at: 0)
-            }
-        }
         
     }
     

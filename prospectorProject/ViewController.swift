@@ -337,7 +337,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             {
                 if holderC[j] == "News"
                 {
-                    newsArrayHolder.append(one)
+                    arrayHolder.append(one)
                 }
             }
             for k in 0...cCount
@@ -345,7 +345,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 holderC.remove(at: 0)
             }
         }
-        
     }
     
     // Features
@@ -487,8 +486,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //NEWS SEGUE
         if segue.identifier == "newsSegue"
         {
-            print(arrayHolder)
-            let nvc = segue.destination as! TrendingViewController
+            let nvc = segue.destination as! NewsViewController
             var count1 = arrayHolder.count - 1
             
             if count1 > -1
@@ -598,6 +596,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         {
             let nvc = segue.destination as! SpecificArticleViewController
             nvc.specificArticle = articles
+            nvc.content0 = contentString1
         }
         else if segue.identifier == "searchSegue"
         {

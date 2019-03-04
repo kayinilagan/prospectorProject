@@ -1,32 +1,25 @@
 //
-//  TrendingViewController.swift
+//  NewsViewController.swift
 //  prospectorProject
 //
-//  Created by period3 on 11/14/18.
-//  Copyright © 2018 period3. All rights reserved.
+//  Created by period3 on 3/1/19.
+//  Copyright © 2019 period3. All rights reserved.
 //
 
 import UIKit
 
-// Does not work atm
+class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-class TrendingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
     var arrayofArticlesNews = [[String: String]]()
     
+    @IBOutlet weak var newsTableView: UITableView!
     
-    override func viewDidLoad()
-    {
+    
+    override func viewDidLoad() {
+        
         super.viewDidLoad()
         
-        trendingTableView.reloadData()
-        
-        
-        
     }
-    
-    @IBOutlet weak var trendingTableView: UITableView!
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -37,18 +30,15 @@ class TrendingViewController: UIViewController, UITableViewDataSource, UITableVi
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")
         let article = arrayofArticlesNews[indexPath.row]
-        print(article)
         cell?.textLabel?.text = article["title"]
-        print(cell?.textLabel?.text)
+        
         return cell!
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let nvc = segue.destination as! SpecificArticleViewController
-        let index = trendingTableView.indexPathForSelectedRow?.row
+        let index = newsTableView.indexPathForSelectedRow?.row
         nvc.specificArticle = arrayofArticlesNews
         nvc.content0 = arrayofArticlesNews[index!]["content"]!
     }
 }
-
-

@@ -12,20 +12,22 @@ class SpecificArticleViewController: UIViewController {
     
     var specificArticle = [[String:String]]()
     var content0: String!
-    
+    var specificArticleStruct: Article!
 
     @IBOutlet weak var articleTextView: UITextView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+//
+//        for i in 0...specificArticle.count - 1
+//        {
+//            articleTextView.text = specificArticle[i]["content"]?.htmlToString
+////            articleTextView.text = content0
+//            print("over here kai")
+//        }
         
-        for i in 0...specificArticle.count - 1
-        {
-            articleTextView.text = specificArticle[i]["content"]?.htmlToString
-//            articleTextView.text = content0
-            print("over here kai")
-        }
+        articleTextView.text = specificArticleStruct.content.htmlToString
     }
     
 

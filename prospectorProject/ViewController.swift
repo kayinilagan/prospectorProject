@@ -22,6 +22,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var searchBool = false
     var contentString1: String!
     var numberOfCategories = [Int]()
+    var articlesStruct = [Article]()
 
     var oneSignal = OneSignal()
 
@@ -116,16 +117,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return articles.count
+        return articlesStruct.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        let source = articles[indexPath.row]
-        cell.articleLabel.text = source["title"]
-        cell.articleDateLabel.text = source["pubDate"]
+        let article = articlesStruct[indexPath.row]
+        cell.articleLabel.text = article.title
+        cell.articleDateLabel.text = article.pubDate
         print("bobby sucks")
         return cell
     }
@@ -146,7 +147,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let categories = String(result["categories"].arrayValue.count)
             
             
-
+            articlesStruct.append(Article(title: title, pubDate: pubDate, description: description, content: content, articleThumbnail: articleThumbnail, categories: categories))
+            
 
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories]
             articles.append(source)
@@ -574,6 +576,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let nvc = segue.destination as! SpecificArticleViewController
             nvc.specificArticle = articles
             nvc.content0 = contentString1
+            let cell = sender as! UICollectionViewCell
+            if let indexPath = self.mainCollectionView.indexPath(for: cell) {
+                let article = articlesStruct[indexPath.row]
+                nvc.specificArticleStruct = article
+            }
         }
         else if segue.identifier == "searchSegue"
         {

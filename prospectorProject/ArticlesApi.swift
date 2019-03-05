@@ -11,3 +11,12 @@ import Foundation
 
 // Do it parse function, build it like how source is made in parse function.
 // This is very important for the search functiom.
+
+struct Article {
+    let title : String
+    let pubDate : String
+    let description : String
+    let content : String
+    let articleThumbnail : String
+    let categories : String
+}

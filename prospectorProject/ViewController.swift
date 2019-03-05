@@ -10,7 +10,7 @@ import OneSignal
 
 var articleInfo: ArticleInfo!
 
-
+//hey guys! henning and I were thinking that we could clear the table view before storing articles? We may be able to do so in the function that stores the articles in the table view cell by clearing the table view and then adding in the articles so we can avoid repeating articles in a table view once a button is clicked on again. -Helen 
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     

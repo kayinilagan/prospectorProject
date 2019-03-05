@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="1075.78125" y="-615.234375"/>
         </scene>
-        <!--View Controller-->
+        <!--TheProspector-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -269,37 +269,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="m8I-vL-y76">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" title="TheProspector" id="m8I-vL-y76">
                         <barButtonItem key="leftBarButtonItem" title="Menu" image="hamburgerIconSkinny" id="R9o-Dc-pk8">
                             <connections>
                                 <action selector="hamburgerButton:" destination="BYZ-38-t0r" id="82n-2s-cj3"/>
                             </connections>
                         </barButtonItem>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" minimumFontSize="17" id="nMc-4D-RaV">
-                            <rect key="frame" x="153" y="3" width="462" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <attributedString key="attributedText">
-                                <fragment content="PROSPECTOR">
-                                    <attributes>
-                                        <color key="NSColor" red="0.087453864514827728" green="0.20676326751708984" blue="0.3940390944480896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="50" name="SukhumvitSet-Text"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content="NOW">
-                                    <attributes>
-                                        <color key="NSColor" red="0.2149919867515564" green="0.63083118200302124" blue="0.98529237508773804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <font key="NSFont" size="50" name="SukhumvitSet-Text"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <segue destination="8qL-Vz-nnh" kind="show" identifier="searchSegue" id="Dqk-co-s9R"/>
-                            </connections>
-                        </textField>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL">
                             <connections>
                                 <action selector="searchButton:" destination="BYZ-38-t0r" id="XK3-BY-RUE"/>
@@ -406,6 +381,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2hN-JH-pEX">
                         <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelloSanttinyRegular" family="Hello Santtiny" pointSize="33"/>
+                            <color key="textColor" red="0.014300031587481499" green="0.45816069841384888" blue="0.98548680543899536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -837,9 +817,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="25" height="25"/>
+        <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KBi-Y3-iHt"/>
+        <segue reference="OXl-Ch-xb8"/>
     </inferredMetricsTieBreakers>
 </document>

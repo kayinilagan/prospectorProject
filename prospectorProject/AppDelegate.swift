@@ -36,6 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         OneSignal.promptForPushNotifications(userResponse: { accepted in
             print("User accepted notifications: \(accepted)")
         })
+        
+        UISearchBar.appearance().tintColor = .prospectBlue
+        UINavigationBar.appearance().tintColor = .prospectBlue
+        
         return true
     }
 

@@ -468,13 +468,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
-    // Who We Are
-    
-    @IBAction func whoWeAreButton(_ sender: UIButton)
-    {
-        
-        
-    }
+  
     
     // MARK: - Private instance methods
     

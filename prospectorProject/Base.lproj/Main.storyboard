@@ -194,7 +194,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ryX-Lp-SZQ" kind="show" id="TR8-Rs-Iym"/>
+                                            <segue destination="ryX-Lp-SZQ" kind="show" id="SPd-1s-yeO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -717,7 +717,7 @@
         <!--Who We Are View Controller-->
         <scene sceneID="c5p-Ql-yoR">
             <objects>
-                <viewController id="ryX-Lp-SZQ" customClass="WhoWeAreViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ryX-Lp-SZQ" customClass="WhoWeAreViewController" customModule="prospectorProject" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="89j-Hr-ZTD">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -817,9 +817,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="24" height="24"/>
+        <image name="hamburgerIconSkinny" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OXl-Ch-xb8"/>
+        <segue reference="KBi-Y3-iHt"/>
     </inferredMetricsTieBreakers>
 </document>

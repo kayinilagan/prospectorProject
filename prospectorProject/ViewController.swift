@@ -23,6 +23,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var contentString1: String!
     var numberOfCategories = [Int]()
     var articlesStruct = [Article]()
+    var filteredArticlesStruct = [Article]()
+    let searchController = UISearchController(searchResultsController: nil)
 
     var oneSignal = OneSignal()
 
@@ -55,6 +57,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     {
         super.viewDidLoad()
         print(OneSignal.app_id())
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Articles"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
 
         
@@ -117,14 +125,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
+        if isFiltering() {
+            return filteredArticlesStruct.count
+        }
         return articlesStruct.count
+        
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        let article = articlesStruct[indexPath.row]
+        let article: Article
+        if isFiltering() {
+            article = filteredArticlesStruct[indexPath.row]
+        } else {
+            article = articlesStruct[indexPath.row]
+        }
         cell.articleLabel.text = article.title
         cell.articleDateLabel.text = article.pubDate
         print("bobby sucks")
@@ -459,6 +476,27 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
+    // MARK: - Private instance methods
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filteredArticlesStruct = articlesStruct.filter({( article : Article) -> Bool in
+            return article.title.lowercased().contains(searchText.lowercased())
+        })
+        
+        mainCollectionView.reloadData()
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+
+
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         //NEWS SEGUE
@@ -578,7 +616,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             nvc.content0 = contentString1
             let cell = sender as! UICollectionViewCell
             if let indexPath = self.mainCollectionView.indexPath(for: cell) {
-                let article = articlesStruct[indexPath.row]
+                let article: Article
+                if isFiltering() {
+                    article = filteredArticlesStruct[indexPath.row]
+                } else {
+                    article = articlesStruct[indexPath.row]
+                }
                 nvc.specificArticleStruct = article
             }
         }
@@ -611,3 +654,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     @IBOutlet weak var searchButtonOut: UIBarButtonItem!
 }
+
+extension ViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+

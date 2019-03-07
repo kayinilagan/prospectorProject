@@ -76,7 +76,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         if json["status"] == "ok"
                         {
                             self.parse(json: json)
-                            print("Muhammet Here!")
                             return
                         }
                         
@@ -143,8 +142,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             article = articlesStruct[indexPath.row]
         }
         cell.articleLabel.text = article.title
+        cell.articleLabel.backgroundColor = UIColor.prospectBlue
+        cell.articleDateLabel.backgroundColor = UIColor.darkerProspectBlue
         cell.articleDateLabel.text = article.pubDate
-        print("bobby sucks")
         return cell
     }
     
@@ -181,16 +181,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 categories1.append(category[i].stringValue)
             }
             
-            print("Right here!")
             
             // I FIXED IT
             descriptions1.append(title)
             dates1.append(pubDate)
             
         }
-        print("Over Here!")
-        print(descriptions1)
-        print("Muhammet Here!")
+
         if searchBool == true
         {
         DispatchQueue.main.async {

@@ -14,7 +14,10 @@ class SpecificArticleViewController: UIViewController {
     var content0: String!
     var specificArticleStruct: Article!
 
+    @IBOutlet weak var specificImageView: UIImageView!
     @IBOutlet weak var articleTextView: UITextView!
+    @IBOutlet weak var specificTitleLabe: UILabel!
+    @IBOutlet weak var specificDateLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -26,8 +29,11 @@ class SpecificArticleViewController: UIViewController {
 ////            articleTextView.text = content0
 //            print("over here kai")
 //        }
-        
+        specificTitleLabe.backgroundColor = UIColor.prospectBlue
+        self.title = specificArticleStruct.title.htmlToString
         articleTextView.text = specificArticleStruct.content.htmlToString
+        specificTitleLabe.text = specificArticleStruct.title.htmlToString
+        specificDateLabel.text = specificArticleStruct.pubDate.htmlToString
     }
     
 

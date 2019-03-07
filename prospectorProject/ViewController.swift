@@ -625,17 +625,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // Search Button
     
-    @IBAction func searchButton(_ sender: UIBarButtonItem)
-    {
-        print("Why")
-        searchBool = true
-        print(searchBool)
-        let vc = SearchViewController()
-        self.performSegue(withIdentifier: "searchSegue", sender: sender)
-
-    
-    }
-    @IBOutlet weak var searchButtonOut: UIBarButtonItem!
 }
 
 extension ViewController: UISearchResultsUpdating {

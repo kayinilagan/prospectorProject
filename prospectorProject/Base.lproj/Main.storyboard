@@ -10,86 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View Controller-->
-        <scene sceneID="6n3-3Y-mCs">
-            <objects>
-                <viewController id="8qL-Vz-nnh" customClass="SearchViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mN8-KK-AbI">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WTw-1O-6DN">
-                                <rect key="frame" x="0.0" y="126" width="768" height="898"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iH8-oB-BOm">
-                                    <size key="itemSize" width="768" height="365"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="searchCell" id="lcI-yE-iJr" customClass="CollectionViewCell" customModule="prospectorProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wr8-Y7-NaW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYc-os-94h">
-                                                    <rect key="frame" x="0.0" y="294" width="768" height="38"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IY-D7-cyk">
-                                                    <rect key="frame" x="0.0" y="332" width="768" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.0298590418" green="0.053070098160000002" blue="0.046318821609999998" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <connections>
-                                            <outlet property="articleDateLabel" destination="5IY-D7-cyk" id="tZ9-re-WYF"/>
-                                            <outlet property="articleLabel" destination="LYc-os-94h" id="4EG-EU-7Hz"/>
-                                            <outlet property="imageView" destination="Wr8-Y7-NaW" id="yj2-GJ-2XY"/>
-                                            <segue destination="GcG-Qj-Jiu" kind="show" identifier="searchToCell" id="OXl-Ch-xb8"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="4I0-yI-t7e"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="C37-c7-h0f"/>
-                                </connections>
-                            </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V44-sF-Hi8">
-                                <rect key="frame" x="0.0" y="70" width="768" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="FRd-Su-rah"/>
-                    </view>
-                    <connections>
-                        <outlet property="searchBar" destination="V44-sF-Hi8" id="dB1-hg-iq2"/>
-                        <outlet property="searchCollectionView" destination="WTw-1O-6DN" id="67a-xG-0mn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aiR-5r-PBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1075.78125" y="-615.234375"/>
-        </scene>
         <!--TheProspector-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -275,103 +195,18 @@
                                 <action selector="hamburgerButton:" destination="BYZ-38-t0r" id="82n-2s-cj3"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL">
-                            <connections>
-                                <action selector="searchButton:" destination="BYZ-38-t0r" id="XK3-BY-RUE"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL"/>
                     </navigationItem>
                     <connections>
                         <outlet property="leadingC" destination="9pU-x5-RuA" id="lei-n0-Oof"/>
                         <outlet property="mainCollectionView" destination="A3Z-T8-gPY" id="4sM-3b-gNB"/>
                         <outlet property="primeView" destination="DTT-hW-9s8" id="wvJ-hv-6Uf"/>
-                        <outlet property="searchButtonOut" destination="QUT-Fz-DhL" id="1if-W9-MLM"/>
                         <outlet property="trailingC" destination="JyS-o4-TKG" id="ecH-wT-eRE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1075.78125" y="133.0078125"/>
-        </scene>
-        <!--Article View Controller-->
-        <scene sceneID="hBS-Jr-1oi">
-            <objects>
-                <viewController id="ZGI-wT-Vqe" customClass="ArticleViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hbj-uL-5DY">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CaU-GA-yER">
-                                <rect key="frame" x="0.0" y="263" width="768" height="526"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-fE-a3i">
-                                <rect key="frame" x="0.0" y="70" width="768" height="923"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UzJ-eE-T3f">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="194"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-yZ-qtZ">
-                                        <rect key="frame" x="0.0" y="125" width="768" height="69"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3zU-gs-2Qz">
-                                        <rect key="frame" x="0.0" y="202" width="768" height="715"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CJC-jG-8fB">
-                                            <size key="itemSize" width="768" height="555"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="article" id="Uef-u5-sNf" customClass="ArticleCollectionViewCell" customModule="prospectorProject" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="768" height="555"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="555"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="content" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au0-Aq-ruF">
-                                                            <rect key="frame" x="0.0" y="10" width="768" height="544"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
-                                                    </subviews>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
-                                        <connections>
-                                            <outlet property="dataSource" destination="ZGI-wT-Vqe" id="VZc-bh-Xqi"/>
-                                            <outlet property="delegate" destination="ZGI-wT-Vqe" id="T4T-g0-q8m"/>
-                                        </connections>
-                                    </collectionView>
-                                </subviews>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Wsa-uC-bqS"/>
-                    </view>
-                    <connections>
-                        <outlet property="articleCollectionView" destination="3zU-gs-2Qz" id="FzQ-d2-oGE"/>
-                        <outlet property="articleTextField" destination="CaU-GA-yER" id="OVh-i1-iac"/>
-                        <outlet property="dateLabel" destination="fg8-yZ-qtZ" id="7i2-Q5-5ym"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AOU-qz-Af8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2147.65625" y="134.1796875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uEW-iP-RI1">
@@ -817,7 +652,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="25" height="25"/>
+        <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KBi-Y3-iHt"/>

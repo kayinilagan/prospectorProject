@@ -598,11 +598,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
             }
         }
-        else if segue.identifier == "mainArticleSegue"
-        {
-            let nvc = segue.destination as! ArticleViewController
-            nvc.articleSource = self.articles
-        }
         else if segue.identifier == "specificSegue"
         {
             let nvc = segue.destination as! SpecificArticleViewController
@@ -618,12 +613,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 }
                 nvc.specificArticleStruct = article
             }
-        }
-        else if segue.identifier == "searchSegue"
-        {
-            let nvc = segue.destination as! SearchViewController
-            nvc.data = self.descriptions1
-            nvc.arrayOfSearchArticles = self.articles
         }
             //table view segue
 //        else if segue.identifier == "tableViewArticlesRecentSegue"

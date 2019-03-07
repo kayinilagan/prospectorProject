@@ -195,7 +195,6 @@
                                 <action selector="hamburgerButton:" destination="BYZ-38-t0r" id="82n-2s-cj3"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="QUT-Fz-DhL"/>
                     </navigationItem>
                     <connections>
                         <outlet property="leadingC" destination="9pU-x5-RuA" id="lei-n0-Oof"/>

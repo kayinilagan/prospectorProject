@@ -236,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="-6" y="134"/>
         </scene>
-        <!--Trending View Controller-->
+        <!--Trending-->
         <scene sceneID="XfU-oz-7E2">
             <objects>
-                <viewController id="WdX-cT-Jpd" customClass="TrendingViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Trending" id="WdX-cT-Jpd" customClass="TrendingViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsq-r5-XW1">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,10 +334,10 @@
             </objects>
             <point key="canvasLocation" x="1483.59375" y="859.5703125"/>
         </scene>
-        <!--Sports View Controller-->
+        <!--Sports-->
         <scene sceneID="uEF-Z5-3S0">
             <objects>
-                <viewController id="keT-iG-7rS" customClass="SportsViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sports" id="keT-iG-7rS" customClass="SportsViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zxy-ge-59Y">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -390,10 +390,10 @@
             </objects>
             <point key="canvasLocation" x="673.4375" y="859.5703125"/>
         </scene>
-        <!--Features View Controller-->
+        <!--Features-->
         <scene sceneID="TEe-JF-aGd">
             <objects>
-                <viewController id="mvB-T7-37b" customClass="FeaturesViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Features" id="mvB-T7-37b" customClass="FeaturesViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9pm-mm-lt1">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,10 +432,10 @@
             </objects>
             <point key="canvasLocation" x="-7.03125" y="1545.703125"/>
         </scene>
-        <!--Other View Controller-->
+        <!--Other-->
         <scene sceneID="E54-f8-2MH">
             <objects>
-                <viewController id="65c-U3-9xA" customClass="OtherViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Other" id="65c-U3-9xA" customClass="OtherViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wbn-aY-Dh1">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -532,10 +532,10 @@
             </objects>
             <point key="canvasLocation" x="1125" y="2267.578125"/>
         </scene>
-        <!--News View Controller-->
+        <!--News-->
         <scene sceneID="OjD-Ia-Qru">
             <objects>
-                <viewController id="C87-Md-ivn" customClass="NewsViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="News" id="C87-Md-ivn" customClass="NewsViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uUd-bW-D9z">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -578,10 +578,10 @@
             </objects>
             <point key="canvasLocation" x="2431.25" y="888.86718749999989"/>
         </scene>
-        <!--Who We Are View Controller-->
+        <!--Who We Are-->
         <scene sceneID="c5p-Ql-yoR">
             <objects>
-                <viewController id="ryX-Lp-SZQ" customClass="WhoWeAreViewController" customModule="prospectorProject" sceneMemberID="viewController">
+                <viewController title="Who We Are" id="ryX-Lp-SZQ" customClass="WhoWeAreViewController" customModule="prospectorProject" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="89j-Hr-ZTD">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -630,10 +630,10 @@
             </objects>
             <point key="canvasLocation" x="2147.65625" y="1545.703125"/>
         </scene>
-        <!--Opinion View Controller-->
+        <!--Opinion-->
         <scene sceneID="Wj7-gi-La6">
             <objects>
-                <viewController id="v3T-bq-n2Q" customClass="OpinionViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Opinion" id="v3T-bq-n2Q" customClass="OpinionViewController" customModule="prospectorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hFb-Hq-h5g">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -684,6 +684,6 @@
         <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KBi-Y3-iHt"/>
+        <segue reference="SzI-1n-AZZ"/>
     </inferredMetricsTieBreakers>
 </document>

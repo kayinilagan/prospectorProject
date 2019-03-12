@@ -26,6 +26,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var articlesStruct = [Article]()
     var filteredArticlesStruct = [Article]()
     let searchController = UISearchController(searchResultsController: nil)
+    let slantedSayout = CollectionViewSlantedLayout()
+    
 
     var oneSignal = OneSignal()
 
@@ -63,6 +65,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Articles"
         navigationItem.searchController = searchController
+        UICollectionView(frame: .zero, collectionViewLayout: slantedSayout)
         definesPresentationContext = true
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
 

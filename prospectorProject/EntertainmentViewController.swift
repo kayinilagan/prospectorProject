@@ -13,11 +13,14 @@ import UIKit
 class EntertainmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var arrayofArticlesEntertainment = [[String: String]]()
 
+ 
+
     @IBOutlet weak var entertainmentTableView: UITableView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -28,8 +31,13 @@ class EntertainmentViewController: UIViewController, UITableViewDataSource, UITa
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")
         let article = arrayofArticlesEntertainment[indexPath.row]
+       
         cell?.textLabel?.text = article["title"]
+        
+        
+        
         return cell!
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {

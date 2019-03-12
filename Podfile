@@ -3,9 +3,10 @@
 
 target 'Notificaiton Center' do
     pod 'OneSignal', '>= 2.6.2', '<3.0.4'
+    pod 'CollectionViewSlantedLayout', '~> 3.1'
 end
 
 target 'prospectorProject' do
     pod 'OneSignal', '>= 2.6.2', '<3.0.4'
-  
+    pod 'CollectionViewSlantedLayout', '~> 3.1'
 end

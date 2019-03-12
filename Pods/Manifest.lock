@@ -1,16 +1,20 @@
 PODS:
+  - CollectionViewSlantedLayout (3.1.1)
   - OneSignal (2.9.3)
 
 DEPENDENCIES:
+  - CollectionViewSlantedLayout (~> 3.1)
   - OneSignal (< 3.0.4, >= 2.6.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CollectionViewSlantedLayout
     - OneSignal
 
 SPEC CHECKSUMS:
+  CollectionViewSlantedLayout: 24397455acd2461960bc45d394e0ef99c17d03ce
   OneSignal: a506e3bc61d2030f0757faf9bd783a9b211c6e3c
 
-PODFILE CHECKSUM: 986a6499a89a162f482ce151c74232df02bb0f2e
+PODFILE CHECKSUM: 95e8cbe57b4249fb577b5df996f0339ee36ae759
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.5.3

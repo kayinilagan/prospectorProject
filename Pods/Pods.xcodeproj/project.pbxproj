@@ -6,238 +6,390 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		E212E5F4272EA60EE00A3E3D4E18FDA8 /* OneSignal-iOS11.4 */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 377D3628FAE95E8DB5A1EC674E012BCF /* Build configuration list for PBXAggregateTarget "OneSignal-iOS11.4" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = "OneSignal-iOS11.4";
-		};
-		EAB511D5FD944EAF5593F70C2AD3C42C /* OneSignal-iOS12.1 */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = A386B0E27C289DB1EA252A8DE38AB4E8 /* Build configuration list for PBXAggregateTarget "OneSignal-iOS12.1" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = "OneSignal-iOS12.1";
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		55AC04492FFAD10720C6FD9702210DD4 /* Pods-prospectorProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 681818A8A3C25C12ED7304793404E393 /* Pods-prospectorProject-dummy.m */; };
-		CA8EF1272650E64301C9D8720A8B588B /* Pods-Notificaiton Center-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 983B000D3C273A590AD1F3AD64F4635A /* Pods-Notificaiton Center-dummy.m */; };
+		16D618742B065E08D2B4DB1EC6EFE4A5 /* CollectionViewSlantedLayout-iOS11.4-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D2927F742B8FA57E6EFE2DABD0F530 /* CollectionViewSlantedLayout-iOS11.4-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B78A0DFA8C7A34CCE72E777B62652EC /* CollectionViewSlantedMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B952C2C25D894BFA787CF9A5EEABD341 /* CollectionViewSlantedMasks.swift */; };
+		1DA9335F88A0EED055E340518622809F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E538F0B835A53761AF5FF2D2D75573E8 /* UIKit.framework */; };
+		1E05782C46A5F799C5B043315BFBD172 /* CAShapeLayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20151759FB6BD2C64D09D064F6BDFB82 /* CAShapeLayer+Helpers.swift */; };
+		2800D4E2BBC84E285F0D8F1D9478C9BC /* CollectionViewSlantedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654FEBCC8B12EE49C6863C5E7CBBC3B /* CollectionViewSlantedCell.swift */; };
+		37BF33F6A20DE89E149391FF4ACDABB8 /* Pods-prospectorProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C40CBDD5C2189D250134BBA07B6BE49C /* Pods-prospectorProject-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3A3CF0DBAC6CA52FCEBAE6037D1C27B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E538F0B835A53761AF5FF2D2D75573E8 /* UIKit.framework */; };
+		50B2A7A36E9F452BC1A39DFA9B52649E /* CollectionViewSlantedLayout-iOS11.4-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C06751AD5D33ED0FDD73F8981B47518 /* CollectionViewSlantedLayout-iOS11.4-dummy.m */; };
+		53F819121B37A3A70ED6747D815C9401 /* CollectionViewSlantedLayout-iOS12.1-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D7CFE1257383AB1A62F7E73D3D256C /* CollectionViewSlantedLayout-iOS12.1-dummy.m */; };
+		677B061D749673E637854A0BFD60DDE8 /* CollectionViewDelegateSlantedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755AB144B4093E12E046739400018259 /* CollectionViewDelegateSlantedLayout.swift */; };
+		67D9FE206B8FD5481A78CFB29CDA28F2 /* Pods-prospectorProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0857E2CA417695C0C5E3ADEA077C9391 /* Pods-prospectorProject-dummy.m */; };
+		82E99014D258734F35299B36A19D3C33 /* UICollectionViewLayout+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748475E4F7FE5A3FE850FF5D15514951 /* UICollectionViewLayout+Helpers.swift */; };
+		841E3E934BB26542810A1F9A54A99E43 /* CollectionViewSlantedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F1EC9F6BB17FB2558B5C589D69BE2762 /* CollectionViewSlantedLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		883E338548D51F7E906953633AC3B12D /* Pods-Notificaiton Center-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 073A8FEFA3B461908063618904F5C42E /* Pods-Notificaiton Center-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8F82CB490C6A10A3A4F1D93D6FE012AC /* CollectionViewSlantedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AD9CB5C7FB59C31BD1A559978A86A /* CollectionViewSlantedLayout.swift */; };
+		A08983CE1BE2C744B194C46FC0DA1855 /* CollectionViewSlantedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F1EC9F6BB17FB2558B5C589D69BE2762 /* CollectionViewSlantedLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A975453F9ABE221D3808D26393BF0C6F /* CollectionViewSlantedLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C122B11806D404071FDFDB50F463B /* CollectionViewSlantedLayoutAttributes.swift */; };
+		AEFB103BE7F6465410A61BB81FC36459 /* UICollectionViewLayout+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748475E4F7FE5A3FE850FF5D15514951 /* UICollectionViewLayout+Helpers.swift */; };
+		C4B2E32DD1D9582DB131272272B1B394 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA15DCB12AB3588C913012053944F57 /* UICollectionView+Helpers.swift */; };
+		C780927820E67C779BC35E33214255B8 /* CollectionViewSlantedLayout+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2350DDA6E31F5BD85C69BA8708F4C /* CollectionViewSlantedLayout+Constants.swift */; };
+		CF17501AC9251611C2D6F1CAAF1B6E72 /* CollectionViewSlantedLayout+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E2350DDA6E31F5BD85C69BA8708F4C /* CollectionViewSlantedLayout+Constants.swift */; };
+		D02AA1192DF59C23DCB1E47C7D2943BF /* CAShapeLayer+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20151759FB6BD2C64D09D064F6BDFB82 /* CAShapeLayer+Helpers.swift */; };
+		DAD444A02F73D79313139CA2DF65A726 /* UICollectionView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA15DCB12AB3588C913012053944F57 /* UICollectionView+Helpers.swift */; };
+		E0F163966637EE5A55D6AADE2737C0AB /* CollectionViewSlantedLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860C122B11806D404071FDFDB50F463B /* CollectionViewSlantedLayoutAttributes.swift */; };
+		E3646CE586F9BD2BAC8D9A85189E456D /* Pods-Notificaiton Center-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B470E1783A97AFBA24387AEADE25DF5 /* Pods-Notificaiton Center-dummy.m */; };
+		E67885456C7EFCBA3F50B663B405BC65 /* CollectionViewSlantedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AD9CB5C7FB59C31BD1A559978A86A /* CollectionViewSlantedLayout.swift */; };
+		E9B8410BF5499DB2DC344A0587571430 /* CollectionViewDelegateSlantedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755AB144B4093E12E046739400018259 /* CollectionViewDelegateSlantedLayout.swift */; };
+		EA201B7C2CE7ED57CAA2AF4324272C59 /* CollectionViewSlantedMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B952C2C25D894BFA787CF9A5EEABD341 /* CollectionViewSlantedMasks.swift */; };
+		EC0985477835609734D165E51CCAFE4D /* CollectionViewSlantedLayout-iOS12.1-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A68E300BF84FF6F7DF129BF507786D1 /* CollectionViewSlantedLayout-iOS12.1-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EC8CED258A68AD5BECB9609917DE1BDB /* CollectionViewSlantedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8654FEBCC8B12EE49C6863C5E7CBBC3B /* CollectionViewSlantedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		65986FFE7F5DA44E3B30F55D6A494EDB /* PBXContainerItemProxy */ = {
+		13313087676671CC7BD3610139408DE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EAB511D5FD944EAF5593F70C2AD3C42C;
-			remoteInfo = "OneSignal-iOS12.1";
+			remoteGlobalIDString = 2F8758AFD87E33C0BFB9C1A358857941;
+			remoteInfo = "CollectionViewSlantedLayout-iOS11.4";
 		};
-		A363C1B85ED62DD44EF56EC89B31E2B9 /* PBXContainerItemProxy */ = {
+		D09C8E1D3A98EFF152B26E1E468018EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E212E5F4272EA60EE00A3E3D4E18FDA8;
-			remoteInfo = "OneSignal-iOS11.4";
+			remoteGlobalIDString = 5A84A090F92F19F11AC1C944D59D6639;
+			remoteInfo = "CollectionViewSlantedLayout-iOS12.1";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1459BCA160E47E7A32DBB67FF49011AE /* Pods-Notificaiton Center.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Notificaiton Center.release.xcconfig"; sourceTree = "<group>"; };
-		1CBAE360AE153E5C4BC0E1241E67F203 /* Pods-prospectorProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-prospectorProject-acknowledgements.plist"; sourceTree = "<group>"; };
-		263BD4799332C94B61BF73D070BE16B3 /* Pods-Notificaiton Center-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Notificaiton Center-acknowledgements.plist"; sourceTree = "<group>"; };
-		681818A8A3C25C12ED7304793404E393 /* Pods-prospectorProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-prospectorProject-dummy.m"; sourceTree = "<group>"; };
-		69EFFB00CFCDB3187A5F4D5CB01B8D23 /* libPods-prospectorProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-prospectorProject.a"; path = "libPods-prospectorProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81B202CEE24CE46F45522CBAE61835C3 /* libPods-Notificaiton Center.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Notificaiton Center.a"; path = "libPods-Notificaiton Center.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		929E8EFA5A965D07CE2B1BF3F3333B12 /* OneSignal-iOS11.4.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "OneSignal-iOS11.4.xcconfig"; sourceTree = "<group>"; };
-		983B000D3C273A590AD1F3AD64F4635A /* Pods-Notificaiton Center-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Notificaiton Center-dummy.m"; sourceTree = "<group>"; };
-		98870C568302D0766E89BFA552035399 /* Pods-prospectorProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-prospectorProject.release.xcconfig"; sourceTree = "<group>"; };
-		996FA0CE4DA6732E3FA171F170BD6517 /* Pods-prospectorProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-prospectorProject.debug.xcconfig"; sourceTree = "<group>"; };
-		A857E2D49209D44FD6C67F11C06A3210 /* Pods-Notificaiton Center-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Notificaiton Center-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CFD16EAD0C8EACC7DEABEDB99EE346D2 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
-		D9C0660749B1DA4F29EB52171DF14CB6 /* OneSignal-iOS12.1.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "OneSignal-iOS12.1.xcconfig"; path = "../OneSignal-iOS12.1/OneSignal-iOS12.1.xcconfig"; sourceTree = "<group>"; };
-		E42D17E8B81038774696326119A85977 /* Pods-Notificaiton Center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Notificaiton Center.debug.xcconfig"; sourceTree = "<group>"; };
-		F145EEAB9D42872FDD753EF04A2B101E /* Pods-prospectorProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-prospectorProject-acknowledgements.markdown"; sourceTree = "<group>"; };
+		04F831802F659F2273377449BB3CA7E7 /* CollectionViewSlantedLayout-iOS11.4.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "CollectionViewSlantedLayout-iOS11.4.modulemap"; path = "../../Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS11.4.modulemap"; sourceTree = "<group>"; };
+		073A8FEFA3B461908063618904F5C42E /* Pods-Notificaiton Center-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Notificaiton Center-umbrella.h"; sourceTree = "<group>"; };
+		07996787A6ED470E86E74CD4A2EE5A53 /* CollectionViewSlantedLayout-iOS12.1.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "CollectionViewSlantedLayout-iOS12.1.modulemap"; path = "../../Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS12.1.modulemap"; sourceTree = "<group>"; };
+		0857E2CA417695C0C5E3ADEA077C9391 /* Pods-prospectorProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-prospectorProject-dummy.m"; sourceTree = "<group>"; };
+		20151759FB6BD2C64D09D064F6BDFB82 /* CAShapeLayer+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CAShapeLayer+Helpers.swift"; path = "Sources/Extensions/CAShapeLayer+Helpers.swift"; sourceTree = "<group>"; };
+		3179FA0A4686AF76AFD79837C0742271 /* OneSignal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OneSignal.framework; path = iOS_SDK/OneSignalSDK/Framework/OneSignal.framework; sourceTree = "<group>"; };
+		33982F31A9B32849F1F4BBFC9B4C0CB2 /* Pods-Notificaiton Center-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Notificaiton Center-acknowledgements.markdown"; sourceTree = "<group>"; };
+		440EFC9C81A38365F5049FE36C7FBC7B /* Pods-Notificaiton Center-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Notificaiton Center-acknowledgements.plist"; sourceTree = "<group>"; };
+		47D7CFE1257383AB1A62F7E73D3D256C /* CollectionViewSlantedLayout-iOS12.1-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CollectionViewSlantedLayout-iOS12.1-dummy.m"; path = "../CollectionViewSlantedLayout-iOS12.1/CollectionViewSlantedLayout-iOS12.1-dummy.m"; sourceTree = "<group>"; };
+		4A9F2E622445AC180EB3138582628E42 /* CollectionViewSlantedLayout-iOS11.4-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CollectionViewSlantedLayout-iOS11.4-prefix.pch"; sourceTree = "<group>"; };
+		4C34E2FA7A99FB2E87DAEF680BB95267 /* libPods-prospectorProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-prospectorProject.a"; path = "libPods-prospectorProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC361FB56994D1A0645901EF597EADC /* Pods-prospectorProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-prospectorProject.debug.xcconfig"; sourceTree = "<group>"; };
+		528BC9C322210819F85B86003A7D1058 /* CollectionViewSlantedLayout-iOS11.4.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "CollectionViewSlantedLayout-iOS11.4.xcconfig"; sourceTree = "<group>"; };
+		53B15F4DB8BB9C385EE643D2D86E869B /* libCollectionViewSlantedLayout-iOS11.4.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libCollectionViewSlantedLayout-iOS11.4.a"; path = "libCollectionViewSlantedLayout-iOS11.4.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C06751AD5D33ED0FDD73F8981B47518 /* CollectionViewSlantedLayout-iOS11.4-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CollectionViewSlantedLayout-iOS11.4-dummy.m"; sourceTree = "<group>"; };
+		6041550E3ED30FEBC72E0DE11FE90955 /* libCollectionViewSlantedLayout-iOS12.1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libCollectionViewSlantedLayout-iOS12.1.a"; path = "libCollectionViewSlantedLayout-iOS12.1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A68E300BF84FF6F7DF129BF507786D1 /* CollectionViewSlantedLayout-iOS12.1-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CollectionViewSlantedLayout-iOS12.1-umbrella.h"; path = "../../Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS12.1-umbrella.h"; sourceTree = "<group>"; };
+		6DA15DCB12AB3588C913012053944F57 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Helpers.swift"; path = "Sources/Extensions/UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
+		748475E4F7FE5A3FE850FF5D15514951 /* UICollectionViewLayout+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionViewLayout+Helpers.swift"; path = "Sources/Extensions/UICollectionViewLayout+Helpers.swift"; sourceTree = "<group>"; };
+		755AB144B4093E12E046739400018259 /* CollectionViewDelegateSlantedLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewDelegateSlantedLayout.swift; path = Sources/CollectionViewDelegateSlantedLayout.swift; sourceTree = "<group>"; };
+		7567A31E4A841423DF61F09156ECD52B /* Pods-prospectorProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-prospectorProject-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7B470E1783A97AFBA24387AEADE25DF5 /* Pods-Notificaiton Center-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Notificaiton Center-dummy.m"; sourceTree = "<group>"; };
+		7D0AD9CB5C7FB59C31BD1A559978A86A /* CollectionViewSlantedLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewSlantedLayout.swift; path = Sources/CollectionViewSlantedLayout.swift; sourceTree = "<group>"; };
+		83FC944BF25E289FCEE322CF10F9FBF0 /* Pods-prospectorProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-prospectorProject-resources.sh"; sourceTree = "<group>"; };
+		860C122B11806D404071FDFDB50F463B /* CollectionViewSlantedLayoutAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewSlantedLayoutAttributes.swift; path = Sources/Internal/CollectionViewSlantedLayoutAttributes.swift; sourceTree = "<group>"; };
+		8654FEBCC8B12EE49C6863C5E7CBBC3B /* CollectionViewSlantedCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewSlantedCell.swift; path = Sources/CollectionViewSlantedCell.swift; sourceTree = "<group>"; };
+		8C7852152B6E0C248AA82FFA6F95F2AA /* Pods-Notificaiton Center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Notificaiton Center.debug.xcconfig"; sourceTree = "<group>"; };
+		8F2987C010A27BC304D7066A65324982 /* CollectionViewSlantedLayout-iOS12.1-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CollectionViewSlantedLayout-iOS12.1-prefix.pch"; path = "../CollectionViewSlantedLayout-iOS12.1/CollectionViewSlantedLayout-iOS12.1-prefix.pch"; sourceTree = "<group>"; };
+		8F82116613EF3F728ED53F06C474A23F /* Pods-prospectorProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-prospectorProject-acknowledgements.plist"; sourceTree = "<group>"; };
+		902E33E0A384421DB891F4D05FAD9604 /* Pods-prospectorProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-prospectorProject-frameworks.sh"; sourceTree = "<group>"; };
+		92B426ABCB92BC5197116C522DDEE009 /* Pods-Notificaiton Center.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Notificaiton Center.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9AAA7BACC74080E31FB575D7FDC1C535 /* Pods-prospectorProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-prospectorProject.release.xcconfig"; sourceTree = "<group>"; };
+		A7D2927F742B8FA57E6EFE2DABD0F530 /* CollectionViewSlantedLayout-iOS11.4-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CollectionViewSlantedLayout-iOS11.4-umbrella.h"; path = "../../Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS11.4-umbrella.h"; sourceTree = "<group>"; };
+		B952C2C25D894BFA787CF9A5EEABD341 /* CollectionViewSlantedMasks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewSlantedMasks.swift; path = Sources/Internal/CollectionViewSlantedMasks.swift; sourceTree = "<group>"; };
+		BEC4CC6A5760622D06262DECBFEE97F9 /* Pods-Notificaiton Center.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Notificaiton Center.release.xcconfig"; sourceTree = "<group>"; };
+		C40CBDD5C2189D250134BBA07B6BE49C /* Pods-prospectorProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-prospectorProject-umbrella.h"; sourceTree = "<group>"; };
+		D31DD1552673D818E64C4C8199E66DCD /* Pods-Notificaiton Center-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Notificaiton Center-resources.sh"; sourceTree = "<group>"; };
+		D46759617644298E6F67E29AE048C5D4 /* CollectionViewSlantedLayout-iOS12.1.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "CollectionViewSlantedLayout-iOS12.1.xcconfig"; path = "../CollectionViewSlantedLayout-iOS12.1/CollectionViewSlantedLayout-iOS12.1.xcconfig"; sourceTree = "<group>"; };
+		E39F5D39920F2A9C954B49D19D92BE38 /* libPods-Notificaiton Center.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Notificaiton Center.a"; path = "libPods-Notificaiton Center.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E538F0B835A53761AF5FF2D2D75573E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F1EC9F6BB17FB2558B5C589D69BE2762 /* CollectionViewSlantedLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CollectionViewSlantedLayout.h; path = Sources/CollectionViewSlantedLayout.h; sourceTree = "<group>"; };
+		F9E2350DDA6E31F5BD85C69BA8708F4C /* CollectionViewSlantedLayout+Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CollectionViewSlantedLayout+Constants.swift"; path = "Sources/CollectionViewSlantedLayout+Constants.swift"; sourceTree = "<group>"; };
+		FCBC7DA7B1D366C681878FB087D45F5A /* Pods-prospectorProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-prospectorProject.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		747727809893E9F6301967F64C38E08C /* Frameworks */ = {
+		2E4F305B09D6DBD60B324A9DD3EFB943 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A50CE16BD849DB01112F21E12A479BF1 /* Frameworks */ = {
+		7A1BB7610AAAB8F5716409D3DD80DBB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA4A069EA4997FE32E5B880F58791E1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3CF0DBAC6CA52FCEBAE6037D1C27B2 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E80712B1D9E62AC46A237EE3CE5AD807 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA9335F88A0EED055E340518622809F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */ = {
+		038FF10746C13A271052EEEEB9AA0366 /* Pods-prospectorProject */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		44B961336CAE9DED3F30436E54C8C2EE /* Pods-prospectorProject */ = {
-			isa = PBXGroup;
-			children = (
-				F145EEAB9D42872FDD753EF04A2B101E /* Pods-prospectorProject-acknowledgements.markdown */,
-				1CBAE360AE153E5C4BC0E1241E67F203 /* Pods-prospectorProject-acknowledgements.plist */,
-				681818A8A3C25C12ED7304793404E393 /* Pods-prospectorProject-dummy.m */,
-				996FA0CE4DA6732E3FA171F170BD6517 /* Pods-prospectorProject.debug.xcconfig */,
-				98870C568302D0766E89BFA552035399 /* Pods-prospectorProject.release.xcconfig */,
+				FCBC7DA7B1D366C681878FB087D45F5A /* Pods-prospectorProject.modulemap */,
+				7567A31E4A841423DF61F09156ECD52B /* Pods-prospectorProject-acknowledgements.markdown */,
+				8F82116613EF3F728ED53F06C474A23F /* Pods-prospectorProject-acknowledgements.plist */,
+				0857E2CA417695C0C5E3ADEA077C9391 /* Pods-prospectorProject-dummy.m */,
+				902E33E0A384421DB891F4D05FAD9604 /* Pods-prospectorProject-frameworks.sh */,
+				83FC944BF25E289FCEE322CF10F9FBF0 /* Pods-prospectorProject-resources.sh */,
+				C40CBDD5C2189D250134BBA07B6BE49C /* Pods-prospectorProject-umbrella.h */,
+				4DC361FB56994D1A0645901EF597EADC /* Pods-prospectorProject.debug.xcconfig */,
+				9AAA7BACC74080E31FB575D7FDC1C535 /* Pods-prospectorProject.release.xcconfig */,
 			);
 			name = "Pods-prospectorProject";
 			path = "Target Support Files/Pods-prospectorProject";
 			sourceTree = "<group>";
 		};
-		4E51F4FD88FB47FD23005C6473B4EDC4 /* OneSignal */ = {
+		16DF2C68A8D6BA2B8E01E18A718FA28D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B92687809A4044EE50495B93F4D31187 /* Frameworks */,
-				84B234E8279D48DE8A039190C429C631 /* Support Files */,
+				DC5E4EDF2C2DE3650C99A4275236A484 /* Pods-Notificaiton Center */,
+				038FF10746C13A271052EEEEB9AA0366 /* Pods-prospectorProject */,
 			);
-			name = OneSignal;
-			path = OneSignal;
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		439617EAFCB50E7C1F770414D2834329 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E538F0B835A53761AF5FF2D2D75573E8 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6BC32B436095ECEE971AE42619ECD063 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				966C0664E62363A639FD4F3DCA12F60D /* CollectionViewSlantedLayout */,
+				C0A24344C87BBDD53DC488CDC4CA0121 /* OneSignal */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		773B7F8DCA61F297B9B0DEC2DB42E202 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3179FA0A4686AF76AFD79837C0742271 /* OneSignal.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				AC6A30D0584DF0C63746234726C3F2DD /* Pods */,
-				B7245002EADAF78C2482320A28E3D581 /* Products */,
-				A66956EA9279A6176841DB0730A5CB71 /* Targets Support Files */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				6BC32B436095ECEE971AE42619ECD063 /* Pods */,
+				FAEC712AD8129321CD07CAB9127556AD /* Products */,
+				16DF2C68A8D6BA2B8E01E18A718FA28D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		84B234E8279D48DE8A039190C429C631 /* Support Files */ = {
+		966C0664E62363A639FD4F3DCA12F60D /* CollectionViewSlantedLayout */ = {
 			isa = PBXGroup;
 			children = (
-				929E8EFA5A965D07CE2B1BF3F3333B12 /* OneSignal-iOS11.4.xcconfig */,
-				D9C0660749B1DA4F29EB52171DF14CB6 /* OneSignal-iOS12.1.xcconfig */,
+				20151759FB6BD2C64D09D064F6BDFB82 /* CAShapeLayer+Helpers.swift */,
+				755AB144B4093E12E046739400018259 /* CollectionViewDelegateSlantedLayout.swift */,
+				8654FEBCC8B12EE49C6863C5E7CBBC3B /* CollectionViewSlantedCell.swift */,
+				F1EC9F6BB17FB2558B5C589D69BE2762 /* CollectionViewSlantedLayout.h */,
+				7D0AD9CB5C7FB59C31BD1A559978A86A /* CollectionViewSlantedLayout.swift */,
+				F9E2350DDA6E31F5BD85C69BA8708F4C /* CollectionViewSlantedLayout+Constants.swift */,
+				860C122B11806D404071FDFDB50F463B /* CollectionViewSlantedLayoutAttributes.swift */,
+				B952C2C25D894BFA787CF9A5EEABD341 /* CollectionViewSlantedMasks.swift */,
+				6DA15DCB12AB3588C913012053944F57 /* UICollectionView+Helpers.swift */,
+				748475E4F7FE5A3FE850FF5D15514951 /* UICollectionViewLayout+Helpers.swift */,
+				B7C4CDBFA119C2108C6BC6CAF18FBA7F /* Support Files */,
+			);
+			name = CollectionViewSlantedLayout;
+			path = CollectionViewSlantedLayout;
+			sourceTree = "<group>";
+		};
+		B7C4CDBFA119C2108C6BC6CAF18FBA7F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				04F831802F659F2273377449BB3CA7E7 /* CollectionViewSlantedLayout-iOS11.4.modulemap */,
+				528BC9C322210819F85B86003A7D1058 /* CollectionViewSlantedLayout-iOS11.4.xcconfig */,
+				5C06751AD5D33ED0FDD73F8981B47518 /* CollectionViewSlantedLayout-iOS11.4-dummy.m */,
+				4A9F2E622445AC180EB3138582628E42 /* CollectionViewSlantedLayout-iOS11.4-prefix.pch */,
+				A7D2927F742B8FA57E6EFE2DABD0F530 /* CollectionViewSlantedLayout-iOS11.4-umbrella.h */,
+				07996787A6ED470E86E74CD4A2EE5A53 /* CollectionViewSlantedLayout-iOS12.1.modulemap */,
+				D46759617644298E6F67E29AE048C5D4 /* CollectionViewSlantedLayout-iOS12.1.xcconfig */,
+				47D7CFE1257383AB1A62F7E73D3D256C /* CollectionViewSlantedLayout-iOS12.1-dummy.m */,
+				8F2987C010A27BC304D7066A65324982 /* CollectionViewSlantedLayout-iOS12.1-prefix.pch */,
+				6A68E300BF84FF6F7DF129BF507786D1 /* CollectionViewSlantedLayout-iOS12.1-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/OneSignal-iOS11.4";
+			path = "../Target Support Files/CollectionViewSlantedLayout-iOS11.4";
 			sourceTree = "<group>";
 		};
-		A66956EA9279A6176841DB0730A5CB71 /* Targets Support Files */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E3E07378C233987E93B195474C2BFE61 /* Pods-Notificaiton Center */,
-				44B961336CAE9DED3F30436E54C8C2EE /* Pods-prospectorProject */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		AC6A30D0584DF0C63746234726C3F2DD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4E51F4FD88FB47FD23005C6473B4EDC4 /* OneSignal */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B7245002EADAF78C2482320A28E3D581 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				81B202CEE24CE46F45522CBAE61835C3 /* libPods-Notificaiton Center.a */,
-				69EFFB00CFCDB3187A5F4D5CB01B8D23 /* libPods-prospectorProject.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B92687809A4044EE50495B93F4D31187 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CFD16EAD0C8EACC7DEABEDB99EE346D2 /* OneSignal.framework */,
+				439617EAFCB50E7C1F770414D2834329 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E3E07378C233987E93B195474C2BFE61 /* Pods-Notificaiton Center */ = {
+		C0A24344C87BBDD53DC488CDC4CA0121 /* OneSignal */ = {
 			isa = PBXGroup;
 			children = (
-				A857E2D49209D44FD6C67F11C06A3210 /* Pods-Notificaiton Center-acknowledgements.markdown */,
-				263BD4799332C94B61BF73D070BE16B3 /* Pods-Notificaiton Center-acknowledgements.plist */,
-				983B000D3C273A590AD1F3AD64F4635A /* Pods-Notificaiton Center-dummy.m */,
-				E42D17E8B81038774696326119A85977 /* Pods-Notificaiton Center.debug.xcconfig */,
-				1459BCA160E47E7A32DBB67FF49011AE /* Pods-Notificaiton Center.release.xcconfig */,
+				773B7F8DCA61F297B9B0DEC2DB42E202 /* Frameworks */,
+			);
+			name = OneSignal;
+			path = OneSignal;
+			sourceTree = "<group>";
+		};
+		DC5E4EDF2C2DE3650C99A4275236A484 /* Pods-Notificaiton Center */ = {
+			isa = PBXGroup;
+			children = (
+				92B426ABCB92BC5197116C522DDEE009 /* Pods-Notificaiton Center.modulemap */,
+				33982F31A9B32849F1F4BBFC9B4C0CB2 /* Pods-Notificaiton Center-acknowledgements.markdown */,
+				440EFC9C81A38365F5049FE36C7FBC7B /* Pods-Notificaiton Center-acknowledgements.plist */,
+				7B470E1783A97AFBA24387AEADE25DF5 /* Pods-Notificaiton Center-dummy.m */,
+				D31DD1552673D818E64C4C8199E66DCD /* Pods-Notificaiton Center-resources.sh */,
+				073A8FEFA3B461908063618904F5C42E /* Pods-Notificaiton Center-umbrella.h */,
+				8C7852152B6E0C248AA82FFA6F95F2AA /* Pods-Notificaiton Center.debug.xcconfig */,
+				BEC4CC6A5760622D06262DECBFEE97F9 /* Pods-Notificaiton Center.release.xcconfig */,
 			);
 			name = "Pods-Notificaiton Center";
 			path = "Target Support Files/Pods-Notificaiton Center";
 			sourceTree = "<group>";
 		};
+		FAEC712AD8129321CD07CAB9127556AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53B15F4DB8BB9C385EE643D2D86E869B /* libCollectionViewSlantedLayout-iOS11.4.a */,
+				6041550E3ED30FEBC72E0DE11FE90955 /* libCollectionViewSlantedLayout-iOS12.1.a */,
+				E39F5D39920F2A9C954B49D19D92BE38 /* libPods-Notificaiton Center.a */,
+				4C34E2FA7A99FB2E87DAEF680BB95267 /* libPods-prospectorProject.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9C42EBFB1595241F4EBBF0098EB26184 /* Headers */ = {
+		75342D1E883063D3ECEF0026A846AD1D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D618742B065E08D2B4DB1EC6EFE4A5 /* CollectionViewSlantedLayout-iOS11.4-umbrella.h in Headers */,
+				A08983CE1BE2C744B194C46FC0DA1855 /* CollectionViewSlantedLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4851B70B23C2D53948B0D4B76939D9B /* Headers */ = {
+		9AECB9262DC4BF9D06B31B6C9D142313 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BF33F6A20DE89E149391FF4ACDABB8 /* Pods-prospectorProject-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0C81021717BBC00C2F03D1FB623246B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883E338548D51F7E906953633AC3B12D /* Pods-Notificaiton Center-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F442CCADEE84C5603F2C14AE57AA44CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0985477835609734D165E51CCAFE4D /* CollectionViewSlantedLayout-iOS12.1-umbrella.h in Headers */,
+				841E3E934BB26542810A1F9A54A99E43 /* CollectionViewSlantedLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CFF2B4796E22D1CE0B374E38AF84B327 /* Pods-prospectorProject */ = {
+		0E49DBCA6F36F599729077356A64DD30 /* Pods-Notificaiton Center */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93D32AA3EE10F48967F7E124B81D8F55 /* Build configuration list for PBXNativeTarget "Pods-prospectorProject" */;
+			buildConfigurationList = 32813A6B31803058CB000A6165DCAD8C /* Build configuration list for PBXNativeTarget "Pods-Notificaiton Center" */;
 			buildPhases = (
-				E4851B70B23C2D53948B0D4B76939D9B /* Headers */,
-				33A5A71550E0ED5F3651AB017F3AC1ED /* Sources */,
-				747727809893E9F6301967F64C38E08C /* Frameworks */,
+				F0C81021717BBC00C2F03D1FB623246B /* Headers */,
+				0E24B3501524148514C4B370C11F1C00 /* Sources */,
+				2E4F305B09D6DBD60B324A9DD3EFB943 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E9A56052D8B5B9284A9D07A15AF9A66A /* PBXTargetDependency */,
-			);
-			name = "Pods-prospectorProject";
-			productName = "Pods-prospectorProject";
-			productReference = 69EFFB00CFCDB3187A5F4D5CB01B8D23 /* libPods-prospectorProject.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E166DB3204B719E41359B944598A6C58 /* Pods-Notificaiton Center */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A720F6E8E425C9F01F7162BFFC4C6B9C /* Build configuration list for PBXNativeTarget "Pods-Notificaiton Center" */;
-			buildPhases = (
-				9C42EBFB1595241F4EBBF0098EB26184 /* Headers */,
-				179FF18DF620A621CC07A753754DF393 /* Sources */,
-				A50CE16BD849DB01112F21E12A479BF1 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4C1A79A712639700668316853533950F /* PBXTargetDependency */,
+				497ECE587A0B369F19DBBCB66E078793 /* PBXTargetDependency */,
 			);
 			name = "Pods-Notificaiton Center";
 			productName = "Pods-Notificaiton Center";
-			productReference = 81B202CEE24CE46F45522CBAE61835C3 /* libPods-Notificaiton Center.a */;
+			productReference = E39F5D39920F2A9C954B49D19D92BE38 /* libPods-Notificaiton Center.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2F8758AFD87E33C0BFB9C1A358857941 /* CollectionViewSlantedLayout-iOS11.4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5951171C99F599A04CCE1E1ABFFD512 /* Build configuration list for PBXNativeTarget "CollectionViewSlantedLayout-iOS11.4" */;
+			buildPhases = (
+				75342D1E883063D3ECEF0026A846AD1D /* Headers */,
+				B90022E707F28555D8AFA6B6DC2485CA /* Sources */,
+				CA4A069EA4997FE32E5B880F58791E1B /* Frameworks */,
+				01F44D574CB8CC5F62E81F7B881484C7 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CollectionViewSlantedLayout-iOS11.4";
+			productName = "CollectionViewSlantedLayout-iOS11.4";
+			productReference = 53B15F4DB8BB9C385EE643D2D86E869B /* libCollectionViewSlantedLayout-iOS11.4.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		58EA3B5E95061F5FDF34B005A73436BB /* Pods-prospectorProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EADEEB10A896AD8CF244D9EBF2ED72F /* Build configuration list for PBXNativeTarget "Pods-prospectorProject" */;
+			buildPhases = (
+				9AECB9262DC4BF9D06B31B6C9D142313 /* Headers */,
+				47E2DE93487DFFA3D035E48E9FF56DCD /* Sources */,
+				7A1BB7610AAAB8F5716409D3DD80DBB5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D6E48E9C05A6DD7C0A5CF769215C49D /* PBXTargetDependency */,
+			);
+			name = "Pods-prospectorProject";
+			productName = "Pods-prospectorProject";
+			productReference = 4C34E2FA7A99FB2E87DAEF680BB95267 /* libPods-prospectorProject.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5A84A090F92F19F11AC1C944D59D6639 /* CollectionViewSlantedLayout-iOS12.1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2EEFC80B5835273B13815DBEE112DA9 /* Build configuration list for PBXNativeTarget "CollectionViewSlantedLayout-iOS12.1" */;
+			buildPhases = (
+				F442CCADEE84C5603F2C14AE57AA44CA /* Headers */,
+				B7E014D4344295E53D046931BBF7FF91 /* Sources */,
+				E80712B1D9E62AC46A237EE3CE5AD807 /* Frameworks */,
+				94BD48BCE86595C7A999DCDAACE5561F /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CollectionViewSlantedLayout-iOS12.1";
+			productName = "CollectionViewSlantedLayout-iOS12.1";
+			productReference = 6041550E3ED30FEBC72E0DE11FE90955 /* libCollectionViewSlantedLayout-iOS12.1.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -257,54 +409,168 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = B7245002EADAF78C2482320A28E3D581 /* Products */;
+			productRefGroup = FAEC712AD8129321CD07CAB9127556AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E212E5F4272EA60EE00A3E3D4E18FDA8 /* OneSignal-iOS11.4 */,
-				EAB511D5FD944EAF5593F70C2AD3C42C /* OneSignal-iOS12.1 */,
-				E166DB3204B719E41359B944598A6C58 /* Pods-Notificaiton Center */,
-				CFF2B4796E22D1CE0B374E38AF84B327 /* Pods-prospectorProject */,
+				2F8758AFD87E33C0BFB9C1A358857941 /* CollectionViewSlantedLayout-iOS11.4 */,
+				5A84A090F92F19F11AC1C944D59D6639 /* CollectionViewSlantedLayout-iOS12.1 */,
+				0E49DBCA6F36F599729077356A64DD30 /* Pods-Notificaiton Center */,
+				58EA3B5E95061F5FDF34B005A73436BB /* Pods-prospectorProject */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01F44D574CB8CC5F62E81F7B881484C7 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS11.4.modulemap",
+				"${PODS_ROOT}/Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS11.4-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/CollectionViewSlantedLayout-iOS11.4-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS11.4.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS11.4-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+		94BD48BCE86595C7A999DCDAACE5561F /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS12.1.modulemap",
+				"${PODS_ROOT}/Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS12.1-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/CollectionViewSlantedLayout-iOS12.1-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS12.1.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS12.1-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+			showEnvVarsInLog = 1;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		179FF18DF620A621CC07A753754DF393 /* Sources */ = {
+		0E24B3501524148514C4B370C11F1C00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA8EF1272650E64301C9D8720A8B588B /* Pods-Notificaiton Center-dummy.m in Sources */,
+				E3646CE586F9BD2BAC8D9A85189E456D /* Pods-Notificaiton Center-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33A5A71550E0ED5F3651AB017F3AC1ED /* Sources */ = {
+		47E2DE93487DFFA3D035E48E9FF56DCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55AC04492FFAD10720C6FD9702210DD4 /* Pods-prospectorProject-dummy.m in Sources */,
+				67D9FE206B8FD5481A78CFB29CDA28F2 /* Pods-prospectorProject-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7E014D4344295E53D046931BBF7FF91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02AA1192DF59C23DCB1E47C7D2943BF /* CAShapeLayer+Helpers.swift in Sources */,
+				E9B8410BF5499DB2DC344A0587571430 /* CollectionViewDelegateSlantedLayout.swift in Sources */,
+				2800D4E2BBC84E285F0D8F1D9478C9BC /* CollectionViewSlantedCell.swift in Sources */,
+				CF17501AC9251611C2D6F1CAAF1B6E72 /* CollectionViewSlantedLayout+Constants.swift in Sources */,
+				53F819121B37A3A70ED6747D815C9401 /* CollectionViewSlantedLayout-iOS12.1-dummy.m in Sources */,
+				8F82CB490C6A10A3A4F1D93D6FE012AC /* CollectionViewSlantedLayout.swift in Sources */,
+				E0F163966637EE5A55D6AADE2737C0AB /* CollectionViewSlantedLayoutAttributes.swift in Sources */,
+				1B78A0DFA8C7A34CCE72E777B62652EC /* CollectionViewSlantedMasks.swift in Sources */,
+				C4B2E32DD1D9582DB131272272B1B394 /* UICollectionView+Helpers.swift in Sources */,
+				AEFB103BE7F6465410A61BB81FC36459 /* UICollectionViewLayout+Helpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B90022E707F28555D8AFA6B6DC2485CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E05782C46A5F799C5B043315BFBD172 /* CAShapeLayer+Helpers.swift in Sources */,
+				677B061D749673E637854A0BFD60DDE8 /* CollectionViewDelegateSlantedLayout.swift in Sources */,
+				EC8CED258A68AD5BECB9609917DE1BDB /* CollectionViewSlantedCell.swift in Sources */,
+				C780927820E67C779BC35E33214255B8 /* CollectionViewSlantedLayout+Constants.swift in Sources */,
+				50B2A7A36E9F452BC1A39DFA9B52649E /* CollectionViewSlantedLayout-iOS11.4-dummy.m in Sources */,
+				E67885456C7EFCBA3F50B663B405BC65 /* CollectionViewSlantedLayout.swift in Sources */,
+				A975453F9ABE221D3808D26393BF0C6F /* CollectionViewSlantedLayoutAttributes.swift in Sources */,
+				EA201B7C2CE7ED57CAA2AF4324272C59 /* CollectionViewSlantedMasks.swift in Sources */,
+				DAD444A02F73D79313139CA2DF65A726 /* UICollectionView+Helpers.swift in Sources */,
+				82E99014D258734F35299B36A19D3C33 /* UICollectionViewLayout+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4C1A79A712639700668316853533950F /* PBXTargetDependency */ = {
+		497ECE587A0B369F19DBBCB66E078793 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "OneSignal-iOS12.1";
-			target = EAB511D5FD944EAF5593F70C2AD3C42C /* OneSignal-iOS12.1 */;
-			targetProxy = 65986FFE7F5DA44E3B30F55D6A494EDB /* PBXContainerItemProxy */;
+			name = "CollectionViewSlantedLayout-iOS12.1";
+			target = 5A84A090F92F19F11AC1C944D59D6639 /* CollectionViewSlantedLayout-iOS12.1 */;
+			targetProxy = D09C8E1D3A98EFF152B26E1E468018EB /* PBXContainerItemProxy */;
 		};
-		E9A56052D8B5B9284A9D07A15AF9A66A /* PBXTargetDependency */ = {
+		7D6E48E9C05A6DD7C0A5CF769215C49D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "OneSignal-iOS11.4";
-			target = E212E5F4272EA60EE00A3E3D4E18FDA8 /* OneSignal-iOS11.4 */;
-			targetProxy = A363C1B85ED62DD44EF56EC89B31E2B9 /* PBXContainerItemProxy */;
+			name = "CollectionViewSlantedLayout-iOS11.4";
+			target = 2F8758AFD87E33C0BFB9C1A358857941 /* CollectionViewSlantedLayout-iOS11.4 */;
+			targetProxy = 13313087676671CC7BD3610139408DE1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		253016E51913C82388F101E49503A141 /* Debug */ = {
+		12F7F6909EA2EE554AF43AC467E54679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46759617644298E6F67E29AE048C5D4 /* CollectionViewSlantedLayout-iOS12.1.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CollectionViewSlantedLayout-iOS12.1/CollectionViewSlantedLayout-iOS12.1-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS12.1.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CollectionViewSlantedLayout;
+				PRODUCT_NAME = "CollectionViewSlantedLayout-iOS12.1";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16BC524EDE752B9BB72D7E267116A89A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -336,6 +602,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -368,26 +636,7 @@
 			};
 			name = Debug;
 		};
-		39AC70FD9AA915C9B677C7714AFD7263 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 929E8EFA5A965D07CE2B1BF3F3333B12 /* OneSignal-iOS11.4.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		3E95A01E06085F792EA64ED918C284F5 /* Release */ = {
+		1DF68876DF2AD07A12482477C1AA7DB8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -419,6 +668,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -447,50 +698,12 @@
 			};
 			name = Release;
 		};
-		40BDD36EF8F8260DFA12065660FD0448 /* Debug */ = {
+		543BCF852ADFCD2B55F455D95346EBFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 929E8EFA5A965D07CE2B1BF3F3333B12 /* OneSignal-iOS11.4.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5C145E8FC5E5A9B429A3A02718BEE168 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9C0660749B1DA4F29EB52171DF14CB6 /* OneSignal-iOS12.1.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		796B5C6AFEE59FD02EE370DCA9CC2C89 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E42D17E8B81038774696326119A85977 /* Pods-Notificaiton Center.debug.xcconfig */;
+			baseConfigurationReference = BEC4CC6A5760622D06262DECBFEE97F9 /* Pods-Notificaiton Center.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -498,6 +711,133 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Notificaiton Center/Pods-Notificaiton Center.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65A065E4A9CD02AF76346526D1B8B8C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D46759617644298E6F67E29AE048C5D4 /* CollectionViewSlantedLayout-iOS12.1.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CollectionViewSlantedLayout-iOS12.1/CollectionViewSlantedLayout-iOS12.1-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS12.1.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CollectionViewSlantedLayout;
+				PRODUCT_NAME = "CollectionViewSlantedLayout-iOS12.1";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		724DED28CE973F8B0D3E862ECFC44008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AAA7BACC74080E31FB575D7FDC1C535 /* Pods-prospectorProject.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-prospectorProject/Pods-prospectorProject.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE44CBFE5A093C40D86D2CC8941B8D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528BC9C322210819F85B86003A7D1058 /* CollectionViewSlantedLayout-iOS11.4.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CollectionViewSlantedLayout-iOS11.4/CollectionViewSlantedLayout-iOS11.4-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS11.4.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CollectionViewSlantedLayout;
+				PRODUCT_NAME = "CollectionViewSlantedLayout-iOS11.4";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D56C90389EC400275D83744E780F0844 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528BC9C322210819F85B86003A7D1058 /* CollectionViewSlantedLayout-iOS11.4.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CollectionViewSlantedLayout-iOS11.4/CollectionViewSlantedLayout-iOS11.4-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULEMAP_FILE = "Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS11.4.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CollectionViewSlantedLayout;
+				PRODUCT_NAME = "CollectionViewSlantedLayout-iOS11.4";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3A92BA1B5920D529664B96C66D201C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C7852152B6E0C248AA82FFA6F95F2AA /* Pods-Notificaiton Center.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Notificaiton Center/Pods-Notificaiton Center.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -508,12 +848,11 @@
 			};
 			name = Debug;
 		};
-		9E768EC5923D79D87E34CF5B3EEFFE48 /* Release */ = {
+		FE196AAB511E7D54C04411627A44D210 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98870C568302D0766E89BFA552035399 /* Pods-prospectorProject.release.xcconfig */;
+			baseConfigurationReference = 4DC361FB56994D1A0645901EF597EADC /* Pods-prospectorProject.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -521,75 +860,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		A4EED91FD2B3C5C3FA6BFA9186D7ED44 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9C0660749B1DA4F29EB52171DF14CB6 /* OneSignal-iOS12.1.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C0D26516658AA90240A34D12CCA16E63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1459BCA160E47E7A32DBB67FF49011AE /* Pods-Notificaiton Center.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		F7ED4B514ABBC76060268D5BD5C106B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 996FA0CE4DA6732E3FA171F170BD6517 /* Pods-prospectorProject.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-prospectorProject/Pods-prospectorProject.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -606,44 +877,44 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				253016E51913C82388F101E49503A141 /* Debug */,
-				3E95A01E06085F792EA64ED918C284F5 /* Release */,
+				16BC524EDE752B9BB72D7E267116A89A /* Debug */,
+				1DF68876DF2AD07A12482477C1AA7DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		377D3628FAE95E8DB5A1EC674E012BCF /* Build configuration list for PBXAggregateTarget "OneSignal-iOS11.4" */ = {
+		32813A6B31803058CB000A6165DCAD8C /* Build configuration list for PBXNativeTarget "Pods-Notificaiton Center" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				40BDD36EF8F8260DFA12065660FD0448 /* Debug */,
-				39AC70FD9AA915C9B677C7714AFD7263 /* Release */,
+				F3A92BA1B5920D529664B96C66D201C7 /* Debug */,
+				543BCF852ADFCD2B55F455D95346EBFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93D32AA3EE10F48967F7E124B81D8F55 /* Build configuration list for PBXNativeTarget "Pods-prospectorProject" */ = {
+		6EADEEB10A896AD8CF244D9EBF2ED72F /* Build configuration list for PBXNativeTarget "Pods-prospectorProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7ED4B514ABBC76060268D5BD5C106B0 /* Debug */,
-				9E768EC5923D79D87E34CF5B3EEFFE48 /* Release */,
+				FE196AAB511E7D54C04411627A44D210 /* Debug */,
+				724DED28CE973F8B0D3E862ECFC44008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A386B0E27C289DB1EA252A8DE38AB4E8 /* Build configuration list for PBXAggregateTarget "OneSignal-iOS12.1" */ = {
+		E2EEFC80B5835273B13815DBEE112DA9 /* Build configuration list for PBXNativeTarget "CollectionViewSlantedLayout-iOS12.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C145E8FC5E5A9B429A3A02718BEE168 /* Debug */,
-				A4EED91FD2B3C5C3FA6BFA9186D7ED44 /* Release */,
+				65A065E4A9CD02AF76346526D1B8B8C2 /* Debug */,
+				12F7F6909EA2EE554AF43AC467E54679 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A720F6E8E425C9F01F7162BFFC4C6B9C /* Build configuration list for PBXNativeTarget "Pods-Notificaiton Center" */ = {
+		F5951171C99F599A04CCE1E1ABFFD512 /* Build configuration list for PBXNativeTarget "CollectionViewSlantedLayout-iOS11.4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				796B5C6AFEE59FD02EE370DCA9CC2C89 /* Debug */,
-				C0D26516658AA90240A34D12CCA16E63 /* Release */,
+				BE44CBFE5A093C40D86D2CC8941B8D77 /* Debug */,
+				D56C90389EC400275D83744E780F0844 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

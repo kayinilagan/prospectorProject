@@ -1,0 +1,1 @@
+../../../CollectionViewSlantedLayout/Sources/CollectionViewSlantedLayout.h

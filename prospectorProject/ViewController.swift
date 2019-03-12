@@ -7,6 +7,7 @@
 import UIKit
 import NotificationCenter
 import OneSignal
+import CollectionViewSlantedLayout
 
 var articleInfo: ArticleInfo!
 

@@ -1,4 +1,4 @@
-framework module Pods_prospectorProject {
+module Pods_prospectorProject {
   umbrella header "Pods-prospectorProject-umbrella.h"
 
   export *

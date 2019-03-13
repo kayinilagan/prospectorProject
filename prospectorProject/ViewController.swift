@@ -13,7 +13,7 @@ var articleInfo: ArticleInfo!
 
 //hey guys! henning and I were thinking that we could clear the table view before storing articles? We may be able to do so in the function that stores the articles in the table view cell by clearing the table view and then adding in the articles so we can avoid repeating articles in a table view once a button is clicked on again. -Helen 
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController {
     
     //Parse Things (Helen's Code + Kai's Copy For Search Button)
     var articles = [[String: String]]()
@@ -35,7 +35,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
-    
     @IBOutlet weak var primeView: UIView!
     
     var hamburgerIsVisible = false;
@@ -47,6 +46,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     // Collection View
     
     @IBOutlet weak var mainCollectionView: UICollectionView!
+    @IBOutlet weak var collectionViewLayout: CollectionViewSlantedLayout!
     
     // Side Menu
     
@@ -61,12 +61,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         print(OneSignal.app_id())
         // Setup the Search Controller
-        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
+        searchController.searchResultsUpdater = self as UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Articles"
         navigationItem.searchController = searchController
-        UICollectionView(frame: .zero, collectionViewLayout: slantedSayout)
         definesPresentationContext = true
+        collectionViewLayout.isFirstCellExcluded = true
+        collectionViewLayout.isLastCellExcluded = true
+        mainCollectionView.collectionViewLayout = collectionViewLayout
+        mainCollectionView.backgroundColor = UIColor.viewProspectBlue
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
 
         
@@ -100,6 +103,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidAppear(true)
         searchBool = true
     }
+    
     // Side Menu
     
     @IBAction func hamburgerButton(_ sender: UIBarButtonItem) {
@@ -124,33 +128,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         mainCollectionView.reloadData()
     }
     
-    // Collection View Stuff
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
-    {
-        if isFiltering() {
-            return filteredArticlesStruct.count
-        }
-        return articlesStruct.count
-        
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
-        let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        let article: Article
-        if isFiltering() {
-            article = filteredArticlesStruct[indexPath.row]
-        } else {
-            article = articlesStruct[indexPath.row]
-        }
-        cell.articleLabel.text = article.title
-        cell.articleLabel.backgroundColor = UIColor.prospectBlue
-        cell.articleDateLabel.backgroundColor = UIColor.darkerProspectBlue
-        cell.articleDateLabel.text = article.pubDate
-        return cell
-    }
     
     //Parse Function
     
@@ -638,6 +615,70 @@ extension ViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         // TODO
         filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
+extension ViewController: CollectionViewDelegateSlantedLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        NSLog("Did select item at indexPath: [\(indexPath.section)][\(indexPath.row)]")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: CollectionViewSlantedLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGFloat {
+        return collectionViewLayout.scrollDirection == .vertical ? 275 : 325
+    }
+}
+
+extension ViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredArticlesStruct.count
+        }
+        return articlesStruct.count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+            as? CollectionViewCell else {
+                fatalError()
+        }
+        
+        let article: Article
+        if isFiltering() {
+            article = filteredArticlesStruct[indexPath.row]
+        } else {
+            article = articlesStruct[indexPath.row]
+        }
+        cell.articleLabel.text = article.title
+        cell.articleLabel.backgroundColor = UIColor.clear
+        cell.articleDateLabel.backgroundColor = UIColor.clear
+        cell.articleDateLabel.text = article.pubDate
+        
+        if let layout = mainCollectionView.collectionViewLayout as? CollectionViewSlantedLayout {
+            cell.contentView.transform = CGAffineTransform(rotationAngle: layout.slantingAngle)
+            cell.articleLabel.transform = CGAffineTransform(rotationAngle: layout.slantingAngle)
+            cell.articleDateLabel.transform = CGAffineTransform(rotationAngle: layout.slantingAngle)
+        }
+        
+        return cell
+    }
+}
+
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let scollectionView = mainCollectionView else {return}
+        guard let svisibleCells = scollectionView.visibleCells as? [CollectionViewCell] else {return}
+        for parallaxCell in svisibleCells {
+            let yOffset = (scollectionView.contentOffset.y - parallaxCell.frame.origin.y) / parallaxCell.imageHeight
+            let xOffset = (scollectionView.contentOffset.x - parallaxCell.frame.origin.x) / parallaxCell.imageWidth
+            parallaxCell.offset(CGPoint(x: xOffset * xOffsetSpeed, y: yOffset * yOffsetSpeed))
+        }
     }
 }
 

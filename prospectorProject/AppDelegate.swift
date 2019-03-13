@@ -10,6 +10,7 @@ import UIKit
 import PushKit
 import UserNotifications
 import OneSignal
+import CollectionViewSlantedLayout
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

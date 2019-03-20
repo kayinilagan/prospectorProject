@@ -13,7 +13,6 @@ import UIKit
 class EntertainmentViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var arrayofArticlesEntertainment = [[String: String]]()
-    var loadCounter: Int!
 
     @IBOutlet weak var entertainmentTableView: UITableView!
     
@@ -23,12 +22,6 @@ class EntertainmentViewController: UIViewController, UITableViewDataSource, UITa
         
         
     }
-    override func viewDidAppear(_ animated: Bool)
-    {
-        
-        
-    }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -41,6 +34,7 @@ class EntertainmentViewController: UIViewController, UITableViewDataSource, UITa
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")
         let article = arrayofArticlesEntertainment[indexPath.row]
         cell?.textLabel?.text = article["title"]
+        cell?.detailTextLabel?.text = article["pubDate"]?.htmlToString
         return cell!
     }
     

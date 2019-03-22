@@ -528,15 +528,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="230" height="233"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1e0-iq-Kz7">
-                                                    <rect key="frame" x="7" y="13" width="215" height="207"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1e0-iq-Kz7">
+                                                    <rect key="frame" x="10" y="11" width="210" height="210"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC3-Hg-Ox8">
+                                                    <rect key="frame" x="7" y="172" width="215" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.10980392156862745" green="0.23529411764705882" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                    <color key="textColor" red="0.99711823763857277" green="0.98206347314980569" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="0.63137254901960782" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="1e0-iq-Kz7" firstAttribute="top" secondItem="Xav-mc-7g7" secondAttribute="topMargin" id="ULh-Ud-Cw5"/>
+                                            <constraint firstItem="1e0-iq-Kz7" firstAttribute="leading" secondItem="Xav-mc-7g7" secondAttribute="leadingMargin" id="kOj-Hf-Q0F"/>
+                                            <constraint firstItem="1e0-iq-Kz7" firstAttribute="trailing" secondItem="Xav-mc-7g7" secondAttribute="trailingMargin" id="yiV-8L-BSY"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="1e0-iq-Kz7" secondAttribute="bottom" id="z6h-41-Fui"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="image" destination="1e0-iq-Kz7" id="KgB-Th-jrU"/>
+                                            <outlet property="nameLabel" destination="LC3-Hg-Ox8" id="lXR-70-RZE"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

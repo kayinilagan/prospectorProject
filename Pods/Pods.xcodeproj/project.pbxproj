@@ -18,7 +18,6 @@
 		53F819121B37A3A70ED6747D815C9401 /* CollectionViewSlantedLayout-iOS12.1-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D7CFE1257383AB1A62F7E73D3D256C /* CollectionViewSlantedLayout-iOS12.1-dummy.m */; };
 		677B061D749673E637854A0BFD60DDE8 /* CollectionViewDelegateSlantedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755AB144B4093E12E046739400018259 /* CollectionViewDelegateSlantedLayout.swift */; };
 		67D9FE206B8FD5481A78CFB29CDA28F2 /* Pods-prospectorProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0857E2CA417695C0C5E3ADEA077C9391 /* Pods-prospectorProject-dummy.m */; };
-		6ED282182257A5DD00DA6421 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED282172257A5DD00DA6421 /* ImageData.swift */; };
 		82E99014D258734F35299B36A19D3C33 /* UICollectionViewLayout+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748475E4F7FE5A3FE850FF5D15514951 /* UICollectionViewLayout+Helpers.swift */; };
 		841E3E934BB26542810A1F9A54A99E43 /* CollectionViewSlantedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F1EC9F6BB17FB2558B5C589D69BE2762 /* CollectionViewSlantedLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		883E338548D51F7E906953633AC3B12D /* Pods-Notificaiton Center-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 073A8FEFA3B461908063618904F5C42E /* Pods-Notificaiton Center-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -76,7 +75,6 @@
 		6041550E3ED30FEBC72E0DE11FE90955 /* libCollectionViewSlantedLayout-iOS12.1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libCollectionViewSlantedLayout-iOS12.1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A68E300BF84FF6F7DF129BF507786D1 /* CollectionViewSlantedLayout-iOS12.1-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CollectionViewSlantedLayout-iOS12.1-umbrella.h"; path = "../../Headers/Public/CollectionViewSlantedLayout/CollectionViewSlantedLayout-iOS12.1-umbrella.h"; sourceTree = "<group>"; };
 		6DA15DCB12AB3588C913012053944F57 /* UICollectionView+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Helpers.swift"; path = "Sources/Extensions/UICollectionView+Helpers.swift"; sourceTree = "<group>"; };
-		6ED282172257A5DD00DA6421 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageData.swift; path = ../prospectorProject/ImageData.swift; sourceTree = "<group>"; };
 		748475E4F7FE5A3FE850FF5D15514951 /* UICollectionViewLayout+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionViewLayout+Helpers.swift"; path = "Sources/Extensions/UICollectionViewLayout+Helpers.swift"; sourceTree = "<group>"; };
 		755AB144B4093E12E046739400018259 /* CollectionViewDelegateSlantedLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionViewDelegateSlantedLayout.swift; path = Sources/CollectionViewDelegateSlantedLayout.swift; sourceTree = "<group>"; };
 		7567A31E4A841423DF61F09156ECD52B /* Pods-prospectorProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-prospectorProject-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -193,7 +191,6 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				6ED282172257A5DD00DA6421 /* ImageData.swift */,
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				6BC32B436095ECEE971AE42619ECD063 /* Pods */,
@@ -517,7 +514,6 @@
 				C780927820E67C779BC35E33214255B8 /* CollectionViewSlantedLayout+Constants.swift in Sources */,
 				50B2A7A36E9F452BC1A39DFA9B52649E /* CollectionViewSlantedLayout-iOS11.4-dummy.m in Sources */,
 				E67885456C7EFCBA3F50B663B405BC65 /* CollectionViewSlantedLayout.swift in Sources */,
-				6ED282182257A5DD00DA6421 /* ImageData.swift in Sources */,
 				A975453F9ABE221D3808D26393BF0C6F /* CollectionViewSlantedLayoutAttributes.swift in Sources */,
 				EA201B7C2CE7ED57CAA2AF4324272C59 /* CollectionViewSlantedMasks.swift in Sources */,
 				DAD444A02F73D79313139CA2DF65A726 /* UICollectionView+Helpers.swift in Sources */,

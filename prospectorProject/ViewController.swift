@@ -13,7 +13,7 @@ var articleInfo: ArticleInfo!
 
 //hey guys! henning and I were thinking that we could clear the table view before storing articles? We may be able to do so in the function that stores the articles in the table view cell by clearing the table view and then adding in the articles so we can avoid repeating articles in a table view once a button is clicked on again. -Helen 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //Parse Things (Helen's Code + Kai's Copy For Search Button)
     var articles = [[String: String]]()
@@ -28,6 +28,14 @@ class ViewController: UIViewController {
     let searchController = UISearchController(searchResultsController: nil)
     let slantedSayout = CollectionViewSlantedLayout()
     
+    var imagePicker = UIImagePickerController()
+    
+    var fileURL: URL!
+    var images = [ImageData]() {
+        didSet {
+            writeToFile()
+        }
+    }
 
     var oneSignal = OneSignal()
 
@@ -85,18 +93,47 @@ class ViewController: UIViewController {
                             self.parse(json: json)
                             return
                         }
-                        
-                        
                     }
-
-                
             }
-
             self.loadError()
         }
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsURL = paths[0]
+        fileURL = documentsURL.appendingPathComponent("Image")
+        readFromFile()
         
-        
-     
+        imagePicker.delegate = self
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true)
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.images.append(ImageData(image: UIImagePNGRepresentation(selectedImage)!, like: false, text: ""))
+            mainCollectionView.reloadData()
+        }
+    }
+    
+    func readFromFile() {
+        do {
+            let data = try Data(contentsOf: fileURL)
+            let images = try PropertyListDecoder().decode([ImageData].self, from: data)
+            self.images = images
+            print("Successful readFromFile")
+        }
+        catch {
+            print("Failed readFromFile")
+        }
+    }
+    
+    func writeToFile() {
+        do {
+            let data = try PropertyListEncoder().encode(images)
+            try data.write(to: fileURL!)
+            print("Succeddsul writeToFile")
+        }
+        catch {
+            print("Failed writeToFile")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -150,6 +187,7 @@ class ViewController: UIViewController {
 
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories]
             articles.append(source)
+            images.append(articleThumbnail)
             contentString1 = content
             let itemTest = result["items[1].title"]
             print("We're parsing babey")
@@ -641,9 +679,7 @@ extension ViewController: UICollectionViewDataSource {
         
     }
     
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
             as? CollectionViewCell else {
                 fatalError()
@@ -659,6 +695,7 @@ extension ViewController: UICollectionViewDataSource {
         cell.articleLabel.backgroundColor = UIColor.clear
         cell.articleDateLabel.backgroundColor = UIColor.clear
         cell.articleDateLabel.text = article.pubDate
+        
         
         if let layout = mainCollectionView.collectionViewLayout as? CollectionViewSlantedLayout {
             cell.contentView.transform = CGAffineTransform(rotationAngle: layout.slantingAngle)

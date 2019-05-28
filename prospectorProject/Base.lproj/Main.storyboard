@@ -144,7 +144,7 @@
                                                             <rect key="frame" x="-0.5" y="0.0" width="769" height="365"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZB-k2-eTe">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZB-k2-eTe">
                                                                     <rect key="frame" x="0.0" y="0.0" width="768" height="365"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" red="0.029859041795134544" green="0.053070098161697388" blue="0.046318821609020233" alpha="0.25096280809999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -719,8 +719,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hamburgerIconSkinny" width="25" height="25"/>
-        <image name="star" width="6000" height="4000"/>
+        <image name="hamburgerIconSkinny" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="KBi-Y3-iHt"/>

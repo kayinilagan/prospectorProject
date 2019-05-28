@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 // Do it parse function, build it like how source is made in parse function.
 // This is very important for the search functiom.
@@ -17,6 +17,7 @@ struct Article {
     let pubDate : String
     let description : String
     let content : String
-    let articleThumbnail : String
+    let articleThumbnail : UIImage
     let categories : String
+    let link: String
 }

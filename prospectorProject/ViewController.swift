@@ -27,10 +27,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var filteredArticlesStruct = [Article]()
     let searchController = UISearchController(searchResultsController: nil)
     let slantedSayout = CollectionViewSlantedLayout()
-    
+    var pathway: String!
+    var imageArticles = [[String: UIImage]]()
     var imagePicker = UIImagePickerController()
-    
     var fileURL: URL!
+    var thumbnail: UIImage!
     var images = [ImageData]() {
         didSet {
             writeToFile()
@@ -79,6 +80,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         mainCollectionView.collectionViewLayout = collectionViewLayout
         mainCollectionView.backgroundColor = UIColor.viewProspectBlue
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
+        
+        
+        var link = "http://motyar.info/webscrapemaster/api/?url=https://prospectornow.com/?p=\(pathway)&xpath=//div[@id=cb-featured-image]/div[1]/img#vws"
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            [unowned self] in
+            if let url = URL(string: link)
+            {
+                if let data = try? Data(contentsOf: url)
+                {
+                    let json2 = try! JSON(data: data)
+                    self.parse(json: json2)
+                    return
+                    
+                }
+            }
+            self.loadError()
+        }
 
         
             DispatchQueue.global(qos: .userInitiated).async {
@@ -97,6 +116,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             self.loadError()
         }
+        
+
+        
+        
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsURL = paths[0]
         fileURL = documentsURL.appendingPathComponent("Image")
@@ -173,6 +196,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         for result in json["items"].arrayValue
         {
+           
+
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let description = result["description"].stringValue
@@ -180,18 +205,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let articleThumbnail = result["thumbnail"].stringValue
             let category = result["categories"].arrayValue
             let categories = String(result["categories"].arrayValue.count)
-            
-            
-            articlesStruct.append(Article(title: title, pubDate: pubDate, description: description, content: content, articleThumbnail: articleThumbnail, categories: categories))
+            let link = result["link"].stringValue
             
 
-            let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories]
+            articlesStruct.append(Article(title: title, pubDate: pubDate, description: description, content: content, articleThumbnail: thumbnail , categories: categories, link: link))
+            
+
+            let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories, "link": link]
+            
             articles.append(source)
-            images.append(articleThumbnail)
+            //images.append(articleThumbnail)
             contentString1 = content
-            let itemTest = result["items[1].title"]
             print("We're parsing babey")
-            print(itemTest)
             
             let count = category.count - 1
             
@@ -217,7 +242,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    
+    func parseImage(json2: JSON)
+    {
+        getPathway(link: "https://prospectornow.com/?p=20691")
+      
+        for result in json2[""].arrayValue
+        {
+            let imageString = result["src"].stringValue
+            
+            let url = URL(string: imageString)
+            if let data = try? Data(contentsOf: url!)
+            {
+                let image: UIImage = UIImage(data: data)!
+                thumbnail = image
+            }
+            var source = ["src": thumbnail]
+            imageArticles.append(source as! [String : UIImage])
+            
+            //  let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories]
+            
+            print("double parse babey")
+            
+            
+        }
+    }
     
     
     func loadError() {
@@ -641,7 +689,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // Search Button
     
+    func getPathway(link: String) -> String
+    {
+        var firstNum: String!
+        var secondNum: String!
+        var thirdNum: String!
+        var fourthNum: String!
+        var fifthNum: String!
+        
+
+            
+            firstNum = link[28]
+            secondNum = link[29]
+            thirdNum = link[30]
+            fourthNum = link[31]
+            fifthNum = link[32]
+
+            pathway = "\(firstNum + secondNum + thirdNum + fourthNum + fifthNum)"
+            print(pathway)
+            
+        
+        
+        return pathway
+    }// end of getImage
     
+
    
     
 }
@@ -695,7 +767,7 @@ extension ViewController: UICollectionViewDataSource {
         cell.articleLabel.backgroundColor = UIColor.clear
         cell.articleDateLabel.backgroundColor = UIColor.clear
         cell.articleDateLabel.text = article.pubDate
-        
+        cell.articleThumbnail = article.articleThumbnail
         
         if let layout = mainCollectionView.collectionViewLayout as? CollectionViewSlantedLayout {
             cell.contentView.transform = CGAffineTransform(rotationAngle: layout.slantingAngle)
@@ -716,6 +788,11 @@ extension ViewController: UIScrollViewDelegate {
             let xOffset = (scollectionView.contentOffset.x - parallaxCell.frame.origin.x) / parallaxCell.imageWidth
             parallaxCell.offset(CGPoint(x: xOffset * xOffsetSpeed, y: yOffset * yOffsetSpeed))
         }
+    }
+}
+extension String {
+    subscript(i: Int) -> String {
+        return String(self[index(startIndex, offsetBy: i)])
     }
 }
 

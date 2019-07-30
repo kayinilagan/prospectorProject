@@ -84,20 +84,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         var link = "http://motyar.info/webscrapemaster/api/?url=https://prospectornow.com/?p=\(pathway)&xpath=//div[@id=cb-featured-image]/div[1]/img#vws"
         
-        DispatchQueue.global(qos: .userInitiated).async {
-            [unowned self] in
-            if let url = URL(string: link)
-            {
-                if let data = try? Data(contentsOf: url)
-                {
-                    let json2 = try! JSON(data: data)
-                    self.parse(json: json2)
-                    return
-                    
-                }
-            }
-            self.loadError()
-        }
+//        DispatchQueue.global(qos: .userInitiated).async {
+//            [unowned self] in
+//            if let url = URL(string: link)
+//            {
+//                if let data = try? Data(contentsOf: url)
+//                {
+//                    let json2 = try! JSON(data: data)
+//                    self.parse(json: json2)
+//                    return
+//
+//                }
+//            }
+//            self.loadError()
+//        }
 
         
             DispatchQueue.global(qos: .userInitiated).async {
@@ -208,7 +208,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let link = result["link"].stringValue
             
 
-            articlesStruct.append(Article(title: title, pubDate: pubDate, description: description, content: content, articleThumbnail: thumbnail , categories: categories, link: link))
+            articlesStruct.append(Article(title: title, pubDate: pubDate, description: description, content: content, categories: categories, link: link))
             
 
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories, "link": link]
@@ -242,30 +242,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    func parseImage(json2: JSON)
-    {
-        getPathway(link: "https://prospectornow.com/?p=20691")
-      
-        for result in json2[""].arrayValue
-        {
-            let imageString = result["src"].stringValue
-            
-            let url = URL(string: imageString)
-            if let data = try? Data(contentsOf: url!)
-            {
-                let image: UIImage = UIImage(data: data)!
-                thumbnail = image
-            }
-            var source = ["src": thumbnail]
-            imageArticles.append(source as! [String : UIImage])
-            
-            //  let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories]
-            
-            print("double parse babey")
-            
-            
-        }
-    }
+//    func parseImage(json2: JSON)
+//    {
+//        getPathway(link: "https://prospectornow.com/?p=20691")
+//
+//        for result in json2[""].arrayValue
+//        {
+//            let imageString = result["src"].stringValue
+//
+//            let url = URL(string: imageString)
+//            if let data = try? Data(contentsOf: url!)
+//            {
+//                let image: UIImage = UIImage(data: data)!
+//                thumbnail = image
+//            }
+//            var source = ["src": thumbnail]
+//            imageArticles.append(source as! [String : UIImage])
+//
+//            //  let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories]
+//
+//            print("double parse babey")
+//
+//
+//        }
+//    }
     
     
     func loadError() {
@@ -689,29 +689,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // Search Button
     
-    func getPathway(link: String) -> String
-    {
-        var firstNum: String!
-        var secondNum: String!
-        var thirdNum: String!
-        var fourthNum: String!
-        var fifthNum: String!
-        
-
-            
-            firstNum = link[28]
-            secondNum = link[29]
-            thirdNum = link[30]
-            fourthNum = link[31]
-            fifthNum = link[32]
-
-            pathway = "\(firstNum + secondNum + thirdNum + fourthNum + fifthNum)"
-            print(pathway)
-            
-        
-        
-        return pathway
-    }// end of getImage
+//    func getPathway(link: String) -> String
+//    {
+//        var firstNum: String!
+//        var secondNum: String!
+//        var thirdNum: String!
+//        var fourthNum: String!
+//        var fifthNum: String!
+//
+//
+//
+//            firstNum = link[28]
+//            secondNum = link[29]
+//            thirdNum = link[30]
+//            fourthNum = link[31]
+//            fifthNum = link[32]
+//
+//            pathway = "\(firstNum + secondNum + thirdNum + fourthNum + fifthNum)"
+//            print(pathway)
+//
+//
+//
+//        return pathway
+//    }// end of getImage
     
 
    
@@ -767,7 +767,7 @@ extension ViewController: UICollectionViewDataSource {
         cell.articleLabel.backgroundColor = UIColor.clear
         cell.articleDateLabel.backgroundColor = UIColor.clear
         cell.articleDateLabel.text = article.pubDate
-        cell.articleThumbnail = article.articleThumbnail
+//        cell.articleThumbnail = article.articleThumbnail
         
         if let layout = mainCollectionView.collectionViewLayout as? CollectionViewSlantedLayout {
             cell.contentView.transform = CGAffineTransform(rotationAngle: layout.slantingAngle)

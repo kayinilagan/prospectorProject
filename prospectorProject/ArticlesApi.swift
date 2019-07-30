@@ -17,7 +17,6 @@ struct Article {
     let pubDate : String
     let description : String
     let content : String
-    let articleThumbnail : UIImage
     let categories : String
     let link: String
 }

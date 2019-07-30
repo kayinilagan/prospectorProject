@@ -164,8 +164,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         searchBool = true
     }
     
-    // Side Menu
-    
+    //MARK: Side Menu
     @IBAction func hamburgerButton(_ sender: UIBarButtonItem) {
         if !hamburgerIsVisible
         {
@@ -189,11 +188,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    //Parse Function
-    
+    //MARK: Parse Function
     func parse(json: JSON)
     {
-
         for result in json["items"].arrayValue
         {
            
@@ -241,7 +238,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
-    
+    //MARK: - Parse Image
 //    func parseImage(json2: JSON)
 //    {
 //        getPathway(link: "https://prospectornow.com/?p=20691")
@@ -267,7 +264,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //        }
 //    }
     
-    
+    //MARK: - Load Error
     func loadError() {
         
         DispatchQueue.main.async {

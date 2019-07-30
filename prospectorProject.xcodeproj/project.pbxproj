@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4780BC921539738BB6D02AD7 /* libPods-Notificaiton Center.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D72C2F4AAD26B1406A4532 /* libPods-Notificaiton Center.a */; };
+		6A39AFF722F0D5B70076C33E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A39AFF622F0D5B60076C33E /* GoogleService-Info.plist */; };
 		6E0324E621949D2F00E8040C /* ArticleInfoClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0324E521949D2F00E8040C /* ArticleInfoClass.swift */; };
 		6E1243ED219DDB5700295B5D /* pinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1243EC219DDB5700295B5D /* pinterestLayout.swift */; };
 		6E35CB932188AC1C00BD9F03 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35CB922188AC1C00BD9F03 /* SwiftyJSON.swift */; };
@@ -69,6 +70,7 @@
 		3C9C2B474D729FBAE1498684 /* Pods-prospectorProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prospectorProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-prospectorProject/Pods-prospectorProject.release.xcconfig"; sourceTree = "<group>"; };
 		4439B7BD6EB2A8A5DE2A055A /* Pods-Notificaiton Center.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Notificaiton Center.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Notificaiton Center/Pods-Notificaiton Center.debug.xcconfig"; sourceTree = "<group>"; };
 		65D72C2F4AAD26B1406A4532 /* libPods-Notificaiton Center.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Notificaiton Center.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A39AFF622F0D5B60076C33E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E0324E521949D2F00E8040C /* ArticleInfoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInfoClass.swift; sourceTree = "<group>"; };
 		6E1243EC219DDB5700295B5D /* pinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinterestLayout.swift; sourceTree = "<group>"; };
 		6E35CB922188AC1C00BD9F03 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				6E8C053621836CAF004CF39D /* Assets.xcassets */,
 				6E8C053821836CAF004CF39D /* LaunchScreen.storyboard */,
 				6E35CB922188AC1C00BD9F03 /* SwiftyJSON.swift */,
+				6A39AFF622F0D5B60076C33E /* GoogleService-Info.plist */,
 				6E8C053B21836CAF004CF39D /* Info.plist */,
 			);
 			path = prospectorProject;
@@ -239,6 +242,7 @@
 				6E8C052921836CAD004CF39D /* Frameworks */,
 				6E8C052A21836CAD004CF39D /* Resources */,
 				6ED0049321AEF6F300857E9D /* Embed App Extensions */,
+				6A39AFF822F0DA7C0076C33E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -325,6 +329,7 @@
 				6E8C053521836CAE004CF39D /* Main.storyboard in Resources */,
 				6E3642C1222EDA0B00AB6502 /* HelloSanttiny.ttf in Resources */,
 				84FC2A022230C5CB002E7DC9 /* Wandertucker.ttf in Resources */,
+				6A39AFF722F0D5B70076C33E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +364,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6A39AFF822F0DA7C0076C33E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
 		};
 		CC3BC14FFA04BC360D2286B4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

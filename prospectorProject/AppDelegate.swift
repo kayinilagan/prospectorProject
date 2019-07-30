@@ -11,12 +11,12 @@ import PushKit
 import UserNotifications
 import OneSignal
 import CollectionViewSlantedLayout
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -40,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UISearchBar.appearance().tintColor = .prospectBlue
         UINavigationBar.appearance().tintColor = .prospectBlue
+        
+        FirebaseApp.configure()
         
         return true
     }

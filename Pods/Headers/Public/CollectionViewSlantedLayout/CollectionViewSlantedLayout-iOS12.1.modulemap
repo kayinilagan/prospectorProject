@@ -1,7 +1,1 @@
-module CollectionViewSlantedLayout {
-  umbrella header "CollectionViewSlantedLayout-iOS12.1-umbrella.h"
-  exclude header "CollectionViewSlantedLayout-iOS11.4-umbrella.h"
-
-  export *
-  module * { export * }
-}
+../../../Target Support Files/CollectionViewSlantedLayout-iOS12.1/CollectionViewSlantedLayout-iOS12.1.modulemap

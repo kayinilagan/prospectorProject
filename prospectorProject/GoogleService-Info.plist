@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>445142979783-c4q5430fbpes5tk2ufthcahnmjhedvae.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.445142979783-c4q5430fbpes5tk2ufthcahnmjhedvae</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDTIipUDwR8yXqsvC2bFE4cPm9069OX8lI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>445142979783</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>phs.prospectorProject</string>
+	<key>PROJECT_ID</key>
+	<string>prospector-project-63327</string>
+	<key>STORAGE_BUCKET</key>
+	<string>prospector-project-63327.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:445142979783:ios:e7407cecd6c96f56</string>
+	<key>DATABASE_URL</key>
+	<string>https://prospector-project-63327.firebaseio.com</string>
+</dict>
+</plist>

@@ -10,7 +10,6 @@ import UIKit
 import PushKit
 import UserNotifications
 import OneSignal
-import CollectionViewSlantedLayout
 import Firebase
 
 @UIApplicationMain

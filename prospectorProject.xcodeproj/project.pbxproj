@@ -10,7 +10,6 @@
 		4780BC921539738BB6D02AD7 /* libPods-Notificaiton Center.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D72C2F4AAD26B1406A4532 /* libPods-Notificaiton Center.a */; };
 		6A39AFF722F0D5B70076C33E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A39AFF622F0D5B60076C33E /* GoogleService-Info.plist */; };
 		6E0324E621949D2F00E8040C /* ArticleInfoClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0324E521949D2F00E8040C /* ArticleInfoClass.swift */; };
-		6E1243ED219DDB5700295B5D /* pinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1243EC219DDB5700295B5D /* pinterestLayout.swift */; };
 		6E35CB932188AC1C00BD9F03 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E35CB922188AC1C00BD9F03 /* SwiftyJSON.swift */; };
 		6E3642C1222EDA0B00AB6502 /* HelloSanttiny.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E3642C0222EDA0B00AB6502 /* HelloSanttiny.ttf */; };
 		6E3642C4222EDC0200AB6502 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3642C3222EDC0200AB6502 /* Color.swift */; };
@@ -30,7 +29,6 @@
 		6ED2821C2257A70900DA6421 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED2821B2257A70900DA6421 /* ImageData.swift */; };
 		6ED590F922171E9B004B92C9 /* SpecificArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED590F822171E9B004B92C9 /* SpecificArticleViewController.swift */; };
 		6EE2915C21875C5C00EEE5D0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE2915B21875C5C00EEE5D0 /* CollectionViewCell.swift */; };
-		6EE3D66921949C7300B8833F /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE3D66821949C7300B8833F /* NotificationCenter.swift */; };
 		6EE481A3219C83140050F30C /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481A2219C83140050F30C /* TrendingViewController.swift */; };
 		6EE481A5219C83400050F30C /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481A4219C83400050F30C /* SportsViewController.swift */; };
 		6EE481A7219C838A0050F30C /* EntertainmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE481A6219C838A0050F30C /* EntertainmentViewController.swift */; };
@@ -72,7 +70,6 @@
 		65D72C2F4AAD26B1406A4532 /* libPods-Notificaiton Center.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Notificaiton Center.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A39AFF622F0D5B60076C33E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E0324E521949D2F00E8040C /* ArticleInfoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleInfoClass.swift; sourceTree = "<group>"; };
-		6E1243EC219DDB5700295B5D /* pinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinterestLayout.swift; sourceTree = "<group>"; };
 		6E35CB922188AC1C00BD9F03 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		6E3642C0222EDA0B00AB6502 /* HelloSanttiny.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelloSanttiny.ttf; sourceTree = "<group>"; };
 		6E3642C3222EDC0200AB6502 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -97,7 +94,6 @@
 		6ED2821B2257A70900DA6421 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImageData.swift; path = ../ImageData.swift; sourceTree = "<group>"; };
 		6ED590F822171E9B004B92C9 /* SpecificArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificArticleViewController.swift; sourceTree = "<group>"; };
 		6EE2915B21875C5C00EEE5D0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		6EE3D66821949C7300B8833F /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		6EE481A2219C83140050F30C /* TrendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 		6EE481A4219C83400050F30C /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		6EE481A6219C838A0050F30C /* EntertainmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntertainmentViewController.swift; sourceTree = "<group>"; };
@@ -169,8 +165,6 @@
 				6E8C052F21836CAE004CF39D /* AppDelegate.swift */,
 				6E8C053121836CAE004CF39D /* ViewController.swift */,
 				6E3642C5222EDFDA00AB6502 /* ArticlesApi.swift */,
-				6E1243EC219DDB5700295B5D /* pinterestLayout.swift */,
-				6EE3D66821949C7300B8833F /* NotificationCenter.swift */,
 				6E54AC9A21AEFA48000916D3 /* ArticleCollectionViewCell.swift */,
 				6EE2915B21875C5C00EEE5D0 /* CollectionViewCell.swift */,
 				6EA4527F224142CD00378F6C /* StaffCell.swift */,
@@ -421,7 +415,6 @@
 				6E4264532229941000692932 /* NewsViewController.swift in Sources */,
 				6EE481AD219C83EF0050F30C /* OpinionViewController.swift in Sources */,
 				6EE481A3219C83140050F30C /* TrendingViewController.swift in Sources */,
-				6EE3D66921949C7300B8833F /* NotificationCenter.swift in Sources */,
 				6E8C053021836CAE004CF39D /* AppDelegate.swift in Sources */,
 				6EE2915C21875C5C00EEE5D0 /* CollectionViewCell.swift in Sources */,
 				6EA45280224142CD00378F6C /* StaffCell.swift in Sources */,
@@ -429,7 +422,6 @@
 				6EE481A5219C83400050F30C /* SportsViewController.swift in Sources */,
 				6EE481AF219C84060050F30C /* OtherViewController.swift in Sources */,
 				6EE481A7219C838A0050F30C /* EntertainmentViewController.swift in Sources */,
-				6E1243ED219DDB5700295B5D /* pinterestLayout.swift in Sources */,
 				6EE481AB219C83CB0050F30C /* FeaturesViewController.swift in Sources */,
 				6E35CB932188AC1C00BD9F03 /* SwiftyJSON.swift in Sources */,
 				6E0324E621949D2F00E8040C /* ArticleInfoClass.swift in Sources */,

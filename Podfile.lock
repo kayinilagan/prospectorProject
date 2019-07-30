@@ -1,5 +1,4 @@
 PODS:
-  - CollectionViewSlantedLayout (3.1.1)
   - Crashlytics (3.13.4):
     - Fabric (~> 1.10.2)
   - Fabric (1.10.2)
@@ -90,7 +89,6 @@ PODS:
   - Protobuf (3.9.0)
 
 DEPENDENCIES:
-  - CollectionViewSlantedLayout (~> 3.1)
   - Crashlytics (~> 3.13.4)
   - Fabric (~> 1.10.2)
   - Firebase/Analytics
@@ -99,7 +97,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - CollectionViewSlantedLayout
     - Crashlytics
     - Fabric
     - Firebase
@@ -118,7 +115,6 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
-  CollectionViewSlantedLayout: 24397455acd2461960bc45d394e0ef99c17d03ce
   Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: dedc9e48ea3f3649ad5f6b982f8a0c73508a14b5
@@ -136,6 +132,6 @@ SPEC CHECKSUMS:
   OneSignal: a506e3bc61d2030f0757faf9bd783a9b211c6e3c
   Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
 
-PODFILE CHECKSUM: d324875a6ee7c3353aafed9dd245c3fa9bb2afe0
+PODFILE CHECKSUM: adaa654673869e0687f941845fb92aedfb3e4c23
 
 COCOAPODS: 1.7.5

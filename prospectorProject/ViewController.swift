@@ -7,13 +7,12 @@
 import UIKit
 import NotificationCenter
 import OneSignal
-import CollectionViewSlantedLayout
 
 var articleInfo: ArticleInfo!
 
 //hey guys! henning and I were thinking that we could clear the table view before storing articles? We may be able to do so in the function that stores the articles in the table view cell by clearing the table view and then adding in the articles so we can avoid repeating articles in a table view once a button is clicked on again. -Helen 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate {
     
     //Parse Things (Helen's Code + Kai's Copy For Search Button)
     var articles = [[String: String]]()
@@ -26,7 +25,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var articlesStruct = [Article]()
     var filteredArticlesStruct = [Article]()
     let searchController = UISearchController(searchResultsController: nil)
-    let slantedSayout = CollectionViewSlantedLayout()
     var pathway: String!
     var imageArticles = [[String: UIImage]]()
     var imagePicker = UIImagePickerController()
@@ -55,13 +53,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Collection View
     
     @IBOutlet weak var mainCollectionView: UICollectionView!
-    @IBOutlet weak var collectionViewLayout: CollectionViewSlantedLayout!
     
     // Side Menu
     
-//    override func viewWillAppear(_ animated: Bool){
-//       mainCollectionView.reloadData()
-//    }
+    override func viewWillAppear(_ animated: Bool){
+       mainCollectionView.reloadData()
+    }
     
     // ViewDidLoad
     
@@ -75,12 +72,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         searchController.searchBar.placeholder = "Search Articles"
         navigationItem.searchController = searchController
         definesPresentationContext = true
-        collectionViewLayout.isFirstCellExcluded = true
-        collectionViewLayout.isLastCellExcluded = true
-        mainCollectionView.collectionViewLayout = collectionViewLayout
         mainCollectionView.backgroundColor = UIColor.viewProspectBlue
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
-        
         
         var link = "http://motyar.info/webscrapemaster/api/?url=https://prospectornow.com/?p=\(pathway)&xpath=//div[@id=cb-featured-image]/div[1]/img#vws"
         
@@ -98,8 +91,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //            }
 //            self.loadError()
 //        }
-
-        
             DispatchQueue.global(qos: .userInitiated).async {
                 [unowned self] in
                 if let url = URL(string: homePageQuery)
@@ -116,9 +107,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             self.loadError()
         }
-        
-
-        
         
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsURL = paths[0]
@@ -193,8 +181,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     {
         for result in json["items"].arrayValue
         {
-           
-
             let title = result["title"].stringValue
             let pubDate = result["pubDate"].stringValue
             let description = result["description"].stringValue
@@ -675,47 +661,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 nvc.specificArticleStruct = article
             }
         }
-            //table view segue
-//        else if segue.identifier == "tableViewArticlesRecentSegue"
-//        {
-//            let nvc = segue.destination as! TableViewViewController
-//            let index = issueView.indexPathForSelectedRow?.row
-//            nvc.article = articles[index!]
-//        }
-    }
-    
-    // Search Button
-    
-//    func getPathway(link: String) -> String
-//    {
-//        var firstNum: String!
-//        var secondNum: String!
-//        var thirdNum: String!
-//        var fourthNum: String!
-//        var fifthNum: String!
-//
-//
-//
-//            firstNum = link[28]
-//            secondNum = link[29]
-//            thirdNum = link[30]
-//            fourthNum = link[31]
-//            fifthNum = link[32]
-//
-//            pathway = "\(firstNum + secondNum + thirdNum + fourthNum + fifthNum)"
-//            print(pathway)
-//
-//
-//
-//        return pathway
-//    }// end of getImage
-    
-
-   
-    
 }
-
-
 
 extension ViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
@@ -725,68 +671,26 @@ extension ViewController: UISearchResultsUpdating {
     }
 }
 
-extension ViewController: CollectionViewDelegateSlantedLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        NSLog("Did select item at indexPath: [\(indexPath.section)][\(indexPath.row)]")
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: CollectionViewSlantedLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGFloat {
-        return collectionViewLayout.scrollDirection == .vertical ? 275 : 325
-    }
-}
-
+//MARK: Collection View
 extension ViewController: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if isFiltering() {
-            return filteredArticlesStruct.count
-        }
         return articlesStruct.count
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-            as? CollectionViewCell else {
-                fatalError()
-        }
-        
+        let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CollectionViewCell
         let article: Article
-        if isFiltering() {
-            article = filteredArticlesStruct[indexPath.row]
-        } else {
-            article = articlesStruct[indexPath.row]
-        }
-        cell.articleLabel.text = article.title
-        cell.articleLabel.backgroundColor = UIColor.clear
-        cell.articleDateLabel.backgroundColor = UIColor.clear
-        cell.articleDateLabel.text = article.pubDate
-//        cell.articleThumbnail = article.articleThumbnail
-        
-        if let layout = mainCollectionView.collectionViewLayout as? CollectionViewSlantedLayout {
-            cell.contentView.transform = CGAffineTransform(rotationAngle: layout.slantingAngle)
-            cell.articleLabel.transform = CGAffineTransform(rotationAngle: layout.slantingAngle)
-            cell.articleDateLabel.transform = CGAffineTransform(rotationAngle: layout.slantingAngle)
-        }
-        
-        return cell
+        article = articlesStruct[indexPath.row]
+        cell?.articleLabel.text = article.title
+        print(article.title)
+        cell?.articleLabel.backgroundColor = UIColor.prospectBlue
+        cell?.articleDateLabel.text = article.pubDate
+        print(article.pubDate)
+        cell?.articleDateLabel.backgroundColor = UIColor.darkerProspectBlue
+        return cell!
     }
 }
 
-extension ViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard let scollectionView = mainCollectionView else {return}
-        guard let svisibleCells = scollectionView.visibleCells as? [CollectionViewCell] else {return}
-        for parallaxCell in svisibleCells {
-            let yOffset = (scollectionView.contentOffset.y - parallaxCell.frame.origin.y) / parallaxCell.imageHeight
-            let xOffset = (scollectionView.contentOffset.x - parallaxCell.frame.origin.x) / parallaxCell.imageWidth
-            parallaxCell.offset(CGPoint(x: xOffset * xOffsetSpeed, y: yOffset * yOffsetSpeed))
-        }
-    }
-}
 extension String {
     subscript(i: Int) -> String {
         return String(self[index(startIndex, offsetBy: i)])

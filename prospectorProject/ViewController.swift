@@ -66,13 +66,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     {
         super.viewDidLoad()
         print(OneSignal.app_id())
+        
+        print(articlesStruct.count)
         // Setup the Search Controller
-        searchController.searchResultsUpdater = self as UISearchResultsUpdating
+        searchController.searchResultsUpdater = self as! UISearchResultsUpdating
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Articles"
         navigationItem.searchController = searchController
         definesPresentationContext = true
         mainCollectionView.backgroundColor = UIColor.viewProspectBlue
+        mainCollectionView.reloadData()
         let homePageQuery = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fprospectornow.com%2F%3Ffeed%3Drss2"
         
         var link = "http://motyar.info/webscrapemaster/api/?url=https://prospectornow.com/?p=\(pathway)&xpath=//div[@id=cb-featured-image]/div[1]/img#vws"
@@ -189,10 +192,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let category = result["categories"].arrayValue
             let categories = String(result["categories"].arrayValue.count)
             let link = result["link"].stringValue
-            
 
             articlesStruct.append(Article(title: title, pubDate: pubDate, description: description, content: content, categories: categories, link: link))
-            
 
             let source = ["title":title, "pubDate":pubDate, "description": description, "content":content, "articleThumbnail": articleThumbnail, "categories": categories, "link": link]
             
@@ -220,7 +221,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         DispatchQueue.main.async {
         
         self.mainCollectionView.reloadData()
-            
             }
         }
     }
@@ -482,7 +482,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     // Other
-    
     var otherArrayHolder = [[String: String]]()
     var realOtherArray = [[String: String]]()
     @IBAction func otherButton(_ sender: UIButton)
@@ -537,7 +536,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
 
-    
+    //MARK: Start of Prepare for Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         //NEWS SEGUE
@@ -661,8 +660,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 nvc.specificArticleStruct = article
             }
         }
+        //MARK: End of Prepare for Segues
 }
-
+}
 extension ViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
@@ -673,19 +673,21 @@ extension ViewController: UISearchResultsUpdating {
 
 //MARK: Collection View
 extension ViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ mainCollectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(articlesStruct.count)
         return articlesStruct.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ mainCollectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //WHY IS THIS A BITCH?
         let cell = mainCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? CollectionViewCell
         let article: Article
         article = articlesStruct[indexPath.row]
         cell?.articleLabel.text = article.title
-        print(article.title)
+        print(cell?.articleLabel.text)
         cell?.articleLabel.backgroundColor = UIColor.prospectBlue
         cell?.articleDateLabel.text = article.pubDate
-        print(article.pubDate)
+        print(cell?.articleDateLabel.text)
         cell?.articleDateLabel.backgroundColor = UIColor.darkerProspectBlue
         return cell!
     }

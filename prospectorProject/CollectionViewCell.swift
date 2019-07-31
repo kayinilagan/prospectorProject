@@ -11,7 +11,6 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell
 {
-    
     var articleTitle: String!
     var articleThumbnail: UIImage!
     var articleDate: String!

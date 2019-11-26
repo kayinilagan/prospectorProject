@@ -96,7 +96,7 @@ DEPENDENCIES:
   - OneSignal (< 3.0.4, >= 2.6.2)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Crashlytics
     - Fabric
     - Firebase
@@ -134,4 +134,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: adaa654673869e0687f941845fb92aedfb3e4c23
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

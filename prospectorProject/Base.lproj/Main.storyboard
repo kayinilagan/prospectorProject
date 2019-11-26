@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q0I-et-RDA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q0I-et-RDA">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -117,10 +117,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTT-hW-9s8">
-                                <rect key="frame" x="0.0" y="48" width="768" height="976"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A3Z-T8-gPY">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="976"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xmT-Ko-xsf">
                                             <size key="itemSize" width="768.5" height="370"/>
@@ -207,7 +207,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DTT-hW-9s8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0Dt-sg-dQL"/>
-                            <constraint firstItem="DTT-hW-9s8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="48" id="4b2-tY-m7k"/>
+                            <constraint firstItem="DTT-hW-9s8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="4b2-tY-m7k"/>
                             <constraint firstItem="DTT-hW-9s8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EmQ-8I-BoI"/>
                             <constraint firstItem="DTT-hW-9s8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mf9-hO-PwP"/>
                         </constraints>
@@ -221,8 +221,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="leadingC" destination="mf9-hO-PwP" id="OFO-DJ-fET"/>
                         <outlet property="mainCollectionView" destination="A3Z-T8-gPY" id="4sM-3b-gNB"/>
                         <outlet property="primeView" destination="DTT-hW-9s8" id="wvJ-hv-6Uf"/>
+                        <outlet property="trailingC" destination="0Dt-sg-dQL" id="UxJ-SD-svN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

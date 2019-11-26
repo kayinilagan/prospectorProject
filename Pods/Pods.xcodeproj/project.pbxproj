@@ -3459,11 +3459,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		02B84521F257A161DACAAE8196597718 /* Debug */ = {
+		02AB3C7CDABE570F5AB7C5C73CBB180C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1FEDCA0185BDF19AF9FC4262AB993B8 /* FirebaseAnalytics-iOS12.1.xcconfig */;
+			baseConfigurationReference = E44AE389749BD312ED0E3809AE49DEB8 /* Firebase-Analytics-Core-CoreOnly.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3473,34 +3472,9 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
-		};
-		032E58819F29232994DEE1160C02AF5B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D231C537CAB2574A9899B705CE862605 /* nanopb-iOS12.1.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/nanopb-iOS12.1/nanopb-iOS12.1-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = nanopb;
-				PRODUCT_NAME = "nanopb-iOS12.1";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
+			name = Release;
 		};
 		0344B85031B10543E1F5BD33C16ADEEC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3614,6 +3588,46 @@
 			};
 			name = Debug;
 		};
+		14B06919C8986A6066E3A9501302DBCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44EDBC053D495711FCFDC01E82CA44D /* FirebaseCore-iOS12.1.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FirebaseCore;
+				PRODUCT_NAME = "FirebaseCore-iOS12.1";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17E2F98C18F28AD23DEE485B56FD8FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B66BA170332F79C54E85C08F7827EC51 /* GoogleAppMeasurement-iOS12.1.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		1864BFEA3CE4B6B013AA749C1B37ADCC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30FFB4C20758FBFC762781E711D21DDA /* GTMSessionFetcher.xcconfig */;
@@ -3638,6 +3652,23 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		19960F7FA3F754FC49F3675E4B73D4FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A217815D9C533AD66AF8962DF8A4E81E /* OneSignal-iOS12.1.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		200CD2396E713A87F09DF2D0477FFC0C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3672,22 +3703,20 @@
 			};
 			name = Debug;
 		};
-		25B4CDA1B7D1CAD1F77FC73D1D566D7B /* Release */ = {
+		275F1071F6789A0E4C0057A4A28CC321 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EEE3517F1807D0DC4F5A079161925CD /* GoogleUtilities-00567490.xcconfig */;
+			baseConfigurationReference = ED9975E7AD5647E227519F0F5C123CFF /* FirebaseInstanceID-iOS12.1.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/GoogleUtilities-00567490/GoogleUtilities-00567490-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = GoogleUtilities;
-				PRODUCT_NAME = "GoogleUtilities-00567490";
+				PRODUCT_MODULE_NAME = FirebaseInstanceID;
+				PRODUCT_NAME = "FirebaseInstanceID-iOS12.1";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -3723,6 +3752,24 @@
 			};
 			name = Release;
 		};
+		2C874F5BD8F756E4F0A9D4B67DDE31D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A217815D9C533AD66AF8962DF8A4E81E /* OneSignal-iOS12.1.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		2E256BD78F1E4A0F292B11DBD2424029 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FC3C5B460CA5E1E51F6E05B5B7734AC /* OneSignal-iOS11.4.xcconfig */;
@@ -3740,6 +3787,22 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		2F7D75BE859F15EF399060595706F552 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1FEDCA0185BDF19AF9FC4262AB993B8 /* FirebaseAnalytics-iOS12.1.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		30EED2221011AD10D4D2792A366C9ECC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3774,6 +3837,30 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		3984DB726D5E53BE336DD54903689CE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EEE3517F1807D0DC4F5A079161925CD /* GoogleUtilities-00567490.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleUtilities-00567490/GoogleUtilities-00567490-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GoogleUtilities;
+				PRODUCT_NAME = "GoogleUtilities-00567490";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		3BBF4777AF11BD86907064052BA2357C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3909,47 +3996,31 @@
 			};
 			name = Debug;
 		};
-		4C2DF04BBBCA28F9B84A82DF3B0237AA /* Debug */ = {
+		4DB20BFBB20E66910A81EEB635051C26 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E44EDBC053D495711FCFDC01E82CA44D /* FirebaseCore-iOS12.1.xcconfig */;
+			baseConfigurationReference = D231C537CAB2574A9899B705CE862605 /* nanopb-iOS12.1.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				GCC_PREFIX_HEADER = "Target Support Files/nanopb-iOS12.1/nanopb-iOS12.1-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FirebaseCore;
-				PRODUCT_NAME = "FirebaseCore-iOS12.1";
+				PRODUCT_MODULE_NAME = nanopb;
+				PRODUCT_NAME = "nanopb-iOS12.1";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
-		};
-		4F52F7AF2D8FA9021330EBA28F8BE276 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A217815D9C533AD66AF8962DF8A4E81E /* OneSignal-iOS12.1.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
+			name = Release;
 		};
 		5A14692DDB57F06725A9183206256A07 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3992,66 +4063,6 @@
 			};
 			name = Debug;
 		};
-		6138036537E98A9204B81699EBFF9015 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B66BA170332F79C54E85C08F7827EC51 /* GoogleAppMeasurement-iOS12.1.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6830F4F850238BE2971DE0FCE9BEA7A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EEE3517F1807D0DC4F5A079161925CD /* GoogleUtilities-00567490.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/GoogleUtilities-00567490/GoogleUtilities-00567490-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = GoogleUtilities;
-				PRODUCT_NAME = "GoogleUtilities-00567490";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6D3DB3A996C5F55A1C78625997CA6819 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E44AE389749BD312ED0E3809AE49DEB8 /* Firebase-Analytics-Core-CoreOnly.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		6DC4EC9DDCBFBAAEE35F0B21A61E6316 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 624C682A9358332520EF3872722ECB92 /* FirebaseABTesting.xcconfig */;
@@ -4092,6 +4103,22 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		7A5F5E6C89C37C6B0E97CBFFA5D8A8BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44AE389749BD312ED0E3809AE49DEB8 /* Firebase-Analytics-Core-CoreOnly.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		7B7E9D7FAB7E45B9F4ADF8DC4822703B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4158,31 +4185,6 @@
 			};
 			name = Debug;
 		};
-		879010FF39C330FCE1452AEEEC5DA1E7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9975E7AD5647E227519F0F5C123CFF /* FirebaseInstanceID-iOS12.1.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FirebaseInstanceID;
-				PRODUCT_NAME = "FirebaseInstanceID-iOS12.1";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		8ACCB3BAF0F6DEF6D142F76A76938052 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5420E9731E75BB4E265573164010AAA9 /* FirebasePerformance.xcconfig */;
@@ -4199,66 +4201,52 @@
 			};
 			name = Debug;
 		};
-		8DE26712EF7DED223B85CBF5394E836F /* Release */ = {
+		A3FE5A2E7BCCC77EAF896267FD3512BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A217815D9C533AD66AF8962DF8A4E81E /* OneSignal-iOS12.1.xcconfig */;
+			baseConfigurationReference = 1EEE3517F1807D0DC4F5A079161925CD /* GoogleUtilities-00567490.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		985FB417D6DABFA5041DFDF56533BBAE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED9975E7AD5647E227519F0F5C123CFF /* FirebaseInstanceID-iOS12.1.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleUtilities-00567490/GoogleUtilities-00567490-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FirebaseInstanceID;
-				PRODUCT_NAME = "FirebaseInstanceID-iOS12.1";
+				PRODUCT_MODULE_NAME = GoogleUtilities;
+				PRODUCT_NAME = "GoogleUtilities-00567490";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A19F7709888C07BB874AE79F8E7D786D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1FEDCA0185BDF19AF9FC4262AB993B8 /* FirebaseAnalytics-iOS12.1.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		A4DBEBAC63B85E679750D951F013FB05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C79233EFDF807F3E9264F53D4B8BA92 /* Pods-Notificaiton Center.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		A6B4C69A420436EFC3C18ABEC50F5A4B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4299,6 +4287,31 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		AACA088DA6D43FFE871C75858978CBD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D231C537CAB2574A9899B705CE862605 /* nanopb-iOS12.1.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/nanopb-iOS12.1/nanopb-iOS12.1-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = nanopb;
+				PRODUCT_NAME = "nanopb-iOS12.1";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		AB09B621ED251839D4FA17E44F361111 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4364,11 +4377,10 @@
 			};
 			name = Debug;
 		};
-		AFA05460091F03586C10BB24C9E512C8 /* Release */ = {
+		AFEED3443F1F551438B126921F04E7E6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B66BA170332F79C54E85C08F7827EC51 /* GoogleAppMeasurement-iOS12.1.xcconfig */;
+			baseConfigurationReference = A1FEDCA0185BDF19AF9FC4262AB993B8 /* FirebaseAnalytics-iOS12.1.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -4395,56 +4407,6 @@
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B46A16A2992AFE62FE77764D7D4E8B6E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D231C537CAB2574A9899B705CE862605 /* nanopb-iOS12.1.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/nanopb-iOS12.1/nanopb-iOS12.1-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = nanopb;
-				PRODUCT_NAME = "nanopb-iOS12.1";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B74332F3E5025730A537A4CFF3E1CD29 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C79233EFDF807F3E9264F53D4B8BA92 /* Pods-Notificaiton Center.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -4491,6 +4453,46 @@
 			};
 			name = Release;
 		};
+		C04658DB1F70A2E1EA40ED741772FF0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B66BA170332F79C54E85C08F7827EC51 /* GoogleAppMeasurement-iOS12.1.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C076A6D931C3B4A3226C9C1FF3FB7925 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44EDBC053D495711FCFDC01E82CA44D /* FirebaseCore-iOS12.1.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = FirebaseCore;
+				PRODUCT_NAME = "FirebaseCore-iOS12.1";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		CA7A991976B7E277BE245D1AA2179DA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 624C682A9358332520EF3872722ECB92 /* FirebaseABTesting.xcconfig */;
@@ -4529,6 +4531,29 @@
 			};
 			name = Debug;
 		};
+		CFC95A66E3D67DD8BD90E7576E9C45DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAD977D918CEF0E6B2BF945EEFCF6BF9 /* Pods-Notificaiton Center.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		D5E47D55D075430D61218A20ECD6DF25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0207B95FD2B971A43DACA620C46EA28B /* GoogleAppMeasurement-iOS11.4.xcconfig */;
@@ -4545,11 +4570,10 @@
 			};
 			name = Debug;
 		};
-		DF4AB10399B9F5DA3CCFD9B74FC89DA3 /* Release */ = {
+		D7DDF17A463BC5772C81A45880EF4737 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E44EDBC053D495711FCFDC01E82CA44D /* FirebaseCore-iOS12.1.xcconfig */;
+			baseConfigurationReference = ED9975E7AD5647E227519F0F5C123CFF /* FirebaseInstanceID-iOS12.1.xcconfig */;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -4558,17 +4582,16 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = FirebaseCore;
-				PRODUCT_NAME = "FirebaseCore-iOS12.1";
+				PRODUCT_MODULE_NAME = FirebaseInstanceID;
+				PRODUCT_NAME = "FirebaseInstanceID-iOS12.1";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		EDC4F1103EC13AA07E30145D61D4CE17 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -4618,55 +4641,14 @@
 			};
 			name = Debug;
 		};
-		F627CB1A45C5EDBD1DC634AD8E610066 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAD977D918CEF0E6B2BF945EEFCF6BF9 /* Pods-Notificaiton Center.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FDA6BBB37ED9D9064AEAD0200B91BC2F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E44AE389749BD312ED0E3809AE49DEB8 /* Firebase-Analytics-Core-CoreOnly.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		0F792EA84954DB1B1345ADCFCF8A65D5 /* Build configuration list for PBXNativeTarget "GoogleUtilities-00567490" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6830F4F850238BE2971DE0FCE9BEA7A0 /* Debug */,
-				25B4CDA1B7D1CAD1F77FC73D1D566D7B /* Release */,
+				3984DB726D5E53BE336DD54903689CE8 /* Debug */,
+				A3FE5A2E7BCCC77EAF896267FD3512BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4692,8 +4674,8 @@
 		3E1B8D5AA11C94D5CAFFA65D5D58E0DC /* Build configuration list for PBXNativeTarget "FirebaseInstanceID-iOS12.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				985FB417D6DABFA5041DFDF56533BBAE /* Debug */,
-				879010FF39C330FCE1452AEEEC5DA1E7 /* Release */,
+				D7DDF17A463BC5772C81A45880EF4737 /* Debug */,
+				275F1071F6789A0E4C0057A4A28CC321 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4710,8 +4692,8 @@
 		45018D1C8BBD2C56E3B52EEB5907605A /* Build configuration list for PBXAggregateTarget "GoogleAppMeasurement-iOS12.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6138036537E98A9204B81699EBFF9015 /* Debug */,
-				AFA05460091F03586C10BB24C9E512C8 /* Release */,
+				17E2F98C18F28AD23DEE485B56FD8FA1 /* Debug */,
+				C04658DB1F70A2E1EA40ED741772FF0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4728,8 +4710,8 @@
 		4E72DA5BA4158F58D068FE92D6DF708D /* Build configuration list for PBXAggregateTarget "Firebase-Analytics-Core-CoreOnly" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FDA6BBB37ED9D9064AEAD0200B91BC2F /* Debug */,
-				6D3DB3A996C5F55A1C78625997CA6819 /* Release */,
+				7A5F5E6C89C37C6B0E97CBFFA5D8A8BB /* Debug */,
+				02AB3C7CDABE570F5AB7C5C73CBB180C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4755,8 +4737,8 @@
 		8162E7220D637ED46D63D03BB716D2DA /* Build configuration list for PBXNativeTarget "FirebaseCore-iOS12.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4C2DF04BBBCA28F9B84A82DF3B0237AA /* Debug */,
-				DF4AB10399B9F5DA3CCFD9B74FC89DA3 /* Release */,
+				C076A6D931C3B4A3226C9C1FF3FB7925 /* Debug */,
+				14B06919C8986A6066E3A9501302DBCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4782,8 +4764,8 @@
 		9C8DECC99B8190CC47FE5016F49385BA /* Build configuration list for PBXAggregateTarget "FirebaseAnalytics-iOS12.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				02B84521F257A161DACAAE8196597718 /* Debug */,
-				A19F7709888C07BB874AE79F8E7D786D /* Release */,
+				2F7D75BE859F15EF399060595706F552 /* Debug */,
+				AFEED3443F1F551438B126921F04E7E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4836,8 +4818,8 @@
 		CE8533BCCBB1C059A0E95C62471B2674 /* Build configuration list for PBXNativeTarget "nanopb-iOS12.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				032E58819F29232994DEE1160C02AF5B /* Debug */,
-				B46A16A2992AFE62FE77764D7D4E8B6E /* Release */,
+				AACA088DA6D43FFE871C75858978CBD8 /* Debug */,
+				4DB20BFBB20E66910A81EEB635051C26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4881,8 +4863,8 @@
 		E52D84E487DF351D29AE5F9D2F921F0D /* Build configuration list for PBXNativeTarget "Pods-Notificaiton Center" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B74332F3E5025730A537A4CFF3E1CD29 /* Debug */,
-				F627CB1A45C5EDBD1DC634AD8E610066 /* Release */,
+				A4DBEBAC63B85E679750D951F013FB05 /* Debug */,
+				CFC95A66E3D67DD8BD90E7576E9C45DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4890,8 +4872,8 @@
 		EE596B0E47F7D46EF3C99EC0A264A773 /* Build configuration list for PBXAggregateTarget "OneSignal-iOS12.1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F52F7AF2D8FA9021330EBA28F8BE276 /* Debug */,
-				8DE26712EF7DED223B85CBF5394E836F /* Release */,
+				19960F7FA3F754FC49F3675E4B73D4FE /* Debug */,
+				2C874F5BD8F756E4F0A9D4B67DDE31D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

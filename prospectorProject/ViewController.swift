@@ -163,6 +163,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             trailingC.constant = 0
             
             searchController.searchBar.isHidden = true
+                        
             hamburgerIsVisible = true
         }
         else
@@ -282,7 +283,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //******Start of Helen's Code (Also please see top of Viewcontroller)***************************************************
     var arrayHolder = [[String:String]]()
     
-    // Trending
+    //MARK: Trending
 
     @IBAction func trendingButton(_ sender: UIButton)
     {
@@ -315,7 +316,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    // Sports
+    //MARK: Sports
     
     var sportsArrayHolder = [[String: String]]()
 
@@ -350,7 +351,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    // Entertainment
+    //MARK: Entertainment
     
     var entertainmentArrayHolder = [[String: String]]()
 
@@ -384,7 +385,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    // News
+    //MARK: News
     
     var newsArrayHolder = [[String: String]]()
 
@@ -417,7 +418,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    // Features
+    //MARK: Features
     
     var featuresArrayHolder = [[String: String]]()
 
@@ -451,7 +452,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    // Opinion
+    //MARK: Opinion
     
     var opinionArrayHolder = [[String: String]]()
 
@@ -485,7 +486,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    // Other
+    //MARK: Other
     var otherArrayHolder = [[String: String]]()
     var realOtherArray = [[String: String]]()
     @IBAction func otherButton(_ sender: UIButton)

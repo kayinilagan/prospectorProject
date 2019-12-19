@@ -160,13 +160,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if !hamburgerIsVisible
         {
             leadingC.constant = 129
-            trailingC.constant = -129
+            trailingC.constant = 0
+            
+            searchController.searchBar.isHidden = true
             hamburgerIsVisible = true
         }
         else
         {
             leadingC.constant = 0
             trailingC.constant = 0
+            
+            searchController.searchBar.isHidden = false
             hamburgerIsVisible = false
         }
         
